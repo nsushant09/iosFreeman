@@ -18,11 +18,8 @@ struct RegistrationView: View {
     @State var email : String = ""
     @State var password : String = ""
     
-    var genders = ["male", "female"]
-    
-    
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ScrollView{
                 VStack{
                     Text("Welcome to Freeman,\nShop With Us")
@@ -40,9 +37,12 @@ struct RegistrationView: View {
                     HStack(alignment: .center, content: {
                         Text("Already have an account?")
                             .font(.system(size: 14, weight: .regular, design: .rounded))
-                        Text("Login")
-                            .font(.system(size: 16, weight: .semibold, design: .rounded))
-                            .underline()
+                        
+                        NavigationLink(destination: LoginView.getInstance(), label: {
+                            Text("Login")
+                                .font(.system(size: 16, weight: .semibold, design: .rounded))
+                                .underline()
+                        })
                     })
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
                     
@@ -57,7 +57,16 @@ struct RegistrationView: View {
                 .padding(.all)
             }
         }
+        .navigationBarBackButtonHidden(true)
         
+    }
+    
+    static private var instance : RegistrationView? = nil
+    static func getInstance() -> RegistrationView{
+        if(RegistrationView.instance == nil){
+            RegistrationView.instance = RegistrationView()
+        }
+        return RegistrationView.instance!
     }
 }
 
