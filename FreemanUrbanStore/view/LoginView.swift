@@ -14,12 +14,23 @@ struct LoginView: View {
     @State var userPasswordField : String = ""
     
     @State var navigateRegistrationView  = false
+    @State var navigateOTPView = false
     
     var body: some View {
         NavigationStack{
             
+            Navigator.navigate(
+                bindingBoolean: $navigateRegistrationView,
+                destination: RegistrationView.getInstance()
+            )
+            
+            Navigator.navigate(
+                bindingBoolean: $navigateOTPView,
+                destination: OTPView()
+            )
+            
+            
             VStack{
-                
                 Spacer()
                 
                 customView.logoImage
@@ -29,11 +40,14 @@ struct LoginView: View {
                 
                 customView.inputSecureField(title: "Password", bindingString: $userPasswordField)
                 
-                customView.darkFilledButton(action: {}, label: {
+                customView.darkFilledButton(action: {
+                    // Validate username password, if valid go to one time password]
+                    navigateOTPView = true                    
+                }, label: {
                     Text("Login".uppercased())
                 })
                 
-                NavigationLink(destination: RegistrationView.getInstance(), label: {
+                NavigationLink(destination: ForgotPasswordEmailView(), label: {
                     Text("Forgot Password?")
                         .frame(maxWidth: .infinity)
                         .foregroundColor(CustomColors.primary)
@@ -44,21 +58,17 @@ struct LoginView: View {
                 Spacer()
                 
                 
-                NavigationLink(destination: RegistrationView.getInstance(), label: {
-                    customView.darkOutlinedButton(action: {
-                        navigateRegistrationView = true
-                    }, label: {
-                        Text("Create new account")
-                    })
+                customView.darkOutlinedButton(action: {
+                    navigateRegistrationView = true
+                }, label: {
+                    Text("Create new account")
+                        .frame(maxWidth: .infinity)
                 })
                 
                 
             }.padding(16)
         }
-        .navigationDestination(isPresented: $navigateRegistrationView, destination: {
-            RegistrationView.getInstance()
-        })
-            .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     

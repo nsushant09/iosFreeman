@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		527400D92A8CA22000053D64 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527400D82A8CA22000053D64 /* CustomViews.swift */; };
 		527400DB2A8CA29E00053D64 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527400DA2A8CA29E00053D64 /* RegistrationView.swift */; };
+		527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FEB2A8CED7200A60DF6 /* LoginViewModel.swift */; };
+		527B9FEE2A8CED8100A60DF6 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FED2A8CED8100A60DF6 /* RegistrationViewModel.swift */; };
+		527B9FF02A8CEEB700A60DF6 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */; };
+		527B9FF22A8CEF0600A60DF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FF12A8CEF0600A60DF6 /* User.swift */; };
+		527B9FF42A8CF08100A60DF6 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FF32A8CF08100A60DF6 /* Validator.swift */; };
 		52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */; };
 		52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A544102A8BF229004BCFA9 /* ContentView.swift */; };
 		52A544132A8BF22A004BCFA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A544122A8BF22A004BCFA9 /* Assets.xcassets */; };
@@ -18,11 +23,25 @@
 		52A5442B2A8BF365004BCFA9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442A2A8BF365004BCFA9 /* LoginView.swift */; };
 		52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442C2A8BF628004BCFA9 /* CustomColors.swift */; };
 		52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */; };
+		52E435DE2A8DF74600547A77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435DD2A8DF74600547A77 /* MainView.swift */; };
+		52E435E02A8DFEEF00547A77 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435DF2A8DFEEF00547A77 /* HomeView.swift */; };
+		52E435E22A8DFEF500547A77 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435E12A8DFEF500547A77 /* CartView.swift */; };
+		52E435E42A8DFEFC00547A77 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435E32A8DFEFC00547A77 /* AccountView.swift */; };
+		52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435E52A8DFF0400547A77 /* SearchView.swift */; };
+		52E435E82A8E020C00547A77 /* ForgotPasswordEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435E72A8E020C00547A77 /* ForgotPasswordEmailView.swift */; };
+		52E435EA2A8E021700547A77 /* ForgotPasswordNewPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435E92A8E021700547A77 /* ForgotPasswordNewPassView.swift */; };
+		52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435EB2A8E021F00547A77 /* OTPView.swift */; };
+		52E435EE2A8E098400547A77 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435ED2A8E098400547A77 /* Navigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		527400D82A8CA22000053D64 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		527400DA2A8CA29E00053D64 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		527B9FEB2A8CED7200A60DF6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		527B9FED2A8CED8100A60DF6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
+		527B9FF12A8CEF0600A60DF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		527B9FF32A8CF08100A60DF6 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		52A5440B2A8BF229004BCFA9 /* FreemanUrbanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreemanUrbanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreemanUrbanStoreApp.swift; sourceTree = "<group>"; };
 		52A544102A8BF229004BCFA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +52,15 @@
 		52A5442A2A8BF365004BCFA9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		52A5442C2A8BF628004BCFA9 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImages.swift; sourceTree = "<group>"; };
+		52E435DD2A8DF74600547A77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		52E435DF2A8DFEEF00547A77 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		52E435E12A8DFEF500547A77 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		52E435E32A8DFEFC00547A77 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		52E435E52A8DFF0400547A77 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		52E435E72A8E020C00547A77 /* ForgotPasswordEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordEmailView.swift; sourceTree = "<group>"; };
+		52E435E92A8E021700547A77 /* ForgotPasswordNewPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordNewPassView.swift; sourceTree = "<group>"; };
+		52E435EB2A8E021F00547A77 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		52E435ED2A8E098400547A77 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +121,14 @@
 			children = (
 				52A5442A2A8BF365004BCFA9 /* LoginView.swift */,
 				527400DA2A8CA29E00053D64 /* RegistrationView.swift */,
+				52E435DD2A8DF74600547A77 /* MainView.swift */,
+				52E435DF2A8DFEEF00547A77 /* HomeView.swift */,
+				52E435E12A8DFEF500547A77 /* CartView.swift */,
+				52E435E32A8DFEFC00547A77 /* AccountView.swift */,
+				52E435E52A8DFF0400547A77 /* SearchView.swift */,
+				52E435E72A8E020C00547A77 /* ForgotPasswordEmailView.swift */,
+				52E435E92A8E021700547A77 /* ForgotPasswordNewPassView.swift */,
+				52E435EB2A8E021F00547A77 /* OTPView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -117,6 +153,8 @@
 		52A544252A8BF25F004BCFA9 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				527B9FEB2A8CED7200A60DF6 /* LoginViewModel.swift */,
+				527B9FED2A8CED8100A60DF6 /* RegistrationViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -124,6 +162,8 @@
 		52A544262A8BF2D2004BCFA9 /* usecase */ = {
 			isa = PBXGroup;
 			children = (
+				527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */,
+				527B9FF32A8CF08100A60DF6 /* Validator.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -141,6 +181,7 @@
 				52A5442C2A8BF628004BCFA9 /* CustomColors.swift */,
 				52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */,
 				527400D82A8CA22000053D64 /* CustomViews.swift */,
+				52E435ED2A8E098400547A77 /* Navigator.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -148,6 +189,7 @@
 		52A544292A8BF31B004BCFA9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				527B9FF12A8CEF0600A60DF6 /* User.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -222,15 +264,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */,
+				52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */,
+				52E435E22A8DFEF500547A77 /* CartView.swift in Sources */,
+				527B9FF22A8CEF0600A60DF6 /* User.swift in Sources */,
+				52E435EE2A8E098400547A77 /* Navigator.swift in Sources */,
 				52A544182A8BF22A004BCFA9 /* Persistence.swift in Sources */,
+				527B9FEE2A8CED8100A60DF6 /* RegistrationViewModel.swift in Sources */,
 				52A5441B2A8BF22A004BCFA9 /* FreemanUrbanStore.xcdatamodeld in Sources */,
+				527B9FF42A8CF08100A60DF6 /* Validator.swift in Sources */,
+				52E435E02A8DFEEF00547A77 /* HomeView.swift in Sources */,
 				52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */,
 				527400DB2A8CA29E00053D64 /* RegistrationView.swift in Sources */,
 				52A5442B2A8BF365004BCFA9 /* LoginView.swift in Sources */,
+				52E435DE2A8DF74600547A77 /* MainView.swift in Sources */,
 				52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */,
+				52E435E42A8DFEFC00547A77 /* AccountView.swift in Sources */,
 				527400D92A8CA22000053D64 /* CustomViews.swift in Sources */,
+				52E435EA2A8E021700547A77 /* ForgotPasswordNewPassView.swift in Sources */,
 				52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */,
+				527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */,
 				52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */,
+				527B9FF02A8CEEB700A60DF6 /* UserValidator.swift in Sources */,
+				52E435E82A8E020C00547A77 /* ForgotPasswordEmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

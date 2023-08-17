@@ -28,6 +28,8 @@ struct CustomViews{
             .background(CustomColors.fieldColor)
             .cornerRadius(8)
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            .textInputAutocapitalization(TextInputAutocapitalization.never)
+            .autocorrectionDisabled()
     }
     
     func inputSecureField(title : String, bindingString : Binding<String>) -> some View{
@@ -39,6 +41,8 @@ struct CustomViews{
             .background(CustomColors.fieldColor)
             .cornerRadius(8)
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            .textInputAutocapitalization(TextInputAutocapitalization.never)
+            .autocorrectionDisabled()
     }
     
     func darkOutlinedButton(action :@escaping () -> Void, label : () -> some View) -> some View{

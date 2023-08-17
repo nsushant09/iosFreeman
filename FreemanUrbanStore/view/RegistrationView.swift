@@ -49,10 +49,10 @@ struct RegistrationView: View {
                     customView.darkFilledButton(action: {}, label: {
                         Text("Create account")
                     })
-                    
-                    customView.darkOutlinedButton(action: {}, label: {
-                        Text("Create trader account")
-                    })
+//
+//                    customView.darkOutlinedButton(action: {}, label: {
+//                        Text("Create trader account")
+//                    })
                 }
                 .padding(.all)
             }
