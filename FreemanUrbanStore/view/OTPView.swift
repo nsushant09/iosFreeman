@@ -12,8 +12,13 @@ struct OTPView: View {
     private let customView : CustomViews = CustomViews.instance
     @State var otpValue : String = ""
     
+    @State var navigateMainView = false
+    
     var body: some View {
         NavigationStack{
+            
+            Navigator.navigate(bindingBoolean: $navigateMainView, destination: MainView())
+            
             VStack{
                 Spacer()
                 
@@ -29,7 +34,7 @@ struct OTPView: View {
                 
                 customView.inputTextField(title: "OTP", bindingString: $otpValue)
                 customView.darkFilledButton(action: {
-                    
+                    navigateMainView = true
                 }, label: {
                     Text("Verify")
                         .frame(maxWidth: .infinity)

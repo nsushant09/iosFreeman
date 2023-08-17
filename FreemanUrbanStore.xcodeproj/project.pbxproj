@@ -14,6 +14,7 @@
 		527B9FF02A8CEEB700A60DF6 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */; };
 		527B9FF22A8CEF0600A60DF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FF12A8CEF0600A60DF6 /* User.swift */; };
 		527B9FF42A8CF08100A60DF6 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FF32A8CF08100A60DF6 /* Validator.swift */; };
+		52A2BA782A8E1D3800B41350 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2BA772A8E1D3800B41350 /* SliderView.swift */; };
 		52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */; };
 		52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A544102A8BF229004BCFA9 /* ContentView.swift */; };
 		52A544132A8BF22A004BCFA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A544122A8BF22A004BCFA9 /* Assets.xcassets */; };
@@ -23,6 +24,9 @@
 		52A5442B2A8BF365004BCFA9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442A2A8BF365004BCFA9 /* LoginView.swift */; };
 		52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442C2A8BF628004BCFA9 /* CustomColors.swift */; };
 		52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */; };
+		52C570522A8E4C5700048465 /* KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C570512A8E4C5700048465 /* KeyValue.swift */; };
+		52C570542A8E5AE500048465 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C570532A8E5AE500048465 /* ProductCardView.swift */; };
+		52C570562A8E5BBC00048465 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C570552A8E5BBC00048465 /* AsyncImageView.swift */; };
 		52E435DE2A8DF74600547A77 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435DD2A8DF74600547A77 /* MainView.swift */; };
 		52E435E02A8DFEEF00547A77 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435DF2A8DFEEF00547A77 /* HomeView.swift */; };
 		52E435E22A8DFEF500547A77 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435E12A8DFEF500547A77 /* CartView.swift */; };
@@ -42,6 +46,7 @@
 		527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		527B9FF12A8CEF0600A60DF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		527B9FF32A8CF08100A60DF6 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		52A2BA772A8E1D3800B41350 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		52A5440B2A8BF229004BCFA9 /* FreemanUrbanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreemanUrbanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreemanUrbanStoreApp.swift; sourceTree = "<group>"; };
 		52A544102A8BF229004BCFA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +57,9 @@
 		52A5442A2A8BF365004BCFA9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		52A5442C2A8BF628004BCFA9 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImages.swift; sourceTree = "<group>"; };
+		52C570512A8E4C5700048465 /* KeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValue.swift; sourceTree = "<group>"; };
+		52C570532A8E5AE500048465 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		52C570552A8E5BBC00048465 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		52E435DD2A8DF74600547A77 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		52E435DF2A8DFEEF00547A77 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		52E435E12A8DFEF500547A77 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -74,6 +82,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52A2BA762A8E1D2A00B41350 /* view_components */ = {
+			isa = PBXGroup;
+			children = (
+				52A2BA772A8E1D3800B41350 /* SliderView.swift */,
+				52C570532A8E5AE500048465 /* ProductCardView.swift */,
+				52C570552A8E5BBC00048465 /* AsyncImageView.swift */,
+			);
+			path = view_components;
+			sourceTree = "<group>";
+		};
 		52A544022A8BF229004BCFA9 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				52A5442C2A8BF628004BCFA9 /* CustomColors.swift */,
+				52A2BA762A8E1D2A00B41350 /* view_components */,
 				52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */,
 				527400D82A8CA22000053D64 /* CustomViews.swift */,
 				52E435ED2A8E098400547A77 /* Navigator.swift */,
@@ -190,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				527B9FF12A8CEF0600A60DF6 /* User.swift */,
+				52C570512A8E4C5700048465 /* KeyValue.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -265,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */,
+				52C570522A8E4C5700048465 /* KeyValue.swift in Sources */,
 				52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */,
 				52E435E22A8DFEF500547A77 /* CartView.swift in Sources */,
 				527B9FF22A8CEF0600A60DF6 /* User.swift in Sources */,
@@ -273,9 +294,11 @@
 				527B9FEE2A8CED8100A60DF6 /* RegistrationViewModel.swift in Sources */,
 				52A5441B2A8BF22A004BCFA9 /* FreemanUrbanStore.xcdatamodeld in Sources */,
 				527B9FF42A8CF08100A60DF6 /* Validator.swift in Sources */,
+				52A2BA782A8E1D3800B41350 /* SliderView.swift in Sources */,
 				52E435E02A8DFEEF00547A77 /* HomeView.swift in Sources */,
 				52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */,
 				527400DB2A8CA29E00053D64 /* RegistrationView.swift in Sources */,
+				52C570562A8E5BBC00048465 /* AsyncImageView.swift in Sources */,
 				52A5442B2A8BF365004BCFA9 /* LoginView.swift in Sources */,
 				52E435DE2A8DF74600547A77 /* MainView.swift in Sources */,
 				52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */,
@@ -286,6 +309,7 @@
 				527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */,
 				52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */,
 				527B9FF02A8CEEB700A60DF6 /* UserValidator.swift in Sources */,
+				52C570542A8E5AE500048465 /* ProductCardView.swift in Sources */,
 				52E435E82A8E020C00547A77 /* ForgotPasswordEmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

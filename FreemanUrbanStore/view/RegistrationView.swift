@@ -22,6 +22,7 @@ struct RegistrationView: View {
         NavigationStack{
             ScrollView{
                 VStack{
+                    
                     Text("Welcome to Freeman,\nShop With Us")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.system(size: 28, weight: .semibold, design: .monospaced))
@@ -46,9 +47,9 @@ struct RegistrationView: View {
                     })
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
                     
-                    customView.darkFilledButton(action: {}, label: {
-                        Text("Create account")
-                    })
+//                    customView.darkFilledButton(action: {}, label: {
+//                        Text("Create account")
+//                    })
 //
 //                    customView.darkOutlinedButton(action: {}, label: {
 //                        Text("Create trader account")

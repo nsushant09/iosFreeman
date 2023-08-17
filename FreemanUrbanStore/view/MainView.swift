@@ -33,6 +33,7 @@ struct MainView: View {
                 image: "person.fill"
             )
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
