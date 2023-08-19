@@ -15,4 +15,5 @@ struct User :Identifiable, Codable, Hashable{
     var password : String
     var phoneNumber : String
     var dateOfBirth : String
+    var role : String
 }

@@ -22,13 +22,13 @@ struct RegistrationView: View {
         NavigationStack{
             ScrollView{
                 VStack{
-                    
                     Text("Welcome to Freeman,\nShop With Us")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.system(size: 28, weight: .semibold, design: .monospaced))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 64, trailing: 0))
                     
                     customView.inputTextField(title: "Full Name", bindingString: $fullName)
+
                     customView.inputTextField(title: "Phone Number", bindingString: $phoneNumber)
                     customView.datePicker(title: "Date of Birth", selection: $dateOfBirth, displayedComponents: [.date])
                     customView.menu(title: "Select Gender", selection : $gender, options: ["Male", "Female"])
@@ -47,13 +47,13 @@ struct RegistrationView: View {
                     })
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
                     
-//                    customView.darkFilledButton(action: {}, label: {
-//                        Text("Create account")
-//                    })
-//
-//                    customView.darkOutlinedButton(action: {}, label: {
-//                        Text("Create trader account")
-//                    })
+                    customView.darkFilledButton(action: {}, label: {
+                        Text("Create account")
+                    })
+
+                    customView.darkOutlinedButton(action: {}, label: {
+                        Text("Create trader account")
+                    })
                 }
                 .padding(.all)
             }

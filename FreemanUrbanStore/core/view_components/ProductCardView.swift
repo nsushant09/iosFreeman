@@ -9,18 +9,25 @@ import SwiftUI
 
 struct ProductCardView: View {
     private let customView = CustomViews.instance
+    
+    let imageUrl : String
+    let price : String
+    let title : String
+    let category : String
+    let discountedPrice : String?
+    
     var body: some View {
         NavigationStack{
             
             VStack{
                 
                 AsyncImage(
-                    url:URL(string : "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600"),
+                    url:URL(string : imageUrl),
                     content : {image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width:200, height: 130)
+                            .frame(width:170, height: 180)
                             .cornerRadius(16)
                     },
                     placeholder: {
@@ -28,36 +35,55 @@ struct ProductCardView: View {
                     })
                 
                 VStack{
-                    Text("$208.33").frame(maxWidth: .infinity, alignment:.leading)
-                        .font(.system(size: 16, weight: .medium, design: .monospaced))
+                    Text(title).frame(maxWidth: .infinity, alignment:.leading)
+                        .lineLimit(1)
+                        .foregroundColor(CustomColors.primary)
+                        .font(.system(size:20, weight: .medium, design: .rounded))
+                        .kerning(1)
                     
-                    Text("Title").frame(maxWidth: .infinity, alignment:.leading)
-                        .font(.system(size:18, weight: .medium, design: .monospaced))
+                    Text(category).frame(maxWidth: .infinity, alignment:.leading)
+                        .lineLimit(1)
+                        .foregroundColor(.brown.opacity(0.6))
                         .baselineOffset(-2)
+                        .font(.system(size:12, weight: .medium, design: .serif))
                     
-                    Text("So, if you want to maintain the aspect ratio of 1600:900 while changing the height to 200, the corresponding width should be approximately 355.56. However, in practical scenarios, you might round it to a whole number or a more practical value depending on your layout requirements.")
+                    
+                    HStack{
+                        Text(
+                            discountedPrice == nil ? "\(price)" : "\(discountedPrice!)"
+                        )
                         .frame(maxWidth: .infinity, alignment:.leading)
-                        .font(.system(size:14, weight: .regular, design: .rounded))
-                        .kerning(0.2)
+                        .lineLimit(1)
+                        .foregroundColor(CustomColors.primary)
+                        .font(.system(size: 16, weight: .medium, design: .monospaced))
                         .baselineOffset(-4)
+                        
+                        Spacer()
+                        
+                        Text(
+                            discountedPrice == nil ? "" : "\(price)"
+                        )
+                        .frame(maxWidth: .infinity, alignment:.leading)
+                        .lineLimit(1)
+                        .foregroundColor(.gray.opacity(0.6))
+                        .font(.system(size: 16, weight: .medium, design: .monospaced))
+                        .baselineOffset(-4)
+
+                    }
+                    
                 }
-                .padding(EdgeInsets(top: 4, leading: 8, bottom: 8, trailing: 8))
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                 
                 Spacer()
-                    .frame(height: 1)
             }
-            .frame(width: 200, height: 300)
-            .background(CustomColors.fieldColor)
-            .cornerRadius(16)
-            
+            .frame(width: 170, height: 260)
         }
-        
-        
     }
 }
 
 struct ProductCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCardView()
+        ProductCardView(imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                        price: "208.33", title: "MacBook Pro", category: "Category", discountedPrice: "200")
     }
 }
