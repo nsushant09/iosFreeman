@@ -11,6 +11,7 @@ struct MainView: View {
     
     init(){
         UITabBar.appearance().backgroundColor = .white
+        
     }
     
     var body: some View {

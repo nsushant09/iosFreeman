@@ -19,63 +19,65 @@ struct ProductCardView: View {
     var body: some View {
         NavigationStack{
             
-            VStack{
-                
-                AsyncImage(
-                    url:URL(string : imageUrl),
-                    content : {image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width:170, height: 180)
-                            .cornerRadius(16)
-                    },
-                    placeholder: {
-                        ProgressView()
-                    })
-                
+            NavigationLink(destination: {ProductDetailView()}){
                 VStack{
-                    Text(title).frame(maxWidth: .infinity, alignment:.leading)
-                        .lineLimit(1)
-                        .foregroundColor(CustomColors.primary)
-                        .font(.system(size:20, weight: .medium, design: .rounded))
-                        .kerning(1)
                     
-                    Text(category).frame(maxWidth: .infinity, alignment:.leading)
-                        .lineLimit(1)
-                        .foregroundColor(.primary.opacity(0.4))
-                        .font(.system(size:12, weight: .medium, design: .serif))
+                    AsyncImage(
+                        url:URL(string : imageUrl),
+                        content : {image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width:170, height: 180)
+                                .cornerRadius(16)
+                        },
+                        placeholder: {
+                            ProgressView()
+                        })
                     
-                    
-                    HStack{
-                        Text(
-                            discountedPrice == nil ? "$\(price)" : "$\(discountedPrice!)"
-                        )
-                        .frame(maxWidth: .infinity, alignment:.leading)
-                        .lineLimit(1)
-                        .foregroundColor(CustomColors.primary)
-                        .font(.system(size: 16, weight: .medium, design: .monospaced))
-                        .baselineOffset(-4)
+                    VStack{
+                        Text(title).frame(maxWidth: .infinity, alignment:.leading)
+                            .lineLimit(1)
+                            .foregroundColor(CustomColors.primary)
+                            .font(.system(size:20, weight: .medium, design: .rounded))
+                            .kerning(1)
                         
-                        Spacer()
+                        Text(category).frame(maxWidth: .infinity, alignment:.leading)
+                            .lineLimit(1)
+                            .foregroundColor(.primary.opacity(0.4))
+                            .font(.system(size:12, weight: .medium, design: .serif))
                         
-                        Text(
-                            discountedPrice == nil ? "" : "$\(price)"
-                        )
-                        .frame(maxWidth: .infinity, alignment:.leading)
-                        .lineLimit(1)
-                        .foregroundColor(.gray.opacity(0.6))
-                        .font(.system(size: 16, weight: .medium, design: .monospaced))
-                        .baselineOffset(-4)
-
+                        
+                        HStack{
+                            Text(
+                                discountedPrice == nil ? "$\(price)" : "$\(discountedPrice!)"
+                            )
+                            .frame(maxWidth: .infinity, alignment:.leading)
+                            .lineLimit(1)
+                            .foregroundColor(CustomColors.primary)
+                            .font(.system(size: 16, weight: .medium, design: .monospaced))
+                            .baselineOffset(-4)
+                            
+                            Spacer()
+                            
+                            Text(
+                                discountedPrice == nil ? "" : "$\(price)"
+                            )
+                            .frame(maxWidth: .infinity, alignment:.leading)
+                            .lineLimit(1)
+                            .foregroundColor(.gray.opacity(0.6))
+                            .font(.system(size: 16, weight: .medium, design: .monospaced))
+                            .baselineOffset(-4)
+                            
+                        }
+                        
                     }
+                    .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                     
+                    Spacer()
                 }
-                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
-                
-                Spacer()
+                .frame(width: 170, height: 260)
             }
-            .frame(width: 170, height: 260)
         }
     }
 }

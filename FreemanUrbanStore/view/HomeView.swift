@@ -34,10 +34,13 @@ struct HomeView: View {
                     .font(.system(size: 32, weight: .semibold))
                 Spacer()
                 
-                Image(systemName: "heart")
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 24, weight: .semibold))
+                NavigationLink(destination: {FavouriteView()}){
+                    Image(systemName: "heart")
+                        .foregroundColor(.accentColor)
+                        .font(.system(size: 24, weight: .semibold))
+                }
             }
+            .padding(.horizontal)
             
             ScrollView{
                 VStack{
@@ -81,8 +84,8 @@ struct HomeView: View {
                     
                 }
             }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
     
     static func getCarouselData() -> [KeyValue<String, String>]{

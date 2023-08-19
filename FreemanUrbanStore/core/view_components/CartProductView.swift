@@ -17,80 +17,81 @@ struct CartProductView: View {
     
     var body: some View {
         NavigationStack{
-            HStack{
-                
-                AsyncImage(
-                    url:URL(string : imageUrl),
-                    content : {image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width:120, height: 120)
-                            .cornerRadius(16)
-                    },
-                    placeholder: {
-                        ProgressView()
-                    })
-                
-                VStack{
-                    HStack(alignment: .center){
-                        Text(title)
-                            .lineLimit(1)
-                            .font(.system(size: 24, weight: .medium, design: .rounded))
-                            .foregroundColor(.accentColor)
-                            .kerning(0.6)
-                        Spacer()
-                        Image(systemName: "xmark")
-                            .foregroundColor(.gray.opacity(0.6))
-                            .font(.system(size: 18, weight: .semibold))
-                    }
+            NavigationLink(destination:ProductDetailView()){
+                HStack{
+                    AsyncImage(
+                        url:URL(string : imageUrl),
+                        content : {image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width:120, height: 120)
+                                .cornerRadius(16)
+                        },
+                        placeholder: {
+                            ProgressView()
+                        })
                     
-                    Text(category)
-                        .lineLimit(1)
-                        .font(.system(size: 14, weight: .light, design: .serif))
-                        .foregroundColor(.accentColor.opacity(0.4))
-                        .frame(maxWidth: .infinity, alignment:.leading)
-                        .baselineOffset(-4)
-                    
-                    Spacer()
-                        .frame(height: 16)
-
-                    HStack(alignment:.center){
-                        Text("$\(price)")
+                    VStack{
+                        HStack(alignment: .center){
+                            Text(title)
+                                .lineLimit(1)
+                                .font(.system(size: 24, weight: .medium, design: .rounded))
+                                .foregroundColor(.accentColor)
+                                .kerning(0.6)
+                            Spacer()
+                            Image(systemName: "xmark")
+                                .foregroundColor(.gray.opacity(0.6))
+                                .font(.system(size: 18, weight: .semibold))
+                        }
+                        
+                        Text(category)
                             .lineLimit(1)
-                            .foregroundColor(.accentColor)
-                            .font(.system(size: 18, weight: .medium, design: .monospaced))
+                            .font(.system(size: 14, weight: .light, design: .serif))
+                            .foregroundColor(.accentColor.opacity(0.4))
+                            .frame(maxWidth: .infinity, alignment:.leading)
+                            .baselineOffset(-4)
+                        
                         Spacer()
-
-                        Group{
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.gray.opacity(0.4), lineWidth:1)
-                                .frame(width: 36, height: 36)
-                                .foregroundColor(.blue)
-                                .overlay(
-                                    Image(systemName: "minus")
-                                        .foregroundColor(.gray.opacity(0.4))
-                                )
+                            .frame(height: 16)
+                        
+                        HStack(alignment:.center){
+                            Text("$\(price)")
+                                .lineLimit(1)
+                                .foregroundColor(.accentColor)
+                                .font(.system(size: 18, weight: .medium, design: .monospaced))
+                            Spacer()
                             
-                            Text(quantity.codingKey.stringValue)
-                                .fontDesign(.monospaced)
-                                .padding(.horizontal, 8)
-                            
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.accentColor, lineWidth:1)
-                                .frame(width: 36, height: 36)
-                                .foregroundColor(.blue)
-                                .overlay(
-                                    Image(systemName: "plus")
-                                        .foregroundColor(.accentColor)
-                                )
+                            Group{
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray.opacity(0.4), lineWidth:1)
+                                    .frame(width: 36, height: 36)
+                                    .foregroundColor(.blue)
+                                    .overlay(
+                                        Image(systemName: "minus")
+                                            .foregroundColor(.gray.opacity(0.4))
+                                    )
+                                
+                                Text(quantity.codingKey.stringValue)
+                                    .fontDesign(.monospaced)
+                                    .padding(.horizontal, 8)
+                                
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.accentColor, lineWidth:1)
+                                    .frame(width: 36, height: 36)
+                                    .foregroundColor(.blue)
+                                    .overlay(
+                                        Image(systemName: "plus")
+                                            .foregroundColor(.accentColor)
+                                    )
+                            }
                         }
                     }
+                    .frame(maxWidth: .infinity)
+                    .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
                 }
-                .frame(maxWidth: .infinity)
-                .padding(EdgeInsets(top: 0, leading: 4, bottom: 0, trailing: 4))
+                .padding(.vertical, 8)
             }
-            .padding(.vertical, 8)
         }
     }
 }

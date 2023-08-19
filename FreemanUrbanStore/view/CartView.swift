@@ -30,6 +30,7 @@ struct CartView: View {
                     .foregroundColor(.accentColor)
                     .font(.system(size: 24, weight: .semibold))
             }
+            .padding(.horizontal)
             
             ScrollView{
                 VStack{
@@ -66,22 +67,19 @@ struct CartView: View {
                     }
                 }
                 
-                
+                customView.darkFilledButton(action: {
+                    
+                }, label: {
+                    HStack{
+                        Text("Checkout for")
+                        Text("$\(totalCheckoutAmount)")
+                            .font(.system(size : 18, weight: .bold))
+                    }
+                    .frame(maxWidth: .infinity)
+                })
             }
-            Spacer()
-            
-            customView.darkFilledButton(action: {
-                
-            }, label: {
-                HStack{
-                    Text("Checkout for")
-                    Text("$\(totalCheckoutAmount)")
-                        .font(.system(size : 18, weight: .bold))
-                }
-                .frame(maxWidth: .infinity)
-            })
+            .padding(.horizontal)
         }
-        .padding(.all)
     }
 }
 
