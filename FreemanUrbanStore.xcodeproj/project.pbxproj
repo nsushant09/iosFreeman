@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52472B582A90EDEF0080F93A /* CircularCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52472B572A90EDEF0080F93A /* CircularCategoriesView.swift */; };
+		52472B5A2A90F9CF0080F93A /* CartProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52472B592A90F9CF0080F93A /* CartProductView.swift */; };
 		527400D92A8CA22000053D64 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527400D82A8CA22000053D64 /* CustomViews.swift */; };
 		527400DB2A8CA29E00053D64 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527400DA2A8CA29E00053D64 /* RegistrationView.swift */; };
 		527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FEB2A8CED7200A60DF6 /* LoginViewModel.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		52472B572A90EDEF0080F93A /* CircularCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCategoriesView.swift; sourceTree = "<group>"; };
+		52472B592A90F9CF0080F93A /* CartProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductView.swift; sourceTree = "<group>"; };
 		527400D82A8CA22000053D64 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		527400DA2A8CA29E00053D64 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		527B9FEB2A8CED7200A60DF6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				52C570532A8E5AE500048465 /* ProductCardView.swift */,
 				52C570552A8E5BBC00048465 /* AsyncImageView.swift */,
 				52472B572A90EDEF0080F93A /* CircularCategoriesView.swift */,
+				52472B592A90F9CF0080F93A /* CartProductView.swift */,
 			);
 			path = view_components;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				52E435DE2A8DF74600547A77 /* MainView.swift in Sources */,
 				52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */,
 				52E435E42A8DFEFC00547A77 /* AccountView.swift in Sources */,
+				52472B5A2A90F9CF0080F93A /* CartProductView.swift in Sources */,
 				527400D92A8CA22000053D64 /* CustomViews.swift in Sources */,
 				52E435EA2A8E021700547A77 /* ForgotPasswordNewPassView.swift in Sources */,
 				52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */,

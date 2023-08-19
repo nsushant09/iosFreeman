@@ -17,7 +17,7 @@ struct MainView: View {
         TabView{
             getTabItem(
                 view: HomeView(),
-                title: "Home",
+                title: "Discover",
                 image: "house.fill"
             )
             
@@ -38,6 +38,7 @@ struct MainView: View {
                 image: "person.fill"
             )
         }
+        .tint(.accentColor)
         .navigationBarBackButtonHidden(true)
     }
 }

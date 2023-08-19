@@ -43,14 +43,13 @@ struct ProductCardView: View {
                     
                     Text(category).frame(maxWidth: .infinity, alignment:.leading)
                         .lineLimit(1)
-                        .foregroundColor(.brown.opacity(0.6))
-                        .baselineOffset(-2)
+                        .foregroundColor(.primary.opacity(0.4))
                         .font(.system(size:12, weight: .medium, design: .serif))
                     
                     
                     HStack{
                         Text(
-                            discountedPrice == nil ? "\(price)" : "\(discountedPrice!)"
+                            discountedPrice == nil ? "$\(price)" : "$\(discountedPrice!)"
                         )
                         .frame(maxWidth: .infinity, alignment:.leading)
                         .lineLimit(1)
@@ -61,7 +60,7 @@ struct ProductCardView: View {
                         Spacer()
                         
                         Text(
-                            discountedPrice == nil ? "" : "\(price)"
+                            discountedPrice == nil ? "" : "$\(price)"
                         )
                         .frame(maxWidth: .infinity, alignment:.leading)
                         .lineLimit(1)

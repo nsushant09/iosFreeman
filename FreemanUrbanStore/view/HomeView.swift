@@ -30,12 +30,12 @@ struct HomeView: View {
             HStack{
                 Text("Discover")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(Color.accentColor)
+                    .foregroundColor(.accentColor)
                     .font(.system(size: 32, weight: .semibold))
                 Spacer()
                 
                 Image(systemName: "heart")
-                    .foregroundColor(Color.accentColor)
+                    .foregroundColor(.accentColor)
                     .font(.system(size: 24, weight: .semibold))
             }
             
@@ -43,21 +43,23 @@ struct HomeView: View {
                 VStack{
                     SliderView(images: HomeView.getCarouselData())
                     
+                    
                     Text("Categories")
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(.accentColor)
                         .font(.system(size: 24, weight: .semibold))
                     
                     LazyVGrid(columns: categoriesGridColumns, content: {
                         ForEach(0..<8){index in
                             CircularCategoriesView(
-                                imageUrl:"https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                                imageUrl:"https://images.pexels.com/photos/5026973/pexels-photo-5026973.jpeg?auto=compress&cs=tinysrgb&w=1600",
                                 title: "Category")
                         }
                     })
                     
                     Text("Products")
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundColor(Color.accentColor)
+                        .foregroundColor(.accentColor)
                         .font(.system(size: 24, weight: .semibold))
                     
                     LazyVGrid(columns: productGridColumns,
@@ -68,7 +70,7 @@ struct HomeView: View {
                         
                         ForEach(0..<50){index in
                             ProductCardView(
-                                imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
+                                imageUrl: "https://images.pexels.com/photos/2453658/pexels-photo-2453658.jpeg?auto=compress&cs=tinysrgb&w=1600",
                                 price: "208.33",
                                 title: "MacBook Pro",
                                 category: "Category",
@@ -80,7 +82,7 @@ struct HomeView: View {
                 }
             }
         }
-        .padding(.all)
+        .padding(.horizontal)
     }
     
     static func getCarouselData() -> [KeyValue<String, String>]{
