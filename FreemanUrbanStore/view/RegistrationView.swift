@@ -14,9 +14,13 @@ struct RegistrationView: View {
     @State var fullName : String = ""
     @State var phoneNumber : String = ""
     @State var dateOfBirth : Date = Date()
-    @State var gender : String = ""
+    @State var gender : String = "Male"
     @State var email : String = ""
     @State var password : String = ""
+    
+    @State var userDetailResponse : User? = nil
+    
+    let dateFormatter = DateFormatter()
     
     var body: some View {
         NavigationStack{
@@ -47,7 +51,19 @@ struct RegistrationView: View {
                     })
                     .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
                     
-                    customView.darkFilledButton(action: {}, label: {
+                    customView.darkFilledButton(action: {
+                        dateFormatter.dateFormat = "yyyy-MM-dd"
+                        
+                        let user = User(id: 0, name: fullName, email: email, gender: gender, password: password, phoneNumber: phoneNumber, dateOfBirth: dateFormatter.string(from : dateOfBirth), role: "user")
+                        
+                        let postReq = PostRequest<User, User>(
+                            requestUrl: "http://localhost:8080/user/insert",
+                            bindingResponse: $userDetailResponse)
+                            .setRequestBody(requestBody: user)
+                        
+                        postReq.execute()
+                        
+                    }, label: {
                         Text("Create account")
                     })
 
