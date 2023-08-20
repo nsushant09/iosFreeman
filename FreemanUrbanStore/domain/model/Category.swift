@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category{
+struct Category : Identifiable, Codable, Hashable{
     var id : Int
     var name : String
 }

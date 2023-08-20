@@ -122,7 +122,7 @@ struct ProductDetailView: View {
             
             Text("Category")
                 .frame(maxWidth: .infinity, alignment:.leading)
-                .font(.system(size: 18, weight: .light, design: .monospaced))
+                .font(.system(size: 14, weight: .light, design: .monospaced))
                 .baselineOffset(-4)
             
             HStack{
@@ -179,6 +179,14 @@ struct ProductDetailView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.accentColor)
                 .font(.system(size: 24, weight: .semibold))
+            
+            ForEach(0..<5){index in
+                ReviewCard(
+                    username : "Sushant Neupane",
+                    rating: 5,
+                    date : "08/03/2023",
+                    description: "Your stream is still running. We've pause this preview to save your resources.")
+            }
         }
     }
 }

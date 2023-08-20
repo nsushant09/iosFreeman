@@ -19,6 +19,7 @@ struct RegistrationView: View {
     @State var password : String = ""
     
     @State var userDetailResponse : User? = nil
+    @State var allUsers : [User]? = nil
     
     let dateFormatter = DateFormatter()
     
@@ -54,12 +55,15 @@ struct RegistrationView: View {
                     customView.darkFilledButton(action: {
                         dateFormatter.dateFormat = "yyyy-MM-dd"
                         
-                        let user = User(id: 0, name: fullName, email: email, gender: gender, password: password, phoneNumber: phoneNumber, dateOfBirth: dateFormatter.string(from : dateOfBirth), role: "user")
+                        let user = User(id: 0, name: "test", email: "testmail2", gender: gender, password: password, phoneNumber: phoneNumber, dateOfBirth: dateFormatter.string(from : dateOfBirth), role: "user")
                         
-                        let postReq = PostRequest<User, User>(
-                            requestUrl: "http://localhost:8080/user/insert",
-                            bindingResponse: $userDetailResponse)
-                            .setRequestBody(requestBody: user)
+                        let postReq = HTTPRequestExecutor<User, User>
+                            .Builder()
+                            .setRequestUrl("http://localhost:8080/user/")
+                            .setBindingResponse($userDetailResponse)
+                            .setRequestBody(user)
+                            .setHttpMethod(HTTPMethods.POST)
+                            .build()
                         
                         postReq.execute()
                         
@@ -67,7 +71,16 @@ struct RegistrationView: View {
                         Text("Create account")
                     })
 
-                    customView.darkOutlinedButton(action: {}, label: {
+                    customView.darkOutlinedButton(action: {
+                        let req = HTTPRequestExecutor<User, [User]>
+                            .Builder()
+                            .setRequestUrl("http://localhost:8080/user/all")
+                            .setHttpMethod(HTTPMethods.GET)
+                            .build()
+                        
+                        req.execute()
+                            
+                    }, label: {
                         Text("Create trader account")
                     })
                 }

@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Product{
+struct Product : Identifiable, Codable, Hashable{
+    var id : Int
     var name : String
     var description : String
     var price : Double
