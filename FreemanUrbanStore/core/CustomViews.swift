@@ -101,4 +101,11 @@ struct CustomViews{
         .cornerRadius(8)
         .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
+    
+    func errorMessage(_ text : String) -> some View{
+        return Text(text)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .font(.system(size: 12, weight: .light, design: .rounded))
+            .foregroundColor(.red)
+    }
 }

@@ -16,6 +16,10 @@ struct LoginView: View {
     @State var navigateRegistrationView  = false
     @State var navigateOTPView = false
     
+    @State var errorMessage = ""
+    
+    @StateObject var loginViewModel = LoginViewModel()
+    
     var body: some View {
         NavigationStack{
             
@@ -40,9 +44,19 @@ struct LoginView: View {
                 
                 customView.inputSecureField(title: "Password", bindingString: $userPasswordField)
                 
+                if !errorMessage.isEmpty{
+                    customView.errorMessage(self.errorMessage)
+                }
+                
                 customView.darkFilledButton(action: {
-                    // Validate username password, if valid go to one time password]
-                    navigateOTPView = true                    
+                    Task{
+                        if await loginViewModel.loginUser(
+                            email:userEmailField,
+                            password:userPasswordField
+                        ){
+                            navigateOTPView = true
+                        }
+                    }
                 }, label: {
                     Text("Login".uppercased())
                 })
@@ -66,8 +80,12 @@ struct LoginView: View {
                 })
                 
                 
-            }.padding(16)
+            }
+            .padding(16)
         }
+        .onReceive(loginViewModel.$errorMessage, perform: {errorMessage in
+            self.errorMessage = errorMessage
+        })
         .navigationBarBackButtonHidden(true)
     }
     

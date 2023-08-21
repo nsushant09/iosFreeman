@@ -20,6 +20,8 @@
 		527BC2592A932EA800ADF7AF /* CategoryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */; };
 		527BC25B2A932FB000ADF7AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC25A2A932FB000ADF7AF /* Constants.swift */; };
 		527BC25D2A93309500ADF7AF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC25C2A93309500ADF7AF /* HomeViewModel.swift */; };
+		5298E3902A9379700023FD80 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298E38F2A9379700023FD80 /* EmailManager.swift */; };
+		5298E3922A938C8A0023FD80 /* HTTPStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */; };
 		529FF7192A911D1300F92335 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF7182A911D1300F92335 /* FavouriteView.swift */; };
 		529FF71B2A911EDA00F92335 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF71A2A911EDA00F92335 /* ProductDetailView.swift */; };
 		52A2BA782A8E1D3800B41350 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2BA772A8E1D3800B41350 /* SliderView.swift */; };
@@ -67,6 +69,8 @@
 		527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepoImpl.swift; sourceTree = "<group>"; };
 		527BC25A2A932FB000ADF7AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		527BC25C2A93309500ADF7AF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5298E38F2A9379700023FD80 /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
+		5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusMessage.swift; sourceTree = "<group>"; };
 		529FF7182A911D1300F92335 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		529FF71A2A911EDA00F92335 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		52A2BA772A8E1D3800B41350 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 			children = (
 				527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */,
 				527B9FF32A8CF08100A60DF6 /* Validator.swift */,
+				5298E38F2A9379700023FD80 /* EmailManager.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				52CC17412A9210E0004B18C4 /* HTTPMethods.swift */,
 				52CC17442A92116E004B18C4 /* HTTPRequestExecutor.swift */,
 				52AC6B912A93669C00FB2722 /* Result.swift */,
+				5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */,
 			);
 			path = HTTPRequestExecutor;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				52E435EE2A8E098400547A77 /* Navigator.swift in Sources */,
 				529FF7192A911D1300F92335 /* FavouriteView.swift in Sources */,
 				52A544182A8BF22A004BCFA9 /* Persistence.swift in Sources */,
+				5298E3922A938C8A0023FD80 /* HTTPStatusMessage.swift in Sources */,
 				52CC17452A92116E004B18C4 /* HTTPRequestExecutor.swift in Sources */,
 				527B9FEE2A8CED8100A60DF6 /* RegistrationViewModel.swift in Sources */,
 				52A5441B2A8BF22A004BCFA9 /* FreemanUrbanStore.xcdatamodeld in Sources */,
@@ -372,6 +379,7 @@
 				52C570562A8E5BBC00048465 /* AsyncImageView.swift in Sources */,
 				52A5442B2A8BF365004BCFA9 /* LoginView.swift in Sources */,
 				52E435DE2A8DF74600547A77 /* MainView.swift in Sources */,
+				5298E3902A9379700023FD80 /* EmailManager.swift in Sources */,
 				52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */,
 				52E855C12A922B0E007E699B /* ReviewCard.swift in Sources */,
 				52E435E42A8DFEFC00547A77 /* AccountView.swift in Sources */,

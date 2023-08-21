@@ -26,6 +26,7 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     var urlComponent : URLComponents? = nil
     var request : URLRequest? = nil
     
+    
     func execute(completion: @escaping (ResponseType?, Error?) -> Void){
         self.urlComponent = URLComponents(string: self.requestUrl)
         if(self.urlComponent == nil) {return}
@@ -94,7 +95,8 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         }
         
         if(response.statusCode != 200){
-            let errorMessage = response.value(forHTTPHeaderField: "errorMessage") ?? response.description
+            print(response)
+            let errorMessage = response.value(forHTTPHeaderField: "errorMessage") ?? HTTPStatusMessage(statusCode: response.statusCode).get()
             return Result<ResponseType>.failure(errorMessage)
         }
         
