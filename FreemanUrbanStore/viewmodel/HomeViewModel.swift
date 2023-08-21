@@ -8,7 +8,7 @@
 import Foundation
 
 class HomeViewModel : ObservableObject{
-    private let categoryRepo : CategoryRepo = CategoryRepoImpl()
+    private let categoryRepo  = CategoryRepoImpl()
     @Published var categories : [Category] = [Category]()
     
     func fetchCategories(){
@@ -16,7 +16,19 @@ class HomeViewModel : ObservableObject{
         
         categoryRepo.getCategories{categories, error in
             if(categories == nil){return}
-            self.categories = categories!
+            DispatchQueue.main.async {
+                self.categories = categories!
+            }
         }
+    }
+    
+    func fetchCategoriesAsync() async{
+        if(!categories.isEmpty) {return}
+        
+        guard let categories = await categoryRepo.getCategories() else {return}
+        DispatchQueue.main.async {
+            self.categories = categories
+        }
+        
     }
 }

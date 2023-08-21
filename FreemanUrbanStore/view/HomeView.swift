@@ -54,9 +54,6 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.accentColor)
                         .font(.system(size: 24, weight: .semibold))
-                        .onAppear(){
-                            homeViewModel.fetchCategories()
-                        }
                     
                     LazyVGrid(columns: categoriesGridColumns, content: {
                         ForEach(homeViewModel.categories){category in
@@ -93,6 +90,11 @@ struct HomeView: View {
             }
             .padding(.horizontal)
         }
+        .onAppear(perform: {
+            Task{
+                await homeViewModel.fetchCategoriesAsync()
+            }
+        })
     }
     
     static func getCarouselData() -> [KeyValue<String, String>]{
@@ -111,7 +113,6 @@ struct HomeView: View {
             value: "https://images.pexels.com/photos/5026973/pexels-photo-5026973.jpeg?auto=compress&cs=tinysrgb&w=1600"))
         return carouselItems
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {

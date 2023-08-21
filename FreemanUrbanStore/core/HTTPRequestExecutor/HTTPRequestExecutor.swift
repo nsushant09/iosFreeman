@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
+    
+    private let jsonDecoder = JSONDecoder()
+    
     let requestUrl : String
     
     var httpMethod : String = "GET"
@@ -42,7 +45,7 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         let task = URLSession.shared.dataTask(with: self.request!){data, urlResponse, error in
             guard let data = data, error == nil else {return}
             do {
-                let response = try JSONDecoder().decode(ResponseType.self, from: data)
+                let response = try self.jsonDecoder.decode(ResponseType.self, from: data)
                 completion(response, nil)
             } catch {
                 completion(nil, error)
@@ -51,10 +54,42 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         task.resume()
     }
     
+    func executeAsync() async -> ResponseType?{
+        self.urlComponent = URLComponents(string: self.requestUrl)
+        if(self.urlComponent == nil) {return nil}
+        self.applyRequestParameters()
+        guard let url = urlComponent?.url else {return nil}
+        
+        self.request = URLRequest(url: url)
+        self.request?.httpMethod = self.httpMethod
+        
+        self.applyHeaders()
+        self.applyRequestBody()
+        
+        return try? await self.performTaskAsync()
+    }
+    
+    func performTaskAsync() async throws -> ResponseType? {
+        if(self.request == nil || self.request!.url == nil){return nil}
+        
+        let (data, response) = try await URLSession.shared.data(from: self.request!.url!, delegate: nil)
+        return try handleResponse(data: data, response: response)
+    }
+    
+    func handleResponse(data : Data?, response : URLResponse?) throws -> ResponseType?{
+        guard
+            let data = data,
+            let response = response as? HTTPURLResponse,
+            response.statusCode >= 200 && response.statusCode < 300 else{
+            return nil
+        }
+        return try jsonDecoder.decode(ResponseType.self,from: data)
+    }
+    
     func applyRequestBody(){
         do{
             if(self.requestBody == nil){return}
-
+            
             let jsonData = try JSONEncoder().encode(self.requestBody)
             self.request?.httpBody = jsonData
         }catch{

@@ -18,4 +18,13 @@ struct CategoryRepoImpl : CategoryRepo{
             .execute(completion: completion)
     }
     
+    func getCategories() async -> [Category]?{
+            return await HTTPRequestExecutor<Category, [Category]>
+                .Builder()
+                .setRequestUrl(Constants.BASE_URL + "/category/all")
+                .setHttpMethod(HTTPMethods.GET)
+                .build()
+                .executeAsync()
+    }
+    
 }
