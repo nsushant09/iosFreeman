@@ -54,11 +54,15 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         task.resume()
     }
     
-    func executeAsync() async -> ResponseType?{
+    func executeAsync() async -> Result<ResponseType>{
         self.urlComponent = URLComponents(string: self.requestUrl)
-        if(self.urlComponent == nil) {return nil}
+        if(self.urlComponent == nil) {
+            return Result<ResponseType>.failure("Invalid URLComponent")
+        }
         self.applyRequestParameters()
-        guard let url = urlComponent?.url else {return nil}
+        guard let url = urlComponent?.url else {
+            return Result<ResponseType>.failure("Invalid URL")
+        }
         
         self.request = URLRequest(url: url)
         self.request?.httpMethod = self.httpMethod
@@ -66,24 +70,40 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         self.applyHeaders()
         self.applyRequestBody()
         
-        return try? await self.performTaskAsync()
+        do{
+            return try await self.performTaskAsync()
+        }catch{
+            return Result<ResponseType>.failure("Could not perform network call")
+        }
     }
     
-    func performTaskAsync() async throws -> ResponseType? {
-        if(self.request == nil || self.request!.url == nil){return nil}
+    func performTaskAsync() async throws -> Result<ResponseType> {
+        if(self.request == nil || self.request!.url == nil){
+            return Result<ResponseType>.failure("Invalid Network Request")
+        }
         
         let (data, response) = try await URLSession.shared.data(from: self.request!.url!, delegate: nil)
         return try handleResponse(data: data, response: response)
     }
     
-    func handleResponse(data : Data?, response : URLResponse?) throws -> ResponseType?{
+    func handleResponse(data : Data?, response : URLResponse?) throws -> Result<ResponseType>{
         guard
             let data = data,
-            let response = response as? HTTPURLResponse,
-            response.statusCode >= 200 && response.statusCode < 300 else{
-            return nil
+            let response = response as? HTTPURLResponse else {
+            return Result<ResponseType>.failure("Invalid data or HTTPURLResponse")
         }
-        return try jsonDecoder.decode(ResponseType.self,from: data)
+        
+        if(response.statusCode != 200){
+            let errorMessage = response.value(forHTTPHeaderField: "errorMessage") ?? response.description
+            return Result<ResponseType>.failure(errorMessage)
+        }
+        
+        do{
+            let response = try jsonDecoder.decode(ResponseType.self,from: data)
+            return Result<ResponseType>.success(response)
+        }catch{
+            return Result<ResponseType>.failure("Invalid URLComponent")
+        }
     }
     
     func applyRequestBody(){
