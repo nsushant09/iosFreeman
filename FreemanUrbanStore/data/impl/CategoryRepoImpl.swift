@@ -9,21 +9,13 @@ import Foundation
 
 struct CategoryRepoImpl : CategoryRepo{
     
-    func getAllCategories() -> [Category] {
-        
-        var response : [Category] = [Category]()
-        
+    func getCategories(completion : @escaping([Category]? , Error?) -> Void){
         HTTPRequestExecutor<Category, [Category]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/category/all")
             .setHttpMethod(HTTPMethods.GET)
             .build()
-            .execute(completion: {categories, error in
-                guard let categories = categories else {
-                    return
-                }
-                response = categories
-            })
-        return response;
+            .execute(completion: completion)
     }
+    
 }

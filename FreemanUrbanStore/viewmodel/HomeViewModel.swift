@@ -14,6 +14,9 @@ class HomeViewModel : ObservableObject{
     func fetchCategories(){
         if(!categories.isEmpty) {return}
         
-        categories = categoryRepo.getAllCategories()
+        categoryRepo.getCategories{categories, error in
+            if(categories == nil){return}
+            self.categories = categories!
+        }
     }
 }

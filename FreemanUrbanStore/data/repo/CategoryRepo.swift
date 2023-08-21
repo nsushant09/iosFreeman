@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CategoryRepo {
-    func getAllCategories() -> [Category]
+    func getCategories(completion : @escaping([Category]? , Error?) -> Void)
 }

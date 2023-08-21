@@ -46,437 +46,8 @@
             filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7FC9B6EE-8345-423C-AE77-34ABFA29E80C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1B406AF5-C82A-4EF5-99AE-E16101B692CB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6C62A50-5C5D-47CB-A224-1252E764E838"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F552B73C-25F8-41AC-8BCB-F27A09CB2137"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F552B73C-25F8-41AC-8BCB-F27A09CB2137 - acf53e627d1f43be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.HTTPRequestExecutor.execute() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "688">
-               </Location>
-               <Location
-                  uuid = "F552B73C-25F8-41AC-8BCB-F27A09CB2137 - acf53e627d1f43be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.HTTPRequestExecutor.execute() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "1432">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "21BD409C-6B95-43AA-834B-E9404DDC02D5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F91D095E-A82E-403E-A378-B64C475CC913"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F702BE6C-E0DE-459E-8A15-9B3E31658CC1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0E3FD494-4376-4D4D-879E-B80572AC9523"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FF80E97A-C0E7-4B6B-85AF-30841E68F534"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "execute(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C881A6D2-15C6-4FA4-86AA-61D97A296878"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "performTask(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "35D08665-A6EE-436C-9025-6FCC40B6BAA2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "performTask(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "35D08665-A6EE-436C-9025-6FCC40B6BAA2 - 47779794a2c1668d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "35D08665-A6EE-436C-9025-6FCC40B6BAA2 - c9996115cb8455b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "404">
-               </Location>
-               <Location
-                  uuid = "35D08665-A6EE-436C-9025-6FCC40B6BAA2 - c9996115cb8455b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "428">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3978A105-0B89-494D-93FC-33C9EFE3561B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "performTask(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3978A105-0B89-494D-93FC-33C9EFE3561B - c9996115cb8455b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "404">
-               </Location>
-               <Location
-                  uuid = "3978A105-0B89-494D-93FC-33C9EFE3561B - c9996115cb8455b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  uuid = "3978A105-0B89-494D-93FC-33C9EFE3561B - c9996115cb8455b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "428">
-               </Location>
-               <Location
-                  uuid = "3978A105-0B89-494D-93FC-33C9EFE3561B - c9996115cb8455b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "488">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B6270782-8306-40DD-B11A-8BCC6CE12C1E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "performTask(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B6270782-8306-40DD-B11A-8BCC6CE12C1E - c9996115cb8451d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "616">
-               </Location>
-               <Location
-                  uuid = "B6270782-8306-40DD-B11A-8BCC6CE12C1E - c9996115cb8451d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.HTTPRequestExecutor.performTask() -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "640">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EB16F663-05E7-44EB-94EA-A80B17A3C4B4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "performTask(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CF77E604-2DA5-428F-9889-CC7402164A5F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "performTask(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DD6A9850-C6D8-4F27-869E-7E77E4917DD3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "performTask(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -723,325 +294,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3A429E98-E0BF-4B5D-A603-27AA698DE256"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "12C927DA-9AD4-4C8B-8698-54C15E5E5F51"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C26E9B92-9FF8-496B-B757-8291CF853A64"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9A77F8C0-ADB2-442D-B2F0-D9502A0643FA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9A77F8C0-ADB2-442D-B2F0-D9502A0643FA - d54471035265422d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "264">
-               </Location>
-               <Location
-                  uuid = "9A77F8C0-ADB2-442D-B2F0-D9502A0643FA - d544710352654272"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6A719E2E-1E67-4B67-B132-5148C5496DAF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6A719E2E-1E67-4B67-B132-5148C5496DAF - d544710352654272"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "304">
-               </Location>
-               <Location
-                  uuid = "6A719E2E-1E67-4B67-B132-5148C5496DAF - 4a5e8ca87a9b7ac6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "6A719E2E-1E67-4B67-B132-5148C5496DAF - d544710352654393"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "336">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "27706F29-79AD-4F2C-A16E-C4A9F353134B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "27706F29-79AD-4F2C-A16E-C4A9F353134B - 4a5e8ca87a9b7bdd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "27706F29-79AD-4F2C-A16E-C4A9F353134B - 4a5e8ca87a9b7bfe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "31216B0B-A96C-43C0-A495-3185B3DA407D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "31216B0B-A96C-43C0-A495-3185B3DA407D - 4a5e8ca87a9b7bfe"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "31216B0B-A96C-43C0-A495-3185B3DA407D - 4a5e8ca87a9b7b9f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EFD9EB15-2378-4BD1-A0F0-0A6A7A783E79"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "getAllCategories()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EFD9EB15-2378-4BD1-A0F0-0A6A7A783E79 - 4a5e8ca87a9b7bb8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "EFD9EB15-2378-4BD1-A0F0-0A6A7A783E79 - 4a5e8ca87a9b7b59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FreemanUrbanStore.CategoryRepoImpl.getAllCategories() -&gt; Swift.Array&lt;FreemanUrbanStore.Category&gt;"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/data/impl/CategoryRepoImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DA570853-AE35-4528-87BB-37B3830D1390"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/HomeViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "fetchCategories()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1E3F8513-A6C5-4D7A-B5BC-7DA2C365B962"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -1053,6 +305,38 @@
             endingLineNumber = "15"
             landmarkName = "fetchCategories()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E3F8513-A6C5-4D7A-B5BC-7DA2C365B962 - 14a2ee3575cb5e98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.fetchCategories() -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "1E3F8513-A6C5-4D7A-B5BC-7DA2C365B962 - 14a2ee3575cb5e7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.fetchCategories() -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1220,6 +504,141 @@
                   endingLineNumber = "12"
                   offsetFromSymbolStart = "116">
                </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - 4e3854db9fe1040d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of FreemanUrbanStore.HomeViewModel.categories : Swift.Array&lt;FreemanUrbanStore.Category&gt;"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - 67af76aa1d71a81f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.categories.getter : Swift.Array&lt;FreemanUrbanStore.Category&gt;"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - d290dbbae7c25403"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.categories.setter : Swift.Array&lt;FreemanUrbanStore.Category&gt;"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - a46850a902a12b1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.categories.modify : Swift.Array&lt;FreemanUrbanStore.Category&gt;"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - e489a83ece5af268"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.categories.modify : Swift.Array&lt;FreemanUrbanStore.Category&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - c98aabd7f03e4369"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.$categories.getter : Combine.Published&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;.Publisher"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - b66285919baf4f1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.$categories.setter : Combine.Published&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;.Publisher"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - c97804a9465f1c8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.$categories.modify : Combine.Published&lt;Swift.Array&lt;FreemanUrbanStore.Category&gt;&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "B11EC199-C043-4C60-9A9A-51136F2B59E8 - 1ba55d996284e6e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreemanUrbanStore.HomeViewModel.init() -&gt; FreemanUrbanStore.HomeViewModel"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/HomeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "84">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1349,6 +768,118 @@
             endingLineNumber = "66"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E37E45F8-07B0-490D-BC17-EA783ADCF821"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0342A8C2-9D49-4C2D-8BA0-6EBD108E0DB4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "execute(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5660E20-5AB3-4AE7-A744-804EEF417D4D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "HTTPRequestExecutor"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46134E82-A7B5-4337-938A-C5A278CAD1C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "HTTPRequestExecutor"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDC660F0-FD5A-4207-9426-19BFDCA7FCD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "HTTPRequestExecutor"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04976020-E477-4CA3-B03C-77AA1DD5BA6D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "HTTPRequestExecutor"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E671108C-DF44-495F-80EA-C3671B6135D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/core/HTTPRequestExecutor/HTTPRequestExecutor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(requestUrl:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
