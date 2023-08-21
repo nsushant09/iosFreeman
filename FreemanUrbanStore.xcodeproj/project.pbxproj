@@ -16,6 +16,10 @@
 		527B9FF02A8CEEB700A60DF6 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */; };
 		527B9FF22A8CEF0600A60DF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FF12A8CEF0600A60DF6 /* User.swift */; };
 		527B9FF42A8CF08100A60DF6 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527B9FF32A8CF08100A60DF6 /* Validator.swift */; };
+		527BC2562A932E3300ADF7AF /* CategoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC2552A932E3300ADF7AF /* CategoryRepo.swift */; };
+		527BC2592A932EA800ADF7AF /* CategoryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */; };
+		527BC25B2A932FB000ADF7AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC25A2A932FB000ADF7AF /* Constants.swift */; };
+		527BC25D2A93309500ADF7AF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC25C2A93309500ADF7AF /* HomeViewModel.swift */; };
 		529FF7192A911D1300F92335 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF7182A911D1300F92335 /* FavouriteView.swift */; };
 		529FF71B2A911EDA00F92335 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF71A2A911EDA00F92335 /* ProductDetailView.swift */; };
 		52A2BA782A8E1D3800B41350 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2BA772A8E1D3800B41350 /* SliderView.swift */; };
@@ -58,6 +62,10 @@
 		527B9FEF2A8CEEB700A60DF6 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		527B9FF12A8CEF0600A60DF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		527B9FF32A8CF08100A60DF6 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		527BC2552A932E3300ADF7AF /* CategoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepo.swift; sourceTree = "<group>"; };
+		527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepoImpl.swift; sourceTree = "<group>"; };
+		527BC25A2A932FB000ADF7AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		527BC25C2A93309500ADF7AF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		529FF7182A911D1300F92335 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		529FF71A2A911EDA00F92335 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		52A2BA772A8E1D3800B41350 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -102,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		527BC2572A932E9B00ADF7AF /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
 		52A2BA762A8E1D2A00B41350 /* view_components */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +195,8 @@
 		52A544232A8BF24C004BCFA9 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				527BC2572A932E9B00ADF7AF /* impl */,
+				52A544272A8BF2DA004BCFA9 /* repo */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -187,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				52A544292A8BF31B004BCFA9 /* model */,
-				52A544272A8BF2DA004BCFA9 /* repo */,
 				52A544262A8BF2D2004BCFA9 /* usecase */,
 			);
 			path = domain;
@@ -198,6 +215,7 @@
 			children = (
 				527B9FEB2A8CED7200A60DF6 /* LoginViewModel.swift */,
 				527B9FED2A8CED8100A60DF6 /* RegistrationViewModel.swift */,
+				527BC25C2A93309500ADF7AF /* HomeViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -214,6 +232,7 @@
 		52A544272A8BF2DA004BCFA9 /* repo */ = {
 			isa = PBXGroup;
 			children = (
+				527BC2552A932E3300ADF7AF /* CategoryRepo.swift */,
 			);
 			path = repo;
 			sourceTree = "<group>";
@@ -239,6 +258,7 @@
 				52F9C90E2A8E8BFE00950418 /* Product.swift */,
 				52F9C9102A8E8C7E00950418 /* Category.swift */,
 				52F9C9122A8E8D0900950418 /* Review.swift */,
+				527BC25A2A932FB000ADF7AF /* Constants.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -323,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */,
+				527BC2562A932E3300ADF7AF /* CategoryRepo.swift in Sources */,
 				52C570522A8E4C5700048465 /* KeyValue.swift in Sources */,
 				52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */,
 				529FF71B2A911EDA00F92335 /* ProductDetailView.swift in Sources */,
@@ -336,12 +357,14 @@
 				527B9FEE2A8CED8100A60DF6 /* RegistrationViewModel.swift in Sources */,
 				52A5441B2A8BF22A004BCFA9 /* FreemanUrbanStore.xcdatamodeld in Sources */,
 				527B9FF42A8CF08100A60DF6 /* Validator.swift in Sources */,
+				527BC25B2A932FB000ADF7AF /* Constants.swift in Sources */,
 				52A2BA782A8E1D3800B41350 /* SliderView.swift in Sources */,
 				52E435E02A8DFEEF00547A77 /* HomeView.swift in Sources */,
 				52472B582A90EDEF0080F93A /* CircularCategoriesView.swift in Sources */,
 				52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */,
 				52F9C90F2A8E8BFE00950418 /* Product.swift in Sources */,
 				527400DB2A8CA29E00053D64 /* RegistrationView.swift in Sources */,
+				527BC25D2A93309500ADF7AF /* HomeViewModel.swift in Sources */,
 				52C570562A8E5BBC00048465 /* AsyncImageView.swift in Sources */,
 				52A5442B2A8BF365004BCFA9 /* LoginView.swift in Sources */,
 				52E435DE2A8DF74600547A77 /* MainView.swift in Sources */,
@@ -353,6 +376,7 @@
 				52E435EA2A8E021700547A77 /* ForgotPasswordNewPassView.swift in Sources */,
 				52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */,
 				527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */,
+				527BC2592A932EA800ADF7AF /* CategoryRepoImpl.swift in Sources */,
 				52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */,
 				52F9C9112A8E8C7E00950418 /* Category.swift in Sources */,
 				52CC17422A9210E0004B18C4 /* HTTPMethods.swift in Sources */,

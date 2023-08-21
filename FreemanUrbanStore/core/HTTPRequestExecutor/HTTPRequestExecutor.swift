@@ -15,7 +15,6 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     var requestBody : DataType? = nil
     var headers : [String : String]? = nil
     var requestParameters : [String : String]? = nil
-    var bindingResponse : Binding<ResponseType?>? = nil
     
     private init(requestUrl : String){
         self.requestUrl = requestUrl
@@ -24,7 +23,7 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     var urlComponent : URLComponents? = nil
     var request : URLRequest? = nil
     
-    func execute() {
+    func execute(completion: @escaping (ResponseType?, Error?) -> Void){
         self.urlComponent = URLComponents(string: self.requestUrl)
         if(self.urlComponent == nil) {return}
         self.applyRequestParameters()
@@ -35,19 +34,18 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         
         self.applyHeaders()
         self.applyRequestBody()
-        self.performTask()
+        self.performTask(completion : completion)
     }
     
-    func performTask(){
+    func performTask(completion: @escaping (ResponseType?, Error?) -> Void){
         if(self.request == nil){return}
         let task = URLSession.shared.dataTask(with: self.request!){data, urlResponse, error in
             guard let data = data, error == nil else {return}
             do {
                 let response = try JSONDecoder().decode(ResponseType.self, from: data)
-                self.bindingResponse?.wrappedValue = response
-                print(response)
+                completion(response, nil)
             } catch {
-                print(error)
+                completion(nil, error)
             }
         }
         task.resume()
@@ -56,7 +54,7 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     func applyRequestBody(){
         do{
             if(self.requestBody == nil){return}
-                
+
             let jsonData = try JSONEncoder().encode(self.requestBody)
             self.request?.httpBody = jsonData
         }catch{
@@ -81,7 +79,6 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     
     class Builder {
         private var requestUrl: String? = nil
-        private var bindingResponse: Binding<ResponseType?>? = nil
         private var requestBody: DataType? = nil
         private var headers: [String: String]? = nil
         private var requestParameters: [String: String]? = nil
@@ -89,11 +86,6 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         
         func setRequestUrl(_ url: String) -> Builder {
             self.requestUrl = url
-            return self
-        }
-        
-        func setBindingResponse(_ bindingResponse: Binding<ResponseType?>) -> Builder {
-            self.bindingResponse = bindingResponse
             return self
         }
         
@@ -131,7 +123,6 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
             executor.httpMethod = httpMethod
             executor.requestBody = requestBody
             executor.requestParameters = requestParameters
-            executor.bindingResponse = bindingResponse
             
             return executor
         }

@@ -55,31 +55,14 @@ struct RegistrationView: View {
                     customView.darkFilledButton(action: {
                         dateFormatter.dateFormat = "yyyy-MM-dd"
                         
-                        let user = User(id: 0, name: "test", email: "testmail2", gender: gender, password: password, phoneNumber: phoneNumber, dateOfBirth: dateFormatter.string(from : dateOfBirth), role: "user")
+                        let user = User(id: 0, name: fullName, email: email, gender: gender, password: password, phoneNumber: phoneNumber, dateOfBirth: dateFormatter.string(from : dateOfBirth), role: "user")
                         
-                        let postReq = HTTPRequestExecutor<User, User>
-                            .Builder()
-                            .setRequestUrl("http://localhost:8080/user/")
-                            .setBindingResponse($userDetailResponse)
-                            .setRequestBody(user)
-                            .setHttpMethod(HTTPMethods.POST)
-                            .build()
-                        
-                        postReq.execute()
                         
                     }, label: {
                         Text("Create account")
                     })
 
                     customView.darkOutlinedButton(action: {
-                        let req = HTTPRequestExecutor<User, [User]>
-                            .Builder()
-                            .setRequestUrl("http://localhost:8080/user/all")
-                            .setHttpMethod(HTTPMethods.GET)
-                            .build()
-                        
-                        req.execute()
-                            
                     }, label: {
                         Text("Create trader account")
                     })

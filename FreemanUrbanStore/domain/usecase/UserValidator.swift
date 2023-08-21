@@ -12,12 +12,12 @@ struct UserValidator : Validator{
     let user : User
     
     func validate() -> Bool {
-        if(!isCorrectUsername()) {return false}
+        if(!isValidUsername()) {return false}
         return true
     }
     
     
-    func isCorrectUsername() -> Bool{
+    func isValidUsername() -> Bool{
         if(user.name.count < 2) {return false}
         if(user.name.count > 50) {return false}
         if(doesContainSpecialCharacter(string: user.name)) {return false}

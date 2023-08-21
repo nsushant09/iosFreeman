@@ -9,7 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @ObservedObject var homeViewModel = HomeViewModel()
+    
     @State var searchValue : String = ""
+    @State var categories : [Category] = []
     
     let productGridColumns : [GridItem] = [
         GridItem(.flexible(minimum: 0, maximum: .infinity), spacing:16),
@@ -51,12 +54,16 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.accentColor)
                         .font(.system(size: 24, weight: .semibold))
+                        .onAppear(){
+                            homeViewModel.fetchCategories()
+                        }
                     
                     LazyVGrid(columns: categoriesGridColumns, content: {
-                        ForEach(0..<8){index in
+                        ForEach(homeViewModel.categories){category in
                             CircularCategoriesView(
-                                imageUrl:"https://images.pexels.com/photos/5026973/pexels-photo-5026973.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                                title: "Category")
+                                imageUrl: category.imagePath,
+                                title: category.name
+                            )
                         }
                     })
                     

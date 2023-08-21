@@ -29,7 +29,8 @@ struct CircularCategoriesView: View {
                     })
                 
                 Text(title)
-                    .font(.system(size: 14, weight: .light, design: .serif))
+                    .font(.system(size: 12, weight: .light, design: .serif))
+                    .multilineTextAlignment(.center)
                     .foregroundColor(.accentColor)
             }
             .padding(8)
@@ -41,6 +42,6 @@ struct CircularCategoriesView: View {
 
 struct CircularCategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularCategoriesView(imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600", title: "Category")
+        CircularCategoriesView(imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600", title: "Home Appliances")
     }
 }
