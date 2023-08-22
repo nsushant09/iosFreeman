@@ -13,9 +13,10 @@ class LoginViewModel : ObservableObject{
     @Published var user : User? = nil
     @Published var errorMessage = ""
     @Published var authenticationKey = "-1"
+    @Published var navigateToOTP = false
     
-    func loginUser(email : String, password : String) async -> Bool{
-        let result = await HTTPRequestExecutor<User, User>
+    func loginUser(email : String, password : String) async{
+        let userResult = await HTTPRequestExecutor<User, User>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/user/by_user_detail")
             .setRequestParams([
@@ -25,17 +26,29 @@ class LoginViewModel : ObservableObject{
             .build()
             .executeAsync()
         
-        DispatchQueue.main.async {[weak self] in
-            self?.user = ResultManager.extractSuccessValue(from: result)
-            self?.errorMessage = ResultManager.extractFailureValue(from: result)
+        let errorResponse = ResultManager.extractFailureValue(from: userResult)
+        let userResponse = ResultManager.extractSuccessValue(from: userResult)
+        
+        if let userResponse = userResponse{
+            DispatchQueue.main.async {[weak self] in
+                self?.user = userResponse
+                self?.errorMessage = errorResponse
+            }
+            await sendOTPEmail(userResponse: userResponse)
         }
         
-        if(user?.email != nil){
-            authenticationKey = await EmailManager().mailOTPPassword(email: user!.email!)
-            return authenticationKey != "-1";
-        }
-        return false;
     }
+    
+    func sendOTPEmail(userResponse : User) async {
+        guard let userEmail = userResponse.email else{return}
+        if let authenticationResponse = await EmailManager().mailOTPPassword(email: userEmail) {
+            DispatchQueue.main.async {[weak self] in
+                self?.authenticationKey = authenticationResponse
+                self?.navigateToOTP = authenticationResponse != "-1"
+            }
+        }
+    }
+    
     
     func getUser() -> User{
         return user!

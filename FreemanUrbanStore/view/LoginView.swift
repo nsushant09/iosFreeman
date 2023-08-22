@@ -34,7 +34,6 @@ struct LoginView: View {
                 destination: otpView
             )
             
-            
             VStack{
                 Spacer()
                 
@@ -51,19 +50,10 @@ struct LoginView: View {
                 
                 customView.darkFilledButton(action: {
                     Task{
-                        if await loginViewModel.loginUser(
-                            email:userEmailField,
-                            password:userPasswordField
-                        ){
-                            if(loginViewModel.user != nil){
-                                otpView = OTPView(
-                                    authenticationKey: loginViewModel.authenticationKey,
-                                    user: loginViewModel.user!
-                                )
-                                navigateOTPView = true
-                                errorMessage = "Could not proceed please try again."
-                            }
-                        }
+                        await loginViewModel.loginUser(
+                            email: userEmailField,
+                            password: userPasswordField
+                        )
                     }
                 }, label: {
                     Text("Login")
@@ -91,8 +81,17 @@ struct LoginView: View {
             }
             .padding(16)
         }
-        .onReceive(loginViewModel.$errorMessage, perform: {errorMessage in
-            self.errorMessage = errorMessage
+        .onReceive(loginViewModel.$navigateToOTP, perform: {boolean in
+            if(boolean){
+                otpView = OTPView(
+                    authenticationKey: loginViewModel.authenticationKey,
+                    user: loginViewModel.user!
+                )
+                navigateOTPView = true
+            }
+        })
+        .onReceive(loginViewModel.$errorMessage, perform: {publishedError in
+            errorMessage = publishedError
         })
         .navigationBarBackButtonHidden(true)
     }

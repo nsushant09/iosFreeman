@@ -140,28 +140,16 @@ struct RegistrationView: View {
             customView.darkFilledButton(action: {
                 dateFormatter.dateFormat = "yyyy-MM-dd"
                 
-//                let user = User(
-//                    id: 0,
-//                    name: fullName,
-//                    email: email,
-//                    gender: gender,
-//                    password: password,
-//                    phoneNumber: phoneNumber,
-//                    dateOfBirth: dateFormatter.string(from : dateOfBirth),
-//                    role: "user"
-//                )
-  
                 let user = User(
                     id: 0,
-                    name: "Sushant Neupane",
-                    email: "nsushant09@gmail.com",
-                    gender : "Male",
-                    password : "Sushant@123",
-                    phoneNumber: "9823579122",
-                    dateOfBirth: "",
-                    role: "User"
+                    name: fullName,
+                    email: email,
+                    gender: gender,
+                    password: password,
+                    phoneNumber: phoneNumber,
+                    dateOfBirth: dateFormatter.string(from : dateOfBirth),
+                    role: "user"
                 )
-                
                 
                 Task{
                     await registrationViewModel.registerUser(user:user)
@@ -172,7 +160,7 @@ struct RegistrationView: View {
             })
             
             customView.darkOutlinedButton(action: {
-                //                        TODO : Navigate to another movie
+                //                        TODO : Navigate to another view
             }, label: {
                 Text("Create trader account")
             })

@@ -41,12 +41,13 @@ class RegistrationViewModel : ObservableObject{
         }
         
         if(userResponse.email != nil){
-            let authenticationResponse  = await EmailManager().mailOTPPassword(email: userResponse.email!)
-            if(!authenticationResponse.isEmpty){
-                DispatchQueue.main.async {[weak self] in
-                    self?.authenticationKey = authenticationResponse
-                    self?.userDetail = userResponse
-                    self?.navigateToOtpPage = self?.authenticationKey != "-1"
+            if let authenticationResponse  = await EmailManager().mailOTPPassword(email: userResponse.email!){
+                DispatchQueue.main.async {
+                    DispatchQueue.main.async {[weak self] in
+                        self?.authenticationKey = authenticationResponse
+                        self?.userDetail = userResponse
+                        self?.navigateToOtpPage = self?.authenticationKey != "-1"
+                    }
                 }
             }
         }

@@ -21,6 +21,7 @@ struct OTPView: View {
         NavigationStack{
             
             Navigator.navigate(bindingBoolean: $navigateMainView, destination: MainView())
+                .isDetailLink(false)
             
             VStack{
                 Spacer()
@@ -64,7 +65,7 @@ struct OTPView: View {
         )
         do{
             let userJSON = try JSONEncoder().encode(user)
-            UserDefaults.standard.setValue(userJSON, forKey: Constants.AS_IS_LOGGED_IN)
+            UserDefaults.standard.setValue(userJSON, forKey: Constants.AS_LOGGED_IN_USER)
             return true
         }catch{
             return false
@@ -72,8 +73,3 @@ struct OTPView: View {
     }
     
 }
-//
-//struct OTPView_Previews: PreviewProvider {
-//    static var previews: some View {
-//    }
-//}
