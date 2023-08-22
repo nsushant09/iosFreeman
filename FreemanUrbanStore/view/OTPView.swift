@@ -9,9 +9,12 @@ import SwiftUI
 
 struct OTPView: View {
     
+    let authenticationKey : String
+    let user : User
     private let customView : CustomViews = CustomViews.instance
-    @State var otpValue : String = ""
     
+    @State var otpValue : String = ""
+    @State var invalidAttempt = false
     @State var navigateMainView = false
     
     var body: some View {
@@ -33,8 +36,16 @@ struct OTPView: View {
                     .padding(.leading)
                 
                 customView.inputTextField(title: "OTP", bindingString: $otpValue)
+                
+                if invalidAttempt {
+                    customView.errorMessage("Invalid One Time Password")
+                }
+                
                 customView.darkFilledButton(action: {
-                    navigateMainView = true
+                    invalidAttempt = authenticationKey != otpValue
+                    if(authenticationKey == otpValue){
+                        navigateMainView = setLoggedInDetails()
+                    }
                 }, label: {
                     Text("Verify")
                         .frame(maxWidth: .infinity)
@@ -45,10 +56,24 @@ struct OTPView: View {
             .padding(.all)
         }
     }
-}
-
-struct OTPView_Previews: PreviewProvider {
-    static var previews: some View {
-        OTPView()
+    
+    func setLoggedInDetails() -> Bool{
+        UserDefaults.standard.setValue(
+            true,
+            forKey: Constants.AS_IS_LOGGED_IN
+        )
+        do{
+            let userJSON = try JSONEncoder().encode(user)
+            UserDefaults.standard.setValue(userJSON, forKey: Constants.AS_IS_LOGGED_IN)
+            return true
+        }catch{
+            return false
+        }
     }
+    
 }
+//
+//struct OTPView_Previews: PreviewProvider {
+//    static var previews: some View {
+//    }
+//}

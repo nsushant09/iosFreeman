@@ -27,12 +27,13 @@ struct CustomViews{
             .padding(.all)
             .background(CustomColors.fieldColor)
             .cornerRadius(8)
-            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
             .textInputAutocapitalization(TextInputAutocapitalization.never)
             .autocorrectionDisabled()
+            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
     
     func inputSecureField(title : String, bindingString : Binding<String>) -> some View{
+        @State var editing = false
         return SecureField(title, text : bindingString)
             .tint(CustomColors.primary)
             .font(.system(size: 16, weight: .semibold, design: .rounded))
@@ -40,9 +41,9 @@ struct CustomViews{
             .padding(.all)
             .background(CustomColors.fieldColor)
             .cornerRadius(8)
-            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
             .textInputAutocapitalization(TextInputAutocapitalization.never)
             .autocorrectionDisabled()
+            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
     
     func darkOutlinedButton(action :@escaping () -> Void, label : () -> some View) -> some View{
@@ -68,8 +69,8 @@ struct CustomViews{
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
     
-    func datePicker(title : String, selection : Binding<Date>,displayedComponents : DatePickerComponents ) -> some View{
-        return DatePicker(title, selection: selection, displayedComponents: displayedComponents)
+    func datePicker(title : String, selection : Binding<Date>,displayedComponents : DatePickerComponents, inRange : PartialRangeThrough<Date> ) -> some View{
+        return DatePicker(title, selection: selection,in : inRange,  displayedComponents: displayedComponents)
             .tint(CustomColors.primary)
             .font(.system(size: 16, weight: .semibold, design: .rounded))
             .foregroundColor(Color.gray.opacity(0.6))
@@ -80,7 +81,6 @@ struct CustomViews{
     }
     
     func menu(title : String,selection : Binding<String>, options : [String]) -> some View{
-        
         return HStack{
             Text(title)
             Spacer()

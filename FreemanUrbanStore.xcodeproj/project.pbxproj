@@ -26,7 +26,6 @@
 		529FF71B2A911EDA00F92335 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF71A2A911EDA00F92335 /* ProductDetailView.swift */; };
 		52A2BA782A8E1D3800B41350 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2BA772A8E1D3800B41350 /* SliderView.swift */; };
 		52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */; };
-		52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A544102A8BF229004BCFA9 /* ContentView.swift */; };
 		52A544132A8BF22A004BCFA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A544122A8BF22A004BCFA9 /* Assets.xcassets */; };
 		52A544162A8BF22A004BCFA9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52A544152A8BF22A004BCFA9 /* Preview Assets.xcassets */; };
 		52A544182A8BF22A004BCFA9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A544172A8BF22A004BCFA9 /* Persistence.swift */; };
@@ -35,6 +34,10 @@
 		52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442C2A8BF628004BCFA9 /* CustomColors.swift */; };
 		52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */; };
 		52AC6B922A93669C00FB2722 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AC6B912A93669C00FB2722 /* Result.swift */; };
+		52AE51E42A94C2BC008BD3B7 /* TaskPerformerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE51E32A94C2BC008BD3B7 /* TaskPerformerFactory.swift */; };
+		52AE51E62A94C2DE008BD3B7 /* PerformableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE51E52A94C2DE008BD3B7 /* PerformableTask.swift */; };
+		52AE51E82A94C2F6008BD3B7 /* GETTaskPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE51E72A94C2F6008BD3B7 /* GETTaskPerformer.swift */; };
+		52AE51EA2A94C305008BD3B7 /* POSTTaskPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AE51E92A94C305008BD3B7 /* POSTTaskPerformer.swift */; };
 		52C570522A8E4C5700048465 /* KeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C570512A8E4C5700048465 /* KeyValue.swift */; };
 		52C570542A8E5AE500048465 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C570532A8E5AE500048465 /* ProductCardView.swift */; };
 		52C570562A8E5BBC00048465 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C570552A8E5BBC00048465 /* AsyncImageView.swift */; };
@@ -50,6 +53,7 @@
 		52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435EB2A8E021F00547A77 /* OTPView.swift */; };
 		52E435EE2A8E098400547A77 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E435ED2A8E098400547A77 /* Navigator.swift */; };
 		52E855C12A922B0E007E699B /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E855C02A922B0E007E699B /* ReviewCard.swift */; };
+		52EEF3172A93A23900DBA343 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EEF3162A93A23900DBA343 /* Extensions.swift */; };
 		52F9C90F2A8E8BFE00950418 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9C90E2A8E8BFE00950418 /* Product.swift */; };
 		52F9C9112A8E8C7E00950418 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9C9102A8E8C7E00950418 /* Category.swift */; };
 		52F9C9132A8E8D0900950418 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9C9122A8E8D0900950418 /* Review.swift */; };
@@ -76,7 +80,6 @@
 		52A2BA772A8E1D3800B41350 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		52A5440B2A8BF229004BCFA9 /* FreemanUrbanStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreemanUrbanStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreemanUrbanStoreApp.swift; sourceTree = "<group>"; };
-		52A544102A8BF229004BCFA9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52A544122A8BF22A004BCFA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52A544152A8BF22A004BCFA9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52A544172A8BF22A004BCFA9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -85,6 +88,10 @@
 		52A5442C2A8BF628004BCFA9 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImages.swift; sourceTree = "<group>"; };
 		52AC6B912A93669C00FB2722 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		52AE51E32A94C2BC008BD3B7 /* TaskPerformerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPerformerFactory.swift; sourceTree = "<group>"; };
+		52AE51E52A94C2DE008BD3B7 /* PerformableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformableTask.swift; sourceTree = "<group>"; };
+		52AE51E72A94C2F6008BD3B7 /* GETTaskPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETTaskPerformer.swift; sourceTree = "<group>"; };
+		52AE51E92A94C305008BD3B7 /* POSTTaskPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSTTaskPerformer.swift; sourceTree = "<group>"; };
 		52C570512A8E4C5700048465 /* KeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValue.swift; sourceTree = "<group>"; };
 		52C570532A8E5AE500048465 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		52C570552A8E5BBC00048465 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		52E435EB2A8E021F00547A77 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
 		52E435ED2A8E098400547A77 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		52E855C02A922B0E007E699B /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
+		52EEF3162A93A23900DBA343 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		52F9C90E2A8E8BFE00950418 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		52F9C9102A8E8C7E00950418 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		52F9C9122A8E8D0900950418 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -162,7 +170,6 @@
 				52A544232A8BF24C004BCFA9 /* data */,
 				52A544212A8BF23B004BCFA9 /* view */,
 				52A5440E2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift */,
-				52A544102A8BF229004BCFA9 /* ContentView.swift */,
 				52A544122A8BF22A004BCFA9 /* Assets.xcassets */,
 				52A544172A8BF22A004BCFA9 /* Persistence.swift */,
 				52A544192A8BF22A004BCFA9 /* FreemanUrbanStore.xcdatamodeld */,
@@ -253,6 +260,7 @@
 				52A5442E2A8BFAAD004BCFA9 /* CustomImages.swift */,
 				527400D82A8CA22000053D64 /* CustomViews.swift */,
 				52E435ED2A8E098400547A77 /* Navigator.swift */,
+				52EEF3162A93A23900DBA343 /* Extensions.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -270,9 +278,21 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		52AE51E22A94C2AB008BD3B7 /* TaskPerformer */ = {
+			isa = PBXGroup;
+			children = (
+				52AE51E32A94C2BC008BD3B7 /* TaskPerformerFactory.swift */,
+				52AE51E52A94C2DE008BD3B7 /* PerformableTask.swift */,
+				52AE51E72A94C2F6008BD3B7 /* GETTaskPerformer.swift */,
+				52AE51E92A94C305008BD3B7 /* POSTTaskPerformer.swift */,
+			);
+			path = TaskPerformer;
+			sourceTree = "<group>";
+		};
 		52CC17432A921109004B18C4 /* HTTPRequestExecutor */ = {
 			isa = PBXGroup;
 			children = (
+				52AE51E22A94C2AB008BD3B7 /* TaskPerformer */,
 				52CC17412A9210E0004B18C4 /* HTTPMethods.swift */,
 				52CC17442A92116E004B18C4 /* HTTPRequestExecutor.swift */,
 				52AC6B912A93669C00FB2722 /* Result.swift */,
@@ -352,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */,
+				52AE51EA2A94C305008BD3B7 /* POSTTaskPerformer.swift in Sources */,
 				527BC2562A932E3300ADF7AF /* CategoryRepo.swift in Sources */,
 				52C570522A8E4C5700048465 /* KeyValue.swift in Sources */,
 				52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */,
@@ -361,6 +382,7 @@
 				52F9C9132A8E8D0900950418 /* Review.swift in Sources */,
 				52E435EE2A8E098400547A77 /* Navigator.swift in Sources */,
 				529FF7192A911D1300F92335 /* FavouriteView.swift in Sources */,
+				52EEF3172A93A23900DBA343 /* Extensions.swift in Sources */,
 				52A544182A8BF22A004BCFA9 /* Persistence.swift in Sources */,
 				5298E3922A938C8A0023FD80 /* HTTPStatusMessage.swift in Sources */,
 				52CC17452A92116E004B18C4 /* HTTPRequestExecutor.swift in Sources */,
@@ -372,7 +394,7 @@
 				52E435E02A8DFEEF00547A77 /* HomeView.swift in Sources */,
 				52AC6B922A93669C00FB2722 /* Result.swift in Sources */,
 				52472B582A90EDEF0080F93A /* CircularCategoriesView.swift in Sources */,
-				52A544112A8BF229004BCFA9 /* ContentView.swift in Sources */,
+				52AE51E42A94C2BC008BD3B7 /* TaskPerformerFactory.swift in Sources */,
 				52F9C90F2A8E8BFE00950418 /* Product.swift in Sources */,
 				527400DB2A8CA29E00053D64 /* RegistrationView.swift in Sources */,
 				527BC25D2A93309500ADF7AF /* HomeViewModel.swift in Sources */,
@@ -383,10 +405,12 @@
 				52A5442D2A8BF628004BCFA9 /* CustomColors.swift in Sources */,
 				52E855C12A922B0E007E699B /* ReviewCard.swift in Sources */,
 				52E435E42A8DFEFC00547A77 /* AccountView.swift in Sources */,
+				52AE51E62A94C2DE008BD3B7 /* PerformableTask.swift in Sources */,
 				52472B5A2A90F9CF0080F93A /* CartProductView.swift in Sources */,
 				527400D92A8CA22000053D64 /* CustomViews.swift in Sources */,
 				52E435EA2A8E021700547A77 /* ForgotPasswordNewPassView.swift in Sources */,
 				52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */,
+				52AE51E82A94C2F6008BD3B7 /* GETTaskPerformer.swift in Sources */,
 				527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */,
 				527BC2592A932EA800ADF7AF /* CategoryRepoImpl.swift in Sources */,
 				52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */,

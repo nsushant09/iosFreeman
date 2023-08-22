@@ -25,18 +25,20 @@ class LoginViewModel : ObservableObject{
             .build()
             .executeAsync()
         
-        DispatchQueue.main.async {
-            self.user = ResultManager.extractSuccessValue(from: result)
-            self.errorMessage = ResultManager.extractFailureValue(from: result)
+        DispatchQueue.main.async {[weak self] in
+            self?.user = ResultManager.extractSuccessValue(from: result)
+            self?.errorMessage = ResultManager.extractFailureValue(from: result)
         }
         
         if(user?.email != nil){
             authenticationKey = await EmailManager().mailOTPPassword(email: user!.email!)
-            return authenticationKey != "-1"
-            
+            return authenticationKey != "-1";
         }
-        
         return false;
+    }
+    
+    func getUser() -> User{
+        return user!
     }
     
 }

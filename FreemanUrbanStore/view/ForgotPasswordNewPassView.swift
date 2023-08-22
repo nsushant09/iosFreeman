@@ -20,10 +20,12 @@ struct ForgotPasswordNewPassView: View {
         NavigationStack{
             VStack{
                 
-                Navigator.navigate(
-                    bindingBoolean: $navigateOTPView,
-                    destination: OTPView()
-                )
+//                Navigator.navigate(
+//                    bindingBoolean: $navigateOTPView,
+//                    destination: OTPView(
+//                        authenticationKey: "123456"
+//                    )
+//                )
                 
                 Spacer()
                 

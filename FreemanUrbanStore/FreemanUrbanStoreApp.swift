@@ -13,8 +13,13 @@ struct FreemanUrbanStoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if(UserDefaults.standard.bool(forKey: Constants.AS_IS_LOGGED_IN)){
+                MainView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }else{
+                LoginView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }

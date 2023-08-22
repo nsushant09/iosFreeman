@@ -11,6 +11,8 @@ struct RegistrationView: View {
     
     private let customView = CustomViews.instance
     
+    @StateObject var registrationViewModel = RegistrationViewModel()
+    
     @State var fullName : String = ""
     @State var phoneNumber : String = ""
     @State var dateOfBirth : Date = Date()
@@ -21,10 +23,19 @@ struct RegistrationView: View {
     @State var userDetailResponse : User? = nil
     @State var allUsers : [User]? = nil
     
+    @State var navigateToOtpPage = false
+    @State var otpView : OTPView?
+    
     let dateFormatter = DateFormatter()
     
     var body: some View {
         NavigationStack{
+            
+            Navigator.navigate(
+                bindingBoolean: $navigateToOtpPage,
+                destination: otpView
+            )
+            
             ScrollView{
                 VStack{
                     Text("Welcome to Freeman,\nShop With Us")
@@ -32,44 +43,27 @@ struct RegistrationView: View {
                         .font(.system(size: 28, weight: .semibold, design: .monospaced))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 64, trailing: 0))
                     
-                    customView.inputTextField(title: "Full Name", bindingString: $fullName)
-
-                    customView.inputTextField(title: "Phone Number", bindingString: $phoneNumber)
-                    customView.datePicker(title: "Date of Birth", selection: $dateOfBirth, displayedComponents: [.date])
-                    customView.menu(title: "Select Gender", selection : $gender, options: ["Male", "Female"])
-                    customView.inputTextField(title: "Email", bindingString: $email)
-                    customView.inputSecureField(title: "Password", bindingString: $password)
+                    inputFields()
                     
-                    HStack(alignment: .center, content: {
-                        Text("Already have an account?")
-                            .font(.system(size: 14, weight: .regular, design: .rounded))
-                        
-                        NavigationLink(destination: LoginView.getInstance(), label: {
-                            Text("Login")
-                                .font(.system(size: 16, weight: .semibold, design: .rounded))
-                                .underline()
-                        })
-                    })
-                    .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+                    if(!registrationViewModel.errorMessage.isEmpty){
+                        customView.errorMessage(registrationViewModel.errorMessage)
+                    }
                     
-                    customView.darkFilledButton(action: {
-                        dateFormatter.dateFormat = "yyyy-MM-dd"
-                        
-                        let user = User(id: 0, name: fullName, email: email, gender: gender, password: password, phoneNumber: phoneNumber, dateOfBirth: dateFormatter.string(from : dateOfBirth), role: "user")
-                        
-                        
-                    }, label: {
-                        Text("Create account")
-                    })
-
-                    customView.darkOutlinedButton(action: {
-                    }, label: {
-                        Text("Create trader account")
-                    })
+                    loginOptionText()
+                    processingButtons()
                 }
-                .padding(.all)
+                .padding()
             }
         }
+        .onReceive(registrationViewModel.$navigateToOtpPage, perform: { boolean in
+            if(boolean && registrationViewModel.userDetail != nil){
+                otpView = OTPView(
+                    authenticationKey: registrationViewModel.authenticationKey,
+                    user: registrationViewModel.userDetail!
+                )
+                navigateToOtpPage = boolean
+            }
+        })
         .navigationBarBackButtonHidden(true)
         
     }
@@ -80,6 +74,109 @@ struct RegistrationView: View {
             RegistrationView.instance = RegistrationView()
         }
         return RegistrationView.instance!
+    }
+    
+    func inputFields() -> some View{
+        VStack{
+            customView.inputTextField(
+                title: "Full Name",
+                bindingString: $fullName
+            )
+            
+            
+            customView.inputTextField(
+                title: "Phone Number",
+                bindingString: $phoneNumber
+            )
+            
+            customView.datePicker(
+                title: "Date of Birth",
+                selection: $dateOfBirth,
+                displayedComponents: [.date],
+                inRange: ...Calendar.current.startOfDay(for: Date())
+            )
+            customView.menu(
+                title: "Select Gender",
+                selection : $gender,
+                options: ["Male", "Female"]
+            )
+            
+            customView.inputTextField(
+                title: "Email",
+                bindingString: $email
+            )
+            
+            customView.inputSecureField(
+                title: "Password",
+                bindingString: $password
+            )
+        }
+    }
+    
+    func loginOptionText() -> some View{
+        HStack(alignment: .center, content: {
+            Text("Already have an account?")
+                .font(.system(
+                    size: 14,
+                    weight: .regular,
+                    design: .rounded)
+                )
+            
+            NavigationLink(destination: LoginView.getInstance(), label: {
+                Text("Login")
+                    .font(.system(
+                        size: 16,
+                        weight: .semibold,
+                        design: .rounded)
+                    )
+                    .underline()
+            })
+        })
+        .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+    }
+    
+    func processingButtons() -> some View{
+        VStack{
+            customView.darkFilledButton(action: {
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                
+//                let user = User(
+//                    id: 0,
+//                    name: fullName,
+//                    email: email,
+//                    gender: gender,
+//                    password: password,
+//                    phoneNumber: phoneNumber,
+//                    dateOfBirth: dateFormatter.string(from : dateOfBirth),
+//                    role: "user"
+//                )
+  
+                let user = User(
+                    id: 0,
+                    name: "Sushant Neupane",
+                    email: "nsushant09@gmail.com",
+                    gender : "Male",
+                    password : "Sushant@123",
+                    phoneNumber: "9823579122",
+                    dateOfBirth: "",
+                    role: "User"
+                )
+                
+                
+                Task{
+                    await registrationViewModel.registerUser(user:user)
+                }
+                
+            }, label: {
+                Text("Create account")
+            })
+            
+            customView.darkOutlinedButton(action: {
+                //                        TODO : Navigate to another movie
+            }, label: {
+                Text("Create trader account")
+            })
+        }
     }
 }
 

@@ -15,6 +15,7 @@ struct LoginView: View {
     
     @State var navigateRegistrationView  = false
     @State var navigateOTPView = false
+    @State var otpView : OTPView?
     
     @State var errorMessage = ""
     
@@ -30,7 +31,7 @@ struct LoginView: View {
             
             Navigator.navigate(
                 bindingBoolean: $navigateOTPView,
-                destination: OTPView()
+                destination: otpView
             )
             
             
@@ -54,11 +55,18 @@ struct LoginView: View {
                             email:userEmailField,
                             password:userPasswordField
                         ){
-                            navigateOTPView = true
+                            if(loginViewModel.user != nil){
+                                otpView = OTPView(
+                                    authenticationKey: loginViewModel.authenticationKey,
+                                    user: loginViewModel.user!
+                                )
+                                navigateOTPView = true
+                                errorMessage = "Could not proceed please try again."
+                            }
                         }
                     }
                 }, label: {
-                    Text("Login".uppercased())
+                    Text("Login")
                 })
                 
                 NavigationLink(destination: ForgotPasswordEmailView(), label: {
