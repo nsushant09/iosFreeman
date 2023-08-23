@@ -10,6 +10,10 @@
 		523FC9ED2A95221A0020BB91 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9EC2A95221A0020BB91 /* AddProductView.swift */; };
 		523FC9EF2A9526AE0020BB91 /* ProductCRUDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9EE2A9526AE0020BB91 /* ProductCRUDViewModel.swift */; };
 		523FC9F12A9534D80020BB91 /* ApplicationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9F02A9534D80020BB91 /* ApplicationCache.swift */; };
+		5241A70F2A96399D0014E794 /* CartRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241A70E2A96399D0014E794 /* CartRepo.swift */; };
+		5241A7112A9639AD0014E794 /* CartRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241A7102A9639AD0014E794 /* CartRepoImpl.swift */; };
+		5241A7132A963A8B0014E794 /* FavouriteRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241A7122A963A8B0014E794 /* FavouriteRepo.swift */; };
+		5241A7152A963B9A0014E794 /* FavouriteRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241A7142A963B9A0014E794 /* FavouriteRepoImpl.swift */; };
 		52472B582A90EDEF0080F93A /* CircularCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52472B572A90EDEF0080F93A /* CircularCategoriesView.swift */; };
 		52472B5A2A90F9CF0080F93A /* CartProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52472B592A90F9CF0080F93A /* CartProductView.swift */; };
 		525281472A95E71700AE81FB /* ProductRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525281462A95E71700AE81FB /* ProductRepo.swift */; };
@@ -70,6 +74,10 @@
 		523FC9EC2A95221A0020BB91 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		523FC9EE2A9526AE0020BB91 /* ProductCRUDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCRUDViewModel.swift; sourceTree = "<group>"; };
 		523FC9F02A9534D80020BB91 /* ApplicationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCache.swift; sourceTree = "<group>"; };
+		5241A70E2A96399D0014E794 /* CartRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepo.swift; sourceTree = "<group>"; };
+		5241A7102A9639AD0014E794 /* CartRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepoImpl.swift; sourceTree = "<group>"; };
+		5241A7122A963A8B0014E794 /* FavouriteRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepo.swift; sourceTree = "<group>"; };
+		5241A7142A963B9A0014E794 /* FavouriteRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteRepoImpl.swift; sourceTree = "<group>"; };
 		52472B572A90EDEF0080F93A /* CircularCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularCategoriesView.swift; sourceTree = "<group>"; };
 		52472B592A90F9CF0080F93A /* CartProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProductView.swift; sourceTree = "<group>"; };
 		525281462A95E71700AE81FB /* ProductRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepo.swift; sourceTree = "<group>"; };
@@ -141,8 +149,10 @@
 		527BC2572A932E9B00ADF7AF /* impl */ = {
 			isa = PBXGroup;
 			children = (
+				5241A7142A963B9A0014E794 /* FavouriteRepoImpl.swift */,
 				527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */,
 				525281482A95E9E200AE81FB /* ProductRepoImpl.swift */,
+				5241A7102A9639AD0014E794 /* CartRepoImpl.swift */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -267,6 +277,8 @@
 			children = (
 				527BC2552A932E3300ADF7AF /* CategoryRepo.swift */,
 				525281462A95E71700AE81FB /* ProductRepo.swift */,
+				5241A70E2A96399D0014E794 /* CartRepo.swift */,
+				5241A7122A963A8B0014E794 /* FavouriteRepo.swift */,
 			);
 			path = repo;
 			sourceTree = "<group>";
@@ -405,6 +417,7 @@
 				52F9C9132A8E8D0900950418 /* Review.swift in Sources */,
 				52E435EE2A8E098400547A77 /* Navigator.swift in Sources */,
 				529FF7192A911D1300F92335 /* FavouriteView.swift in Sources */,
+				5241A7132A963A8B0014E794 /* FavouriteRepo.swift in Sources */,
 				525281472A95E71700AE81FB /* ProductRepo.swift in Sources */,
 				52EEF3172A93A23900DBA343 /* Extensions.swift in Sources */,
 				52A544182A8BF22A004BCFA9 /* Persistence.swift in Sources */,
@@ -433,6 +446,7 @@
 				52E855C12A922B0E007E699B /* ReviewCard.swift in Sources */,
 				52E435E42A8DFEFC00547A77 /* AccountView.swift in Sources */,
 				52AE51E62A94C2DE008BD3B7 /* PerformableTask.swift in Sources */,
+				5241A70F2A96399D0014E794 /* CartRepo.swift in Sources */,
 				526EA6832A94E34500B4F9DF /* UserDefaultsManager.swift in Sources */,
 				52472B5A2A90F9CF0080F93A /* CartProductView.swift in Sources */,
 				527400D92A8CA22000053D64 /* CustomViews.swift in Sources */,
@@ -442,6 +456,8 @@
 				527B9FEC2A8CED7200A60DF6 /* LoginViewModel.swift in Sources */,
 				527BC2592A932EA800ADF7AF /* CategoryRepoImpl.swift in Sources */,
 				52A5440F2A8BF229004BCFA9 /* FreemanUrbanStoreApp.swift in Sources */,
+				5241A7112A9639AD0014E794 /* CartRepoImpl.swift in Sources */,
+				5241A7152A963B9A0014E794 /* FavouriteRepoImpl.swift in Sources */,
 				52F9C9112A8E8C7E00950418 /* Category.swift in Sources */,
 				52CC17422A9210E0004B18C4 /* HTTPMethods.swift in Sources */,
 				527B9FF02A8CEEB700A60DF6 /* UserValidator.swift in Sources */,
