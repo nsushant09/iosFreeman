@@ -15,7 +15,7 @@ struct TaskPerformerFactory<ResponseType : Codable> {
         case .PATCH, .POST, .PUT :
             return POSTTaskPerformer<ResponseType>(request: request)
         default :
-            return GETTaskPerformer<ResponseType>(request: request)
+            return POSTTaskPerformer<ResponseType>(request: request)
         }
     }
 }

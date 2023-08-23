@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var mainViewModel = MainViewModel()
+    @State var navigateToLogin = false
     
     init(){
         UITabBar.appearance().backgroundColor = .white
@@ -15,32 +17,46 @@ struct MainView: View {
     }
     
     var body: some View {
-        TabView{
-            getTabItem(
-                view: HomeView(),
-                title: "Discover",
-                image: "house.fill"
+        NavigationStack{
+            
+            Navigator.navigate(
+                bindingBoolean: $navigateToLogin,
+                destination: LoginView()
             )
             
-            getTabItem(view: SearchView(),
-                       title: "Search",
-                       image: "magnifyingglass"
+            TabView{
+                getTabItem(
+                    view: HomeView(),
+                    title: "Discover",
+                    image: "house.fill"
+                )
+                
+                getTabItem(view: SearchView(),
+                           title: "Search",
+                           image: "magnifyingglass"
+                )
+                
+                getTabItem(
+                    view: CartView(),
+                    title: "Cart",
+                    image: "cart.fill"
+                )
+                
+                getTabItem(
+                    view: AccountView(),
+                    title: "Account",
+                    image: "person.fill"
+                )
+            }
+            .onReceive(
+                mainViewModel.$navigateToLogin,
+                perform: {boolean in
+                    navigateToLogin = boolean
+                }
             )
-            
-            getTabItem(
-                view: CartView(),
-                title: "Cart",
-                image: "cart.fill"
-            )
-            
-            getTabItem(
-                view: AccountView(),
-                title: "Account",
-                image: "person.fill"
-            )
+            .tint(.accentColor)
+            .navigationBarBackButtonHidden(true)
         }
-        .tint(.accentColor)
-        .navigationBarBackButtonHidden(true)
     }
 }
 

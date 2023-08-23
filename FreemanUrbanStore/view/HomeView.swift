@@ -77,12 +77,8 @@ struct HomeView: View {
                         
                         ForEach(0..<50){index in
                             ProductCardView(
-                                imageUrl: "https://images.pexels.com/photos/2453658/pexels-photo-2453658.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                                price: "208.33",
-                                title: "MacBook Pro",
-                                category: "Category",
-                                discountedPrice: nil)
-                            
+                                product: ProductDetailView.productMock
+                            )      
                         }
                     })
                     

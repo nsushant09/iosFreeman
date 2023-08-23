@@ -77,7 +77,7 @@ struct RegistrationView: View {
     }
     
     func inputFields() -> some View{
-        VStack{
+        Group{
             customView.inputTextField(
                 title: "Full Name",
                 bindingString: $fullName

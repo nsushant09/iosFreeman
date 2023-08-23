@@ -16,6 +16,7 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     var requestBody : DataType? = nil
     var headers : [String : String]? = nil
     var requestParameters : [String : String]? = nil
+    var contentType : String? = nil
     
     private init(mRequestUrl : String){
         requestUrl = mRequestUrl
@@ -95,7 +96,13 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     }
     
     func applyHeaders(){
-        request?.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        if let contentType = contentType{
+            request?.addValue(contentType, forHTTPHeaderField: "Content-Type")
+        } else {
+            request?.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        }
+        
         headers?.forEach({key, value in
             request?.addValue(value, forHTTPHeaderField: key)
         })
@@ -110,40 +117,46 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     }
     
     class Builder {
-        private var mRequestUrl: String? = nil
-        private var mRequestBody: DataType? = nil
-        private var mHeaders: [String: String]? = nil
-        private var mRequestParameters: [String: String]? = nil
-        private var mHttpMethod: HTTPMethods = .GET
+        private var requestUrl: String? = nil
+        private var requestBody: DataType? = nil
+        private var headers: [String: String]? = nil
+        private var requestParameters: [String: String]? = nil
+        private var httpMethod: HTTPMethods = .GET
+        private var contentType : String? = nil
         
         func setRequestUrl(_ url: String) -> Builder {
-            self.mRequestUrl = url
+            self.requestUrl = url
             return self
         }
         
         func setRequestBody(_ requestBody: DataType) -> Builder {
-            self.mRequestBody = requestBody
+            self.requestBody = requestBody
             return self
         }
         
         func setHeaders(_ headers: [String: String]) -> Builder {
-            self.mHeaders = headers
+            self.headers = headers
             return self
         }
         
         func setRequestParams(_ requestParams: [String: String]) -> Builder {
-            self.mRequestParameters = requestParams
+            self.requestParameters = requestParams
             return self
         }
         
         func setHttpMethod(_ httpMethod: HTTPMethods) -> Builder {
-            self.mHttpMethod = httpMethod
+            self.httpMethod = httpMethod
+            return self
+        }
+        
+        func setContentType(_ contentType : String) -> Builder{
+            self.contentType = contentType
             return self
         }
         
         func build() -> HTTPRequestExecutor<DataType, ResponseType> {
             
-            guard let requestUrl = mRequestUrl else{
+            guard let requestUrl = requestUrl else{
                 fatalError("URL is required.Use .setRequestUrl() to insert the URL.")
             }
             
@@ -151,10 +164,11 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
                 mRequestUrl: requestUrl
             )
             
-            executor.headers = self.mHeaders
-            executor.httpMethod = self.mHttpMethod
-            executor.requestBody = self.mRequestBody
-            executor.requestParameters = self.mRequestParameters
+            executor.headers = self.headers
+            executor.httpMethod = self.httpMethod
+            executor.contentType = self.contentType
+            executor.requestBody = self.requestBody
+            executor.requestParameters = self.requestParameters
             
             return executor
         }

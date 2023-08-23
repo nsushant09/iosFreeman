@@ -32,6 +32,20 @@ struct CustomViews{
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
     
+    func inputTextField(title : String, bindingString : Binding<String>, formatter : Formatter) -> some View{
+        return TextField(title, value : bindingString, formatter: formatter)
+            .tint(CustomColors.primary)
+            .font(.system(size: 16, weight: .semibold, design: .rounded))
+            .foregroundColor(Color.primary)
+            .padding(.all)
+            .background(CustomColors.fieldColor)
+            .cornerRadius(8)
+            .textInputAutocapitalization(TextInputAutocapitalization.never)
+            .autocorrectionDisabled()
+            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+    }
+
+    
     func inputSecureField(title : String, bindingString : Binding<String>) -> some View{
         @State var editing = false
         return SecureField(title, text : bindingString)
@@ -54,7 +68,7 @@ struct CustomViews{
             .foregroundColor(CustomColors.primary)
             .background(Color.white.opacity(0))
             .cornerRadius(8)
-            .overlay(RoundedRectangle(cornerRadius: 16).stroke(CustomColors.primary, lineWidth: 2))
+            .overlay(RoundedRectangle(cornerRadius: 8).stroke(CustomColors.primary, lineWidth: 2))
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
     
@@ -66,6 +80,18 @@ struct CustomViews{
             .foregroundColor(Color.white)
             .background(CustomColors.primary)
             .cornerRadius(8)
+            .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+    }
+    
+    func errorButton(action : @escaping() -> Void, label : () -> some View) -> some View{
+        return Button(action: action, label: label)
+            .font(.system(size: 16, weight: .semibold, design: .rounded))
+            .frame(maxWidth:.infinity)
+            .padding(.all)
+            .foregroundColor(CustomColors.errorColor)
+            .background(CustomColors.errorColor.opacity(0.1))
+            .cornerRadius(16)
+            .overlay(RoundedRectangle(cornerRadius: 16).stroke(CustomColors.errorColor, lineWidth: 2))
             .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
     }
     

@@ -7,9 +7,16 @@
 
 import Foundation
 
-struct CategoryRepoImpl : CategoryRepo{
+class CategoryRepoImpl : CategoryRepo{
+    
+    static private var categories = [Category]()
     
     func getCategories() async -> [Category]?{
+        
+        if(!CategoryRepoImpl.categories.isEmpty){
+            return CategoryRepoImpl.categories
+        }
+        
         let result = await HTTPRequestExecutor<Category, [Category]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/category/all")
@@ -17,12 +24,11 @@ struct CategoryRepoImpl : CategoryRepo{
             .build()
             .executeAsync()
         
-        switch result{
-        case .success(let data):
-            return data
-        case .failure(_):
+        if let categoryResponse = ResultManager.extractSuccessValue(from: result){
+            CategoryRepoImpl.categories = categoryResponse
+            return CategoryRepoImpl.categories
+        }else {
             return nil
         }
     }
-    
 }

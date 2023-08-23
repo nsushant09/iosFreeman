@@ -10,20 +10,16 @@ import SwiftUI
 struct ProductCardView: View {
     private let customView = CustomViews.instance
     
-    let imageUrl : String
-    let price : String
-    let title : String
-    let category : String
-    let discountedPrice : String?
+    let product : Product
     
     var body: some View {
         NavigationStack{
             
-            NavigationLink(destination: {ProductDetailView()}){
+            NavigationLink(destination: {ProductDetailView(product: ProductDetailView.productMock)}){
                 VStack{
                     
                     AsyncImage(
-                        url:URL(string : imageUrl),
+                        url:URL(string : product.imagePath),
                         content : {image in
                             image
                                 .resizable()
@@ -36,13 +32,13 @@ struct ProductCardView: View {
                         })
                     
                     VStack{
-                        Text(title).frame(maxWidth: .infinity, alignment:.leading)
+                        Text(product.name).frame(maxWidth: .infinity, alignment:.leading)
                             .lineLimit(1)
                             .foregroundColor(CustomColors.primary)
                             .font(.system(size:20, weight: .medium, design: .rounded))
                             .kerning(1)
                         
-                        Text(category).frame(maxWidth: .infinity, alignment:.leading)
+                        Text(product.category?.name ?? "").frame(maxWidth: .infinity, alignment:.leading)
                             .lineLimit(1)
                             .foregroundColor(.primary.opacity(0.4))
                             .font(.system(size:12, weight: .medium, design: .serif))
@@ -50,7 +46,7 @@ struct ProductCardView: View {
                         
                         HStack{
                             Text(
-                                discountedPrice == nil ? "$\(price)" : "$\(discountedPrice!)"
+                                product.discountedPrice == nil ? "$\(product.price)" : "$\(product.discountedPrice!)"
                             )
                             .frame(maxWidth: .infinity, alignment:.leading)
                             .lineLimit(1)
@@ -61,7 +57,7 @@ struct ProductCardView: View {
                             Spacer()
                             
                             Text(
-                                discountedPrice == nil ? "" : "$\(price)"
+                                product.discountedPrice == nil ? "" : "$\(product.price)"
                             )
                             .frame(maxWidth: .infinity, alignment:.leading)
                             .lineLimit(1)
@@ -84,7 +80,6 @@ struct ProductCardView: View {
 
 struct ProductCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCardView(imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                        price: "208.33", title: "MacBook Pro", category: "Category", discountedPrice: "200")
+        ProductCardView(product: ProductDetailView.productMock)
     }
 }

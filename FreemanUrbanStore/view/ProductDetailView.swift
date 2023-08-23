@@ -10,21 +10,23 @@ import SwiftUI
 struct ProductDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    
-    let imageUrl = "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    let product : Product
     
     var body: some View {
+        
+        let customView = CustomViews.instance
         
         NavigationStack {
             GeometryReader { geometry in
                 
                 ScrollView{
-                    ZStack{
-                        getProductImage()
-                        getToolbar()
-                            .padding(.top)
-                            .padding(.top)
-                    }
+                    getProductImage()
+                        .overlay{
+                            getToolbar()
+                                .padding(.top)
+                                .padding(.top)
+                        }
+                    
                     VStack{
                         showProductDetails()
                         showDescription()
@@ -32,14 +34,25 @@ struct ProductDetailView: View {
                     }
                     .frame(maxWidth: .infinity, maxHeight:.infinity)
                     .padding(.all)
+                    .padding(.bottom)
                     .background(.white)
                     .cornerRadius(16)
                     .offset(y:-32)
                 }
+                .overlay(alignment:.bottom){
+                    Group{
+                        customView.darkFilledButton(
+                            action: {},
+                            label: {
+                                Text("Add to Cart")
+                            }
+                        )
+                        .padding(.horizontal)
+                        .padding(.bottom)
+                    }.background(.white)
+                }
                 .ignoresSafeArea()
                 
-                
-                //end of scroll veiw
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -47,7 +60,7 @@ struct ProductDetailView: View {
     
     func getProductImage() -> some View{
         return AsyncImage(
-            url: URL(string: imageUrl),
+            url: URL(string: product.imagePath),
             content: { image in
                 image
                     .resizable()
@@ -154,8 +167,6 @@ struct ProductDetailView: View {
         }
     }
     
-    let description = "Wireless headphones have revolutionized the way we experience audio, providing a seamless and convenient way to enjoy music, podcasts, and more. Unlike their wired counterparts, wireless headphones utilize advanced Bluetooth technology to establish a wireless connection with devices such as smartphones, tablets, and laptops. This freedom from tangled cords and cables offers unparalleled mobility and convenience, allowing users to move around unrestricted while staying immersed in their audio world. With impressive battery life and quick charging capabilities, wireless headphones have become an essential companion for daily commutes, workouts, and relaxation sessions. They come in various styles, including over-ear, on-ear, and in-ear options, catering to different preferences for comfort and sound isolation. The continuous advancements in wireless audio technology have led to improved sound quality, enhanced noise cancellation features, and seamless integration with voice assistants, making wireless headphones a symbol of modern audio innovation. Whether you're a music enthusiast, a frequent traveler, or someone who simply values the convenience of wireless technology, these headphones have undoubtedly reshaped the way we enjoy audio content."
-    
     func showDescription() -> some View{
         return VStack{
             Text("Description")
@@ -163,7 +174,7 @@ struct ProductDetailView: View {
                 .foregroundColor(.accentColor)
                 .font(.system(size: 24, weight: .semibold))
             
-            Text(description)
+            Text(product.description)
                 .foregroundColor(.gray)
                 .baselineOffset(-4)
             
@@ -189,10 +200,23 @@ struct ProductDetailView: View {
             }
         }
     }
+    
+    static let productMock = Product(
+        id: 0,
+        name: "HeadPhone",
+        description: "Wireless headphones have revolutionized the way we experience audio, providing a seamless and convenient way to enjoy music, podcasts, and more. Unlike their wired counterparts, wireless headphones utilize advanced Bluetooth technology to establish a wireless connection with devices such as smartphones, tablets, and laptops. This freedom from tangled cords and cables offers unparalleled mobility and convenience, allowing users to move around unrestricted while staying immersed in their audio world. With impressive battery life and quick charging capabilities, wireless headphones have become an essential companion for daily commutes, workouts, and relaxation sessions. They come in various styles, including over-ear, on-ear, and in-ear options, catering to different preferences for comfort and sound isolation. The continuous advancements in wireless audio technology have led to improved sound quality, enhanced noise cancellation features, and seamless integration with voice assistants, making wireless headphones a symbol of modern audio innovation. Whether you're a music enthusiast, a frequent traveler, or someone who simply values the convenience of wireless technology, these headphones have undoubtedly reshaped the way we enjoy audio content.",
+        imagePath:"https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        price: 208.48,
+        stock: 10,
+        category: Category(id: 0, name: "Category", imagePath: "")
+    )
 }
+
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView()
+        ProductDetailView(
+            product : ProductDetailView.productMock
+        )
     }
 }

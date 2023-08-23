@@ -17,7 +17,8 @@ struct CartProductView: View {
     
     var body: some View {
         NavigationStack{
-            NavigationLink(destination:ProductDetailView()){
+            NavigationLink(
+                destination:ProductDetailView(product: ProductDetailView.productMock)){
                 HStack{
                     AsyncImage(
                         url:URL(string : imageUrl),

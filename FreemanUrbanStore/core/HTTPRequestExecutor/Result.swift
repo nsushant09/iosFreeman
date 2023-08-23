@@ -31,4 +31,12 @@ struct ResultManager{
         }
     }
     
+    static func returnData<T>(result : Result<T>) -> (T?, String){
+        guard let data = ResultManager.extractSuccessValue(from: result) else {
+            let errorMessage = ResultManager.extractFailureValue(from: result)
+            return (nil, errorMessage)
+        }
+        return (data, "Success")
+    }
+    
 }

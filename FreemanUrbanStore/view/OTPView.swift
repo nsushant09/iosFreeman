@@ -63,13 +63,7 @@ struct OTPView: View {
             true,
             forKey: Constants.AS_IS_LOGGED_IN
         )
-        do{
-            let userJSON = try JSONEncoder().encode(user)
-            UserDefaults.standard.setValue(userJSON, forKey: Constants.AS_LOGGED_IN_USER)
-            return true
-        }catch{
-            return false
-        }
+        return UserDefaultsManager.storeData(data: user, forKey: Constants.AS_LOGGED_IN_USER)
     }
     
 }

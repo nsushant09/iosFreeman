@@ -7,745 +7,682 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DB00ACBA-00E4-49E6-9F5F-F95C06A1FB5A"
+            uuid = "7BD893E7-B02E-47EF-8891-B174F3DCA5FF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "productById()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7BD893E7-B02E-47EF-8891-B174F3DCA5FF - adc18585651a0d37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productById() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "7BD893E7-B02E-47EF-8891-B174F3DCA5FF - fdecbd7cf9a28120"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.productById() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "7BD893E7-B02E-47EF-8891-B174F3DCA5FF - 3c3aa507e4394339"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productById() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D57A608-53C0-4667-8590-6D40A7DF73DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "productById()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6D57A608-53C0-4667-8590-6D40A7DF73DF - adc18585651a0d37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productById() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "6D57A608-53C0-4667-8590-6D40A7DF73DF - fdecbd7cf9a28120"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.productById() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "6D57A608-53C0-4667-8590-6D40A7DF73DF - 3c3aa507e4394339"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productById() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A42C5CA-B36F-4402-9057-E5033273C138"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
             endingLineNumber = "86"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "productById()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C618561-ABA0-4094-9AA6-3282259375ED"
+            uuid = "738F4E05-1672-4435-9874-5C980D3906EF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "productById()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D52B859F-C768-4C09-B2BC-C3434C61DD33"
+            uuid = "53BE1E34-4F77-43A8-BEC6-2101A23449CA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "087DE6B7-40E1-4821-8F52-44C70A70A206"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "body"
-            landmarkType = "24">
+            landmarkName = "productById()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "28EDE63A-E3B6-4DE4-8C5C-E8838C96EA34"
+            uuid = "E192C2E9-2A64-4BFB-A122-1302A603C60D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "productById()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FD0EF79-9457-45A5-AFA1-0E0938070414"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "productsByUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FD0EF79-9457-45A5-AFA1-0E0938070414 - b6cd766cf2215957"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByUser() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "8FD0EF79-9457-45A5-AFA1-0E0938070414 - c1c1633896ef981"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByUser() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "8FD0EF79-9457-45A5-AFA1-0E0938070414 - 61b6f70423b8d51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByUser() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1335CDE7-DE47-46CB-8355-4D6C92153554"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "productsByUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1335CDE7-DE47-46CB-8355-4D6C92153554 - b6cd766cf2215957"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByUser() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "1335CDE7-DE47-46CB-8355-4D6C92153554 - c1c1633896ef981"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByUser() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "1335CDE7-DE47-46CB-8355-4D6C92153554 - 61b6f70423b8d51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByUser() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "559B6782-53F6-46B0-8214-FC5C0F228E3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "productsByUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A22114B4-FD20-4714-B394-2821FF20AC51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "productsByUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80521A61-2FC2-45A6-8110-BA4F165976A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "productsByUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DAA18C2-72DC-4712-A7D9-D15AC2211155"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "productsByUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "362B2E37-7D06-4188-AC91-DED52EFB77A5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "productsByCategory()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "362B2E37-7D06-4188-AC91-DED52EFB77A5 - 2799c7af960cb7a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByCategory() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "362B2E37-7D06-4188-AC91-DED52EFB77A5 - 87bd3dca0293c92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByCategory() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "362B2E37-7D06-4188-AC91-DED52EFB77A5 - f9c76ef14e64f3a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByCategory() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1DC15D9-9320-4BB6-9F14-A80EDBD6E074"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "productsByCategory()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D1DC15D9-9320-4BB6-9F14-A80EDBD6E074 - 2799c7af960cb7a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByCategory() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "D1DC15D9-9320-4BB6-9F14-A80EDBD6E074 - 87bd3dca0293c92"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByCategory() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "D1DC15D9-9320-4BB6-9F14-A80EDBD6E074 - f9c76ef14e64f3a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.productsByCategory() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1322A8D3-E034-4BFF-BBD4-BDCD972C6C20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "productsByCategory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE68ACD4-C2B4-491E-B391-9289D4D85C96"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "productsByCategory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5CDAA68-6688-4A2D-AA28-26F6AD5BF623"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "productsByCategory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E75E5AF6-0441-4C57-9315-856470B4585D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "productsByCategory()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62C9FDA6-DFB1-4F7B-B879-31A6595581FA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "allProduct()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62C9FDA6-DFB1-4F7B-B879-31A6595581FA - ae2e775d45502030"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.allProduct() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "62C9FDA6-DFB1-4F7B-B879-31A6595581FA - dcfb7f64098affd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FreemanUrbanStore.ProductCrudViewModel.allProduct() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "62C9FDA6-DFB1-4F7B-B879-31A6595581FA - 19e16502f7d5633e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.ProductCrudViewModel.allProduct() async -&gt; ()"
+                  moduleName = "FreemanUrbanStore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99C68BD9-A667-4AED-AD5E-E0F195F9F183"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "28EDE63A-E3B6-4DE4-8C5C-E8838C96EA34 - b6703a95b8fec715"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.inputTextField(title: Swift.String, bindingString: SwiftUI.Binding&lt;Swift.String&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.inputSecureField(title: Swift.String, bindingString: SwiftUI.Binding&lt;Swift.String&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.errorMessage(Swift.String) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.darkFilledButton&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(action: () -&gt; (), label: () -&gt; &#x3c4;_0_0) -&gt; some&gt;&gt;.0, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0, FreemanUrbanStore.ForgotPasswordEmailView&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.darkOutlinedButton&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(action: () -&gt; (), label: () -&gt; &#x3c4;_0_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.0, &lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.1&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.0, &lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.1&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in FreemanUrbanStore.LoginView.body.getter : some"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/view/LoginView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "28EDE63A-E3B6-4DE4-8C5C-E8838C96EA34 - 91c462d582132a19"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.inputTextField(title: Swift.String, bindingString: SwiftUI.Binding&lt;Swift.String&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.inputSecureField(title: Swift.String, bindingString: SwiftUI.Binding&lt;Swift.String&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.errorMessage(Swift.String) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.darkFilledButton&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(action: () -&gt; (), label: () -&gt; &#x3c4;_0_0) -&gt; some&gt;&gt;.0, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0, FreemanUrbanStore.ForgotPasswordEmailView&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.darkOutlinedButton&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(action: () -&gt; (), label: () -&gt; &#x3c4;_0_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.0, &lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.1&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.0, &lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.1&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in FreemanUrbanStore.LoginView.body.getter : some"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/view/LoginView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "28EDE63A-E3B6-4DE4-8C5C-E8838C96EA34 - 438ed63a12c70317"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.inputTextField(title: Swift.String, bindingString: SwiftUI.Binding&lt;Swift.String&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.inputSecureField(title: Swift.String, bindingString: SwiftUI.Binding&lt;Swift.String&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.errorMessage(Swift.String) -&gt; some&gt;&gt;.0&gt;, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.darkFilledButton&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(action: () -&gt; (), label: () -&gt; &#x3c4;_0_0) -&gt; some&gt;&gt;.0, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.EdgeInsets) -&gt; some&gt;&gt;.0, FreemanUrbanStore.ForgotPasswordEmailView&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of FreemanUrbanStore.CustomViews.darkOutlinedButton&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(action: () -&gt; (), label: () -&gt; &#x3c4;_0_0) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.0, &lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.1&gt;, SwiftUI.NavigationLink&lt;&lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.0, &lt;&lt;opaque return type of static FreemanUrbanStore.Navigator.navigate&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.View&gt;(bindingBoolean: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: &#x3c4;_0_0) -&gt; SwiftUI.NavigationLink&lt;some, some&gt;&gt;&gt;.1&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in FreemanUrbanStore.LoginView.body.getter : some"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/view/LoginView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
+            landmarkName = "allProduct()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7DDD7D81-6E97-49FD-856A-3E39737BBEFB"
+            uuid = "CE7F5212-F869-4162-91D2-F61D2DC9E910"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9618F6E-92BE-46DE-BDFD-F083E160B799"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/view/LoginView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8686C057-7C56-4C47-B0F6-DF2897BE0CB8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "loginUser(email:password:)"
+            landmarkName = "allProduct()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8686C057-7C56-4C47-B0F6-DF2897BE0CB8 - 56e7eb39bb7f77df"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "540">
-               </Location>
-               <Location
-                  uuid = "8686C057-7C56-4C47-B0F6-DF2897BE0CB8 - 56e7eb39bb7f77df"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "416">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED4F31C3-863B-4E77-924C-C9897C6C2E81"
+            uuid = "D2D4460F-6A41-41B6-9801-1469D8BC2C67"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
+            filePath = "FreemanUrbanStore/viewmodel/ProductCRUDViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "loginUser(email:password:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "allProduct()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "ED4F31C3-863B-4E77-924C-C9897C6C2E81 - 56e7eb39bb7f77fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "736">
-               </Location>
-               <Location
-                  uuid = "ED4F31C3-863B-4E77-924C-C9897C6C2E81 - 56e7eb39bb7f77fc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "612">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F3BBC676-11B9-475B-9CEF-210DCEE04F34"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "loginUser(email:password:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F3BBC676-11B9-475B-9CEF-210DCEE04F34 - f3789b4a0d9568d7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "88">
-               </Location>
-               <Location
-                  uuid = "F3BBC676-11B9-475B-9CEF-210DCEE04F34 - f3789b4a0d9568d7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "320">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "403FF1E6-2029-4C3B-AA77-1CC8EC3CBC17"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "loginUser(email:password:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "403FF1E6-2029-4C3B-AA77-1CC8EC3CBC17 - f3789b4a0d9568b6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "240">
-               </Location>
-               <Location
-                  uuid = "403FF1E6-2029-4C3B-AA77-1CC8EC3CBC17 - f3789b4a0d9568b6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "592">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9484CB8E-8124-4695-8F31-90DC18C80A3F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "sendOTPEmail(userResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9484CB8E-8124-4695-8F31-90DC18C80A3F - 56e7eb39bb7f75ad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "2164">
-               </Location>
-               <Location
-                  uuid = "9484CB8E-8124-4695-8F31-90DC18C80A3F - c6cd92224b7621ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "760">
-               </Location>
-               <Location
-                  uuid = "9484CB8E-8124-4695-8F31-90DC18C80A3F - 4b12360a34859b73"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BE6E20C1-9BC5-4F45-B8CC-5AFB4AF1F9FA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "sendOTPEmail(userResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BE6E20C1-9BC5-4F45-B8CC-5AFB4AF1F9FA - c6cd92224b76218a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "696">
-               </Location>
-               <Location
-                  uuid = "BE6E20C1-9BC5-4F45-B8CC-5AFB4AF1F9FA - 4b12360a34859b52"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "68CF39F3-8948-4837-AF40-9B5BFB449461"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "sendOTPEmail(userResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "68CF39F3-8948-4837-AF40-9B5BFB449461 - c6cd92224b7621e9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "592">
-               </Location>
-               <Location
-                  uuid = "68CF39F3-8948-4837-AF40-9B5BFB449461 - 9751926e4c526878"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  uuid = "68CF39F3-8948-4837-AF40-9B5BFB449461 - 4b12360a34859b31"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F19C0A12-5EEF-4102-8AA4-C0DD208CBA27"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "sendOTPEmail(userResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F19C0A12-5EEF-4102-8AA4-C0DD208CBA27 - c56ca0c2a00cd062"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "476">
-               </Location>
-               <Location
-                  uuid = "F19C0A12-5EEF-4102-8AA4-C0DD208CBA27 - 44a89c19deddad5f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "F19C0A12-5EEF-4102-8AA4-C0DD208CBA27 - 571c75bc13e1c8c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "F19C0A12-5EEF-4102-8AA4-C0DD208CBA27 - 9751926e4c526859"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "F19C0A12-5EEF-4102-8AA4-C0DD208CBA27 - 9751926e4c526859"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "616">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E8D6E85A-E24A-4307-9553-199BD4C8760B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "sendOTPEmail(userResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E8D6E85A-E24A-4307-9553-199BD4C8760B - c56ca0c2a00cd1bd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "232">
-               </Location>
-               <Location
-                  uuid = "E8D6E85A-E24A-4307-9553-199BD4C8760B - 44a89c19deddac80"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  uuid = "E8D6E85A-E24A-4307-9553-199BD4C8760B - 44a89c19deddac80"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "168">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C7C2E230-C19A-4E8E-B0ED-310B8C031954"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "sendOTPEmail(userResponse:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C7C2E230-C19A-4E8E-B0ED-310B8C031954 - 56e7eb39bb7f756b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "3108">
-               </Location>
-               <Location
-                  uuid = "C7C2E230-C19A-4E8E-B0ED-310B8C031954 - c6cd92224b76216d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for FreemanUrbanStore.LoginViewModel.loginUser(email: Swift.String, password: Swift.String) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "1080">
-               </Location>
-               <Location
-                  uuid = "C7C2E230-C19A-4E8E-B0ED-310B8C031954 - 4b12360a34859b94"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in FreemanUrbanStore.LoginViewModel.sendOTPEmail(userResponse: FreemanUrbanStore.User) async -&gt; ()"
-                  moduleName = "FreemanUrbanStore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/test/Dev/iOS/iosProjects/FreemanUrbanStore/FreemanUrbanStore/viewmodel/LoginViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "476">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
