@@ -45,7 +45,8 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         let task = URLSession.shared.dataTask(with: request!){data, urlResponse, error in
             guard let data = data, error == nil else {return}
             do {
-                let response = try JSONDecoder().decode(ResponseType.self, from: data)
+                let response = try JSONDecoder()
+                    .decode(ResponseType.self, from: data)
                 completion(response, nil)
             } catch {
                 completion(nil, error)
@@ -71,7 +72,11 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
         applyRequestBody()
         
         do{
-            let taskPerformer = TaskPerformerFactory<ResponseType>.getTaskPerformer(httpMethod: httpMethod, request: request!)
+            let taskPerformer = TaskPerformerFactory<ResponseType>
+                .getTaskPerformer(
+                    httpMethod: httpMethod,
+                    request: request!
+                )
             return try await taskPerformer.performTaskAsync()
         }catch{
             return .failure("Could not perform network call")

@@ -12,6 +12,5 @@ struct Review : Identifiable, Codable, Hashable{
     var description : String
     var rating : Int
     var date : String
-    var username : String
-    
+    var user : User?
 }

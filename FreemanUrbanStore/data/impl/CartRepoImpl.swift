@@ -8,6 +8,10 @@
 import Foundation
 
 class CartRepoImpl : CartRepo{
+    
+    func resolveAmbiguity(){}
+    
+    
     func addItemToCart(productId: Int, userId: Int) async -> ([Product]?, String) {
         let result = await HTTPRequestExecutor<Product, [Product]>
             .Builder()
@@ -51,6 +55,7 @@ class CartRepoImpl : CartRepo{
         
         return ResultManager.returnData(result: result)
     }
+    
     
     
 }

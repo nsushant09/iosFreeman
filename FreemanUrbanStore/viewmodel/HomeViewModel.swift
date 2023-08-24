@@ -8,16 +8,31 @@
 import Foundation
 
 class HomeViewModel : ObservableObject{
-    private let categoryRepo  = CategoryRepoImpl()
+    
+    private let productsRepo : ProductRepo = ProductRepoImpl()
+    private let categoryRepo  : CategoryRepo = CategoryRepoImpl()
+    
+    @Published var products : [Product] = [Product]()
     @Published var categories : [Category] = [Category]()
     
-    func fetchCategoriesAsync() async{
+    func fetchCategories() async{
         if(!categories.isEmpty) {return}
         
         if let categories = await categoryRepo.getCategories(){
-            DispatchQueue.main.async {
-                self.categories = categories
+            DispatchQueue.main.async {[weak self] in
+                self?.categories = categories
             }
         }
     }
+    
+    func fetchProducts() async{
+        if(!products.isEmpty) {return}
+        let (products, _) = await productsRepo.allProducts()
+        if let products = products {
+            DispatchQueue.main.async {[weak self] in
+                self?.products = products
+            }
+        }
+    }
+    
 }

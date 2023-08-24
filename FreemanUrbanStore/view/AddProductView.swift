@@ -82,10 +82,6 @@ struct AddProductView: View {
                 }
                 .onAppear{
                     Task{
-                        await viewModel.productById()
-//                        await viewModel.productsByCategory()
-//                        await viewModel.productsByUser()
-//                        await viewModel.allProduct()
                     }
                 }
                 .padding()

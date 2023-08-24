@@ -8,9 +8,9 @@
 import Foundation
 
 protocol FavouriteRepo{
-    func addItemToFavourite(productId : Int, userId : Int) async -> ([Product]?, String)
+    func getAllProductFromFavourite(userId : Int) async -> ([Product]?, String)
     
     func removeItemFromFavourite(productId : Int, userId : Int) async -> ([Product]?, String)
     
-    func getAllProductFromFavourite(userId : Int) async -> ([Product]?, String)
+    func addItemToFavourite(productId : Int, userId : Int) async -> ([Product]?, String)
 }

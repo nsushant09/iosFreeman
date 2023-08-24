@@ -10,11 +10,20 @@ import SwiftUI
 struct ProductDetailView: View {
     
     @Environment(\.presentationMode) var presentationMode
-    let product : Product
     
+    let product : Product
+    let customView = CustomViews.instance
+    
+    @StateObject var viewModel : ProductDetailViewModel
+    
+    @State var favouriteIcon = "heart"
+    
+    init(mProduct : Product){
+        product = mProduct
+        self._viewModel = StateObject(wrappedValue: .init(mProduct: mProduct))
+    }
+
     var body: some View {
-        
-        let customView = CustomViews.instance
         
         NavigationStack {
             GeometryReader { geometry in
@@ -40,22 +49,24 @@ struct ProductDetailView: View {
                     .offset(y:-32)
                 }
                 .overlay(alignment:.bottom){
-                    Group{
-                        customView.darkFilledButton(
-                            action: {},
-                            label: {
-                                Text("Add to Cart")
-                            }
-                        )
-                        .padding(.horizontal)
-                        .padding(.bottom)
-                    }.background(.white)
+                    cartButton()
                 }
                 .ignoresSafeArea()
                 
             }
         }
+        .onAppear{
+            onAppear()
+        }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    func onAppear(){
+        Task{
+            await viewModel.fetchCart()
+            await viewModel.fetchFavourite()
+            await viewModel.fetchReviews()
+        }
     }
     
     func getProductImage() -> some View{
@@ -76,6 +87,45 @@ struct ProductDetailView: View {
         )
         
     }
+    
+    func cartButton() -> some View{
+        Group{
+            customView.darkFilledButton(
+                action: {
+                    cartButtonAction()
+                },
+                label: {
+                    cartButtonLabel()
+                }
+            )
+            .padding(.horizontal)
+            .padding(.bottom)
+        }.background(.white)
+    }
+    
+    func cartButtonAction(){
+        if(viewModel.isAddedToCart){
+            Task{
+                await viewModel.addToCart()
+            }
+        }else{
+            Task{
+                await viewModel.removeFromCart()
+            }
+        }
+    }
+    
+    func cartButtonLabel() -> some View{
+        return Group{
+            if(viewModel.isAddedToCart){
+                Text("Remove From Cart")
+            }else{
+                Text("Add To Cart")
+            }
+        }
+    }
+    
+    
     
     func getToolbar() -> some View{
         return HStack{
@@ -100,7 +150,7 @@ struct ProductDetailView: View {
                         .font(.title3)
                 )
                 .onTapGesture {
-                    presentationMode.wrappedValue.dismiss()
+                    //TODO : Share
                 }
                 .padding(.trailing, 8)
             
@@ -108,32 +158,44 @@ struct ProductDetailView: View {
                 .frame(width: 48, height: 48)
                 .foregroundColor(CustomColors.fieldColor)
                 .overlay(
-                    Image(systemName: "heart")
+                    Image(systemName: favouriteIcon)
                         .font(.title3)
                 )
                 .onTapGesture {
-                    presentationMode.wrappedValue.dismiss()
+                    toggleFavourites()
                 }
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.all)
     }
     
+    func toggleFavourites(){
+        withAnimation{
+            if(favouriteIcon == "heart"){
+                favouriteIcon = "heart.fill"
+                Task{await viewModel.addToFavourites()}
+            }else{
+                favouriteIcon = "heart"
+                Task{await viewModel.removeFromFavourites()}
+            }
+        }
+    }
+    
     func showProductDetails() -> some View{
         return VStack{
             
-            Text("Wireless Headphones")
+            Text(product.name)
                 .frame(maxWidth: .infinity, alignment:.leading)
                 .font(.system(size: 24, weight: .medium, design: .default))
                 .baselineOffset(-4)
             
-            Text("$208.48")
+            Text("$\(product.price.toString())")
                 .frame(maxWidth: .infinity, alignment:.leading)
                 .font(.system(size: 24, weight: .medium, design: .rounded))
                 .baselineOffset(-4)
             
             
-            Text("Category")
+            Text("\(product.category?.name ?? "")")
                 .frame(maxWidth: .infinity, alignment:.leading)
                 .font(.system(size: 14, weight: .light, design: .monospaced))
                 .baselineOffset(-4)
@@ -148,13 +210,13 @@ struct ProductDetailView: View {
                                 .foregroundColor(.white)
                                 .font(.system(size: 12))
                             
-                            Text("4.8")
+                            Text(viewModel.averageReviewRating.toString())
                                 .foregroundColor(.white)
                                 .font(.system(size: 12))
                         }
                     })
                 
-                Text("(320 Review)")
+                Text("(\(viewModel.reviews.count) Review)")
                     .font(.system(size: 12))
                     .foregroundColor(.gray.opacity(0.6))
             }
@@ -191,12 +253,13 @@ struct ProductDetailView: View {
                 .foregroundColor(.accentColor)
                 .font(.system(size: 24, weight: .semibold))
             
-            ForEach(0..<5){index in
+            ForEach(viewModel.reviews){review in
                 ReviewCard(
-                    username : "Sushant Neupane",
-                    rating: 5,
-                    date : "08/03/2023",
-                    description: "Your stream is still running. We've pause this preview to save your resources.")
+                    username : review.user?.name ?? "",
+                    rating: review.rating,
+                    date : review.date,
+                    description: review.description
+                )
             }
         }
     }
@@ -216,7 +279,7 @@ struct ProductDetailView: View {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailView(
-            product : ProductDetailView.productMock
+            mProduct : ProductDetailView.productMock
         )
     }
 }

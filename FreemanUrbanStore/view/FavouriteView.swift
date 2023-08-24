@@ -9,7 +9,9 @@ import SwiftUI
 
 struct FavouriteView: View {
     
+    @StateObject var viewModel = FavouriteViewModel()
     @Environment(\.presentationMode) var presentationMode
+    
     let justForYouGridColumns : [GridItem] = [
         GridItem(.flexible(minimum: 0, maximum: .infinity), spacing:16),
         GridItem(.flexible(minimum: 0, maximum: .infinity), spacing:16),
@@ -42,12 +44,14 @@ struct FavouriteView: View {
             ScrollView{
                 VStack{
                     
-                    ForEach(0..<3){index in
+                    ForEach(viewModel.favouriteProducts){product in
                         CartProductView(
-                            imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                            title: "Title",
-                            category: "Category",
-                            price: "200.58")
+                            product: product, isQuantityVisible: false
+                        ){id in
+                            Task{
+                                await viewModel.removeProductFromCart(productId:id)
+                            }
+                        }
                     }
                     
                 }
@@ -63,7 +67,7 @@ struct FavouriteView: View {
                           pinnedViews: [.sectionHeaders],
                           content: {
                     
-                    ForEach(0..<50){index in
+                    ForEach(0..<3){index in
                         ProductCardView(
                             product: ProductDetailView.productMock
                         )

@@ -35,59 +35,15 @@ class ProductCrudViewModel : ObservableObject{
         
         let (data, error) = await productRepo.insertProduct(userId: userId, categoryId: categoryId, product: product)
         
-        guard let _ = data else{
+        if let _ = data {
+            DispatchQueue.main.async {[weak self] in
+                self?.isProductInserted = true
+            }
+        }else {
             DispatchQueue.main.async {[weak self] in
                 self?.errorMessage = error
             }
-            return
         }
-        
-        DispatchQueue.main.async {[weak self] in
-            self?.isProductInserted = true
-        }
-    }
-    
-    func allProduct() async {
-        let (data , error) = await productRepo.allProducts()
-        
-        guard let data = data else{
-            print(error)
-            return
-        }
-        print(data)
-    }
-    
-    func productsByCategory() async {
-        let categoryId = 1;
-        let (data , error) = await productRepo.productByCategory(id: categoryId)
-        
-        guard let data = data else{
-            print(error)
-            return
-        }
-        print(data)
-    }
-    
-    func productsByUser() async {
-        let userId = 1;
-        let (data , error) = await productRepo.productByUser(id: userId)
-        
-        guard let data = data else{
-            print(error)
-            return
-        }
-        print(data)
-    }
-    
-    func productById() async {
-        let productId = 2;
-        let (data , error) = await productRepo.productById(id: productId)
-        
-        guard let data = data else{
-            print(error)
-            return
-        }
-        print(data)
     }
     
     func getCategoryIdFromName(name : String) -> Int?{
@@ -100,8 +56,9 @@ class ProductCrudViewModel : ObservableObject{
         if(!categories.isEmpty) {return}
         
         if let categories = await categoryRepo.getCategories(){
-            DispatchQueue.main.async {
-                self.categories = categories
+            DispatchQueue.main.async {[weak self] in
+                self?.categories = categories
+                self?.category = categories[0].name
             }
         }
     }

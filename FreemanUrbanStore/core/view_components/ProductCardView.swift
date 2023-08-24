@@ -15,7 +15,10 @@ struct ProductCardView: View {
     var body: some View {
         NavigationStack{
             
-            NavigationLink(destination: {ProductDetailView(product: ProductDetailView.productMock)}){
+            NavigationLink(destination: {
+                ProductDetailView(
+                    mProduct: product)
+            }){
                 VStack{
                     
                     AsyncImage(
@@ -46,7 +49,7 @@ struct ProductCardView: View {
                         
                         HStack{
                             Text(
-                                product.discountedPrice == nil ? "$\(product.price)" : "$\(product.discountedPrice!)"
+                                product.discountedPrice == nil ? "$\(product.price.toString())" : "$\(product.discountedPrice!.toString())"
                             )
                             .frame(maxWidth: .infinity, alignment:.leading)
                             .lineLimit(1)

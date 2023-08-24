@@ -18,3 +18,9 @@ func notNull<T>(_ object: T?, _ closure: (T) -> Void) {
         closure(object!)
     }
 }
+
+extension Double {
+    func toString() -> String {
+        return String(format: "%.2f", self)
+    }
+}

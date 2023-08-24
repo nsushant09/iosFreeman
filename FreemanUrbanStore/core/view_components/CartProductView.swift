@@ -9,19 +9,17 @@ import SwiftUI
 
 struct CartProductView: View {
     
-    let imageUrl : String
-    let title : String
-    let category : String
-    let price : String
-    let quantity = 1
+    let product : Product
+    let isQuantityVisible : Bool
+    let onRemoveClick : (Int) -> Void
     
     var body: some View {
         NavigationStack{
             NavigationLink(
-                destination:ProductDetailView(product: ProductDetailView.productMock)){
+                destination:ProductDetailView(mProduct: ProductDetailView.productMock)){
                 HStack{
                     AsyncImage(
-                        url:URL(string : imageUrl),
+                        url:URL(string : product.imagePath),
                         content : {image in
                             image
                                 .resizable()
@@ -35,7 +33,7 @@ struct CartProductView: View {
                     
                     VStack{
                         HStack(alignment: .center){
-                            Text(title)
+                            Text(product.name)
                                 .lineLimit(1)
                                 .font(.system(size: 24, weight: .medium, design: .rounded))
                                 .foregroundColor(.accentColor)
@@ -44,9 +42,12 @@ struct CartProductView: View {
                             Image(systemName: "xmark")
                                 .foregroundColor(.gray.opacity(0.6))
                                 .font(.system(size: 18, weight: .semibold))
+                                .onTapGesture {
+                                    onRemoveClick(product.id)
+                                }
                         }
                         
-                        Text(category)
+                        Text(product.category?.name ?? "")
                             .lineLimit(1)
                             .font(.system(size: 14, weight: .light, design: .serif))
                             .foregroundColor(.accentColor.opacity(0.4))
@@ -57,35 +58,13 @@ struct CartProductView: View {
                             .frame(height: 16)
                         
                         HStack(alignment:.center){
-                            Text("$\(price)")
+                            Text("$\(product.price.toString())")
                                 .lineLimit(1)
                                 .foregroundColor(.accentColor)
                                 .font(.system(size: 18, weight: .medium, design: .monospaced))
                             Spacer()
                             
-                            Group{
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color.gray.opacity(0.4), lineWidth:1)
-                                    .frame(width: 36, height: 36)
-                                    .foregroundColor(.blue)
-                                    .overlay(
-                                        Image(systemName: "minus")
-                                            .foregroundColor(.gray.opacity(0.4))
-                                    )
-                                
-                                Text(quantity.codingKey.stringValue)
-                                    .fontDesign(.monospaced)
-                                    .padding(.horizontal, 8)
-                                
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color.accentColor, lineWidth:1)
-                                    .frame(width: 36, height: 36)
-                                    .foregroundColor(.blue)
-                                    .overlay(
-                                        Image(systemName: "plus")
-                                            .foregroundColor(.accentColor)
-                                    )
-                            }
+                            quantityGroup()
                         }
                     }
                     .frame(maxWidth: .infinity)
@@ -95,14 +74,40 @@ struct CartProductView: View {
             }
         }
     }
+    
+    func quantityGroup() -> some View{
+        return HStack{
+            if isQuantityVisible {
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.gray.opacity(0.4), lineWidth:1)
+                    .frame(width: 36, height: 36)
+                    .foregroundColor(.blue)
+                    .overlay(
+                        Image(systemName: "minus")
+                            .foregroundColor(.gray.opacity(0.4))
+                    )
+                
+                Text("1")
+                    .fontDesign(.monospaced)
+                    .padding(.horizontal, 8)
+                
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.accentColor, lineWidth:1)
+                    .frame(width: 36, height: 36)
+                    .foregroundColor(.blue)
+                    .overlay(
+                        Image(systemName: "plus")
+                            .foregroundColor(.accentColor)
+                    )
+            }
+        }
+    }
 }
 
 struct CartProductView_Previews: PreviewProvider {
     static var previews: some View {
         CartProductView(
-            imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
-            title: "Title",
-            category: "Category",
-            price: "200.58")
+            product: ProductDetailView.productMock, isQuantityVisible: true, onRemoveClick: {id in}
+        )
     }
 }

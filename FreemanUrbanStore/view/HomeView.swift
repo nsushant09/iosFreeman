@@ -58,8 +58,7 @@ struct HomeView: View {
                     LazyVGrid(columns: categoriesGridColumns, content: {
                         ForEach(homeViewModel.categories){category in
                             CircularCategoriesView(
-                                imageUrl: category.imagePath,
-                                title: category.name
+                                category: category
                             )
                         }
                     })
@@ -75,9 +74,9 @@ struct HomeView: View {
                               pinnedViews: [.sectionHeaders],
                               content: {
                         
-                        ForEach(0..<50){index in
+                        ForEach(homeViewModel.products){product in
                             ProductCardView(
-                                product: ProductDetailView.productMock
+                                product: product
                             )      
                         }
                     })
@@ -88,7 +87,8 @@ struct HomeView: View {
         }
         .onAppear(perform: {
             Task{
-                await homeViewModel.fetchCategoriesAsync()
+                await homeViewModel.fetchCategories()
+                await homeViewModel.fetchProducts()
             }
         })
     }

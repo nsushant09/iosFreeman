@@ -11,6 +11,8 @@ struct CartView: View {
     
     let customView = CustomViews.instance
     
+    @StateObject var viewModel = CartViewModel()
+    
     @State var totalCheckoutAmount = 0;
     @State var subtotalAmount = 0;
     @State var deliveryFee = 0;
@@ -35,12 +37,14 @@ struct CartView: View {
             ScrollView{
                 VStack{
                     
-                    ForEach(0..<3){index in
+                    ForEach(viewModel.cartProducts){product in
                         CartProductView(
-                            imageUrl: "https://images.pexels.com/photos/5822534/pexels-photo-5822534.jpeg?auto=compress&cs=tinysrgb&w=1600",
-                            title: "Title",
-                            category: "Category",
-                            price: "200.58")
+                            product: product, isQuantityVisible: true
+                        ){id in
+                            Task{
+                                await viewModel.removeProductFromCart(productId:id)
+                            }
+                        }
                     }
                     
                 }
@@ -54,14 +58,14 @@ struct CartView: View {
                             .fontDesign(.monospaced)
                     }
                     Spacer()
-                    VStack(spacing:8){
-                        Text("$\(subtotalAmount)")
+                    VStack(alignment: .trailing, spacing:8){
+                        Text("$\(viewModel.subTotalAmount.toString())")
                             .fontWeight(.bold)
                             .fontDesign(.monospaced)
-                        Text("$\(deliveryFee)")
+                        Text("$\(viewModel.deliveryFee.toString())")
                             .fontWeight(.bold)
                             .fontDesign(.monospaced)
-                        Text("\(discountPercentage)%")
+                        Text("\(viewModel.discount.toString())")
                             .fontWeight(.bold)
                             .fontDesign(.monospaced)
                     }
@@ -72,7 +76,7 @@ struct CartView: View {
                 }, label: {
                     HStack{
                         Text("Checkout for")
-                        Text("$\(totalCheckoutAmount)")
+                        Text("$\(viewModel.checkoutPrice.toString())")
                             .font(.system(size : 18, weight: .bold))
                     }
                     .frame(maxWidth: .infinity)

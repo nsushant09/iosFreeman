@@ -18,6 +18,7 @@ struct LoginView: View {
     @State var otpView : OTPView?
     
     @State var errorMessage = ""
+    @State var loginLoading = false
     
     @StateObject var loginViewModel = LoginViewModel()
     
@@ -50,13 +51,14 @@ struct LoginView: View {
                 
                 customView.darkFilledButton(action: {
                     Task{
+                        loginLoading = true
                         await loginViewModel.loginUser(
                             email: userEmailField,
                             password: userPasswordField
                         )
                     }
                 }, label: {
-                    Text("Login")
+                        Text("Login")
                 })
                 
                 NavigationLink(destination: ForgotPasswordEmailView(), label: {
