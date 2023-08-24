@@ -15,14 +15,13 @@ struct ProductDetailView: View {
     let customView = CustomViews.instance
     
     @StateObject var viewModel : ProductDetailViewModel
-    
-    @State var favouriteIcon = "heart"
+    @State var favouriteIcon = ""
     
     init(mProduct : Product){
         product = mProduct
         self._viewModel = StateObject(wrappedValue: .init(mProduct: mProduct))
     }
-
+    
     var body: some View {
         
         NavigationStack {
@@ -106,11 +105,11 @@ struct ProductDetailView: View {
     func cartButtonAction(){
         if(viewModel.isAddedToCart){
             Task{
-                await viewModel.addToCart()
+                await viewModel.removeFromCart()
             }
         }else{
             Task{
-                await viewModel.removeFromCart()
+                await viewModel.addToCart()
             }
         }
     }
@@ -165,18 +164,26 @@ struct ProductDetailView: View {
                     toggleFavourites()
                 }
         }
+        .onReceive(
+            viewModel.$isAddedToFavourites,
+            perform: {boolean in
+                if(boolean){
+                    favouriteIcon = "heart.fill"
+                }else{
+                    favouriteIcon = "heart"
+                }
+            }
+        )
         .frame(maxHeight: .infinity, alignment: .top)
         .padding(.all)
     }
     
     func toggleFavourites(){
         withAnimation{
-            if(favouriteIcon == "heart"){
-                favouriteIcon = "heart.fill"
-                Task{await viewModel.addToFavourites()}
-            }else{
-                favouriteIcon = "heart"
+            if(viewModel.isAddedToFavourites){
                 Task{await viewModel.removeFromFavourites()}
+            }else{
+                Task{await viewModel.addToFavourites()}
             }
         }
     }

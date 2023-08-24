@@ -84,6 +84,15 @@ struct CartView: View {
             }
             .padding(.horizontal)
         }
+        .onAppear{
+            onAppear()
+        }
+    }
+    
+    func onAppear(){
+        Task{
+            await viewModel.getCartProducts()
+        }
     }
 }
 

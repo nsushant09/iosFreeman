@@ -81,7 +81,16 @@ struct FavouriteView: View {
             
             Spacer()
         }
+        .onAppear{
+            onAppear()
+        }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    func onAppear(){
+        Task{
+            await viewModel.getFavouriteProducts()
+        }
     }
 }
 

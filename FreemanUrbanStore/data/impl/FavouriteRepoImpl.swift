@@ -41,7 +41,7 @@ class FavouriteRepoImpl : FavouriteRepo{
     func getAllProductFromFavourite(userId: Int) async -> ([Product]?, String) {
         let result = await HTTPRequestExecutor<Product, [Product]>
             .Builder()
-            .setRequestUrl(Constants.BASE_URL + "/favourite/cart_products")
+            .setRequestUrl(Constants.BASE_URL + "/favourite/favourite_products")
             .setHttpMethod(HTTPMethods.GET)
             .setRequestParams([
                 "user_id" : String(userId)
