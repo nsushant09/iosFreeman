@@ -62,7 +62,7 @@ struct ProductCardView: View {
                             Text(
                                 product.discountedPrice == nil ? "" : "$\(product.price)"
                             )
-                            .frame(maxWidth: .infinity, alignment:.leading)
+                            .frame(alignment:.trailing)
                             .lineLimit(1)
                             .foregroundColor(.gray.opacity(0.6))
                             .font(.system(size: 16, weight: .medium, design: .monospaced))

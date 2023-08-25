@@ -15,7 +15,7 @@ struct ProductDetailView: View {
     let customView = CustomViews.instance
     
     @StateObject var viewModel : ProductDetailViewModel
-    @State var favouriteIcon = ""
+    @State var favouriteIcon = "heart"
     
     init(mProduct : Product){
         product = mProduct
@@ -260,6 +260,13 @@ struct ProductDetailView: View {
                 .foregroundColor(.accentColor)
                 .font(.system(size: 24, weight: .semibold))
             
+            if(viewModel.reviews.isEmpty){
+                Text("There are no reviews in this product")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size:18, weight: .medium, design: .monospaced))
+                    .padding(.vertical)
+            }
+            
             ForEach(viewModel.reviews){review in
                 ReviewCard(
                     username : review.user?.name ?? "",
@@ -269,6 +276,7 @@ struct ProductDetailView: View {
                 )
             }
         }
+        .padding(.bottom)
     }
     
     static let productMock = Product(

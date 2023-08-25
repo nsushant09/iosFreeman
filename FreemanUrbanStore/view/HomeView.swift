@@ -29,70 +29,84 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack{
-            
-            HStack{
-                Text("Discover")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 32, weight: .semibold))
-                Spacer()
-                
-                NavigationLink(destination: {FavouriteView()}){
-                    Image(systemName: "heart")
-                        .foregroundColor(.accentColor)
-                        .font(.system(size: 24, weight: .semibold))
-                }
-            }
-            .padding(.horizontal)
-            
+            toolbar()
             ScrollView{
-                VStack{
-                    SliderView(images: HomeView.getCarouselData())
-                    
-                    
-                    Text("Categories")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundColor(.accentColor)
-                        .font(.system(size: 24, weight: .semibold))
-                    
-                    LazyVGrid(columns: categoriesGridColumns, content: {
-                        ForEach(homeViewModel.categories){category in
-                            CircularCategoriesView(
-                                category: category
-                            )
-                        }
-                    })
-                    
-                    Text("Products")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundColor(.accentColor)
-                        .font(.system(size: 24, weight: .semibold))
-                    
-                    LazyVGrid(columns: productGridColumns,
-                              alignment: .center,
-                              spacing: 24,
-                              pinnedViews: [.sectionHeaders],
-                              content: {
-                        
-                        ForEach(homeViewModel.products){product in
-                            ProductCardView(
-                                product: product
-                            )      
-                        }
-                    })
-                    
-                }
+                SliderView(images: HomeView.getCarouselData())
+                categoriesSection()
+                productsSection()
             }
+            .scrollIndicators(.never)
             .padding(.horizontal)
         }
-        .onAppear(perform: {
-            Task{
-                await homeViewModel.fetchCategories()
-                await homeViewModel.fetchProducts()
-            }
-        })
+        .onAppear{
+            onAppear()
+        }
+        
     }
     
+    
+    func onAppear(){
+        Task{
+            await homeViewModel.fetchCategories()
+            await homeViewModel.fetchProducts()
+        }
+    }
+    
+    func toolbar() -> some View{
+        HStack{
+            Text("Discover")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.accentColor)
+                .font(.system(size: 32, weight: .semibold))
+            Spacer()
+            
+            NavigationLink(destination: {FavouriteView()}){
+                Image(systemName: "heart")
+                    .foregroundColor(.accentColor)
+                    .font(.system(size: 24, weight: .semibold))
+            }
+        }
+        .padding(.horizontal)
+    }
+    
+    func categoriesSection() -> some View{
+        VStack{
+            Text("Categories")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.accentColor)
+                .font(.system(size: 24, weight: .semibold))
+            
+            LazyVGrid(columns: categoriesGridColumns, content: {
+                ForEach(homeViewModel.categories){category in
+                    CircularCategoriesView(
+                        category: category
+                    )
+                }
+            })
+        }
+    }
+    
+    func productsSection() -> some View{
+        VStack{
+            Text("Products")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.accentColor)
+                .font(.system(size: 24, weight: .semibold))
+            
+            LazyVGrid(columns: productGridColumns,
+                      alignment: .center,
+                      spacing: 24,
+                      pinnedViews: [.sectionHeaders],
+                      content: {
+                
+                ForEach(homeViewModel.products){product in
+                    ProductCardView(
+                        product: product
+                    )
+                }
+            })
+        }
+    }
     static func getCarouselData() -> [KeyValue<String, String>]{
         var carouselItems = [KeyValue<String, String>]()
         carouselItems.append(KeyValue(

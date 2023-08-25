@@ -13,80 +13,97 @@ struct CartView: View {
     
     @StateObject var viewModel = CartViewModel()
     
-    @State var totalCheckoutAmount = 0;
-    @State var subtotalAmount = 0;
-    @State var deliveryFee = 0;
-    @State var discountPercentage = 0;
-    
     var body: some View {
         NavigationStack{
             
-            HStack{
-                Text("Cart")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 32, weight: .semibold))
-                Spacer()
-                
-                Image(systemName: "ellipsis")
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 24, weight: .semibold))
-            }
-            .padding(.horizontal)
+            toolbar()
             
             ScrollView{
-                VStack{
-                    
-                    ForEach(viewModel.cartProducts){product in
-                        CartProductView(
-                            product: product, isQuantityVisible: true
-                        ){id in
-                            Task{
-                                await viewModel.removeProductFromCart(productId:id)
-                            }
-                        }
-                    }
-                    
-                }
-                HStack{
-                    VStack(alignment: .leading,spacing: 8){
-                        Text("Subtotal :")
-                            .fontDesign(.monospaced)
-                        Text("Delivery Fee :")
-                            .fontDesign(.monospaced)
-                        Text("Discount :")
-                            .fontDesign(.monospaced)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing, spacing:8){
-                        Text("$\(viewModel.subTotalAmount.toString())")
-                            .fontWeight(.bold)
-                            .fontDesign(.monospaced)
-                        Text("$\(viewModel.deliveryFee.toString())")
-                            .fontWeight(.bold)
-                            .fontDesign(.monospaced)
-                        Text("\(viewModel.discount.toString())")
-                            .fontWeight(.bold)
-                            .fontDesign(.monospaced)
-                    }
-                }
-                
-                customView.darkFilledButton(action: {
-                    
-                }, label: {
-                    HStack{
-                        Text("Checkout for")
-                        Text("$\(viewModel.checkoutPrice.toString())")
-                            .font(.system(size : 18, weight: .bold))
-                    }
-                    .frame(maxWidth: .infinity)
-                })
+                cartProductsSection()
+                pricingDetailsSection()
+                checkoutButton()
             }
             .padding(.horizontal)
         }
         .onAppear{
             onAppear()
         }
+    }
+    
+    func toolbar() -> some View{
+        return HStack{
+            Text("Cart")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.accentColor)
+                .font(.system(size: 32, weight: .semibold))
+            Spacer()
+            
+            Image(systemName: "ellipsis")
+                .foregroundColor(.accentColor)
+                .font(.system(size: 24, weight: .semibold))
+        }
+        .padding(.horizontal)
+    }
+    
+    func cartProductsSection() -> some View{
+        return VStack{
+            
+            if(viewModel.cartProducts.isEmpty){
+                Text("There are no reviews in this product")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size:18, weight: .medium, design: .monospaced))
+                    .padding(.vertical)
+            }
+            
+            ForEach(viewModel.cartProducts){product in
+                CartProductView(
+                    product: product, isQuantityVisible: true
+                ){id in
+                    Task{
+                        await viewModel.removeProductFromCart(productId:id)
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    func pricingDetailsSection() -> some View{
+        HStack{
+            VStack(alignment: .leading,spacing: 8){
+                Text("Subtotal :")
+                    .fontDesign(.monospaced)
+                Text("Delivery Fee :")
+                    .fontDesign(.monospaced)
+                Text("Discount :")
+                    .fontDesign(.monospaced)
+            }
+            Spacer()
+            VStack(alignment: .trailing, spacing:8){
+                Text("$\(viewModel.subTotalAmount.toString())")
+                    .fontWeight(.bold)
+                    .fontDesign(.monospaced)
+                Text("$\(viewModel.deliveryFee.toString())")
+                    .fontWeight(.bold)
+                    .fontDesign(.monospaced)
+                Text("\(viewModel.discount.toString())")
+                    .fontWeight(.bold)
+                    .fontDesign(.monospaced)
+            }
+        }
+    }
+    
+    func checkoutButton() -> some View{
+        customView.darkFilledButton(action: {
+            
+        }, label: {
+            HStack{
+                Text("Checkout for")
+                Text("$\(viewModel.checkoutPrice.toString())")
+                    .font(.system(size : 18, weight: .bold))
+            }
+            .frame(maxWidth: .infinity)
+        })
     }
     
     func onAppear(){

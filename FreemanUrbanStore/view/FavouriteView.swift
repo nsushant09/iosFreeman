@@ -19,72 +19,89 @@ struct FavouriteView: View {
     
     var body: some View {
         NavigationStack{
-            HStack{
-                
-                Image(systemName: "chevron.backward")
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 24, weight: .semibold))
-                    .onTapGesture {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                
-                Text("Favourites")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 32, weight: .semibold))
-                
-                Spacer()
-                
-                Image(systemName: "ellipsis")
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 24, weight: .semibold))
-            }
-            .padding(.horizontal)
-            
+            toolbar()
             ScrollView{
                 VStack{
-                    
-                    ForEach(viewModel.favouriteProducts){product in
-                        CartProductView(
-                            product: product, isQuantityVisible: false
-                        ){id in
-                            Task{
-                                await viewModel.removeProductFromCart(productId:id)
-                            }
-                        }
-                    }
-                    
+                    favouriteProductsSection()
+                    justForYouSection()
                 }
-             
-                Text("Just For You")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.accentColor)
-                    .font(.system(size: 24, weight: .semibold))
-                
-                LazyVGrid(columns: justForYouGridColumns,
-                          alignment: .center,
-                          spacing: 24,
-                          pinnedViews: [.sectionHeaders],
-                          content: {
-                    
-                    ForEach(0..<3){index in
-                        ProductCardView(
-                            product: ProductDetailView.productMock
-                        )
-                        
-                    }
-                })
-
-                
             }
             .padding(.horizontal)
-            
             Spacer()
         }
         .onAppear{
             onAppear()
         }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    func toolbar() -> some View{
+        return HStack{
+            
+            Image(systemName: "chevron.backward")
+                .foregroundColor(.accentColor)
+                .font(.system(size: 24, weight: .semibold))
+                .onTapGesture {
+                    presentationMode.wrappedValue.dismiss()
+                }
+            
+            Text("Favourites")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.accentColor)
+                .font(.system(size: 32, weight: .semibold))
+            
+            Spacer()
+            
+            Image(systemName: "ellipsis")
+                .foregroundColor(.accentColor)
+                .font(.system(size: 24, weight: .semibold))
+        }
+        .padding(.horizontal)
+    }
+    
+    func favouriteProductsSection() -> some View {
+        return VStack{
+            
+            if(viewModel.favouriteProducts.isEmpty){
+                Text("There are no reviews in this product")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size:18, weight: .medium, design: .monospaced))
+                    .padding(.vertical)
+            }
+            
+            ForEach(viewModel.favouriteProducts){product in
+                CartProductView(
+                    product: product, isQuantityVisible: false
+                ){id in
+                    Task{
+                        await viewModel.removeProductFromCart(productId:id)
+                    }
+                }
+            }
+        }
+    }
+    
+    func justForYouSection() -> some View{
+        return VStack{
+            Text("Just For You")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.accentColor)
+                .font(.system(size: 24, weight: .semibold))
+            
+            LazyVGrid(columns: justForYouGridColumns,
+                      alignment: .center,
+                      spacing: 24,
+                      pinnedViews: [.sectionHeaders],
+                      content: {
+                
+                ForEach(0..<3){index in
+                    ProductCardView(
+                        product: ProductDetailView.productMock
+                    )
+                    
+                }
+            })
+        }
     }
     
     func onAppear(){
