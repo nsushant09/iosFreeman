@@ -31,7 +31,7 @@ struct MainView: View {
                     image: "house.fill"
                 )
                 
-                getTabItem(view: SearchView(),
+                getTabItem(view: SearchView(searchValue: ""),
                            title: "Search",
                            image: "magnifyingglass"
                 )

@@ -88,4 +88,18 @@ class ProductRepoImpl : ProductRepo{
         
         return ResultManager.returnData(result: result)
     }
+    
+    func productBySearchValue(value: String) async -> ([Product]?, String) {
+        let result = await HTTPRequestExecutor<Product, [Product]>
+            .Builder()
+            .setRequestUrl(Constants.BASE_URL + "/product/search")
+            .setHttpMethod(HTTPMethods.GET)
+            .setRequestParams([
+                "value" : value
+            ])
+            .build()
+            .executeAsync()
+        
+        return ResultManager.returnData(result: result)
+    }
 }

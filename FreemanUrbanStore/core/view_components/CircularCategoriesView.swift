@@ -15,7 +15,9 @@ struct CircularCategoriesView: View {
         
         NavigationStack{
             NavigationLink(
-                destination: {},
+                destination: {
+                    SearchView(searchValue: category.name)
+                },
                 label: {
                 content()
             })

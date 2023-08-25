@@ -14,4 +14,5 @@ protocol ProductRepo{
     func productByCategory(id : Int) async -> ([Product]?, String)
     func productByUser(id : Int) async -> ([Product]?, String)
     func allProducts() async -> ([Product]? , String)
+    func productBySearchValue(value : String) async -> ([Product]?, String)
 }
