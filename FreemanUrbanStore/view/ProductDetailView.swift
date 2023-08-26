@@ -135,6 +135,7 @@ struct ProductDetailView: View {
                     Image(systemName: "chevron.backward")
                         .font(.title3)
                 )
+                .shadow(color: .white.opacity(0.4), radius: 1, x:1, y: 1)
                 .onTapGesture {
                     presentationMode.wrappedValue.dismiss()
                 }
@@ -151,6 +152,7 @@ struct ProductDetailView: View {
                 .onTapGesture {
                     //TODO : Share
                 }
+                .shadow(color: .white.opacity(0.4), radius: 1, x:1, y: 1)
                 .padding(.trailing, 8)
             
             RoundedRectangle(cornerRadius: 16)
@@ -160,6 +162,7 @@ struct ProductDetailView: View {
                     Image(systemName: favouriteIcon)
                         .font(.title3)
                 )
+                .shadow(color: .white.opacity(0.4), radius: 1, x:1, y: 1)
                 .onTapGesture {
                     toggleFavourites()
                 }

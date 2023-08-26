@@ -33,7 +33,8 @@ struct CircularCategoriesView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width:64, height: 64)
-                        .cornerRadius(.infinity)
+                        .clipShape(Circle())
+                        .shadow(radius: 2, x: 2)
                 },
                 placeholder: {
                     ProgressView()

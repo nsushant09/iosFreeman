@@ -19,7 +19,7 @@ struct ReviewCard: View {
             HStack(alignment:.center){
                 Text(username)
                     .foregroundColor(.accentColor)
-                    .font(.system(size: 20, weight: .regular, design: .default))
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
                 
                 Spacer()
                 
@@ -30,7 +30,7 @@ struct ReviewCard: View {
             .padding(.bottom, 2)
 //            Loop for ratings
             HStack(spacing:0){
-                ForEach(0..<rating){index in
+                ForEach(0..<rating){rating in
                     Image(systemName: "star.fill")
                         .font(.system(size: 14))
                 }
@@ -40,7 +40,7 @@ struct ReviewCard: View {
             
             Text(description)
                 .frame(maxWidth:.infinity, alignment: .leading)
-                .font(.system(size: 16, weight:.light, design: .rounded))
+                .font(.system(size: 16, weight:.regular, design: .rounded))
 
         }
         .padding(.all,8)

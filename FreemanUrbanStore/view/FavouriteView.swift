@@ -61,7 +61,6 @@ struct FavouriteView: View {
     
     func favouriteProductsSection() -> some View {
         return VStack{
-            
             if(viewModel.favouriteProducts.isEmpty){
                 Text("There are no reviews in this product")
                     .multilineTextAlignment(.center)
@@ -74,7 +73,7 @@ struct FavouriteView: View {
                     product: product, isQuantityVisible: false
                 ){id in
                     Task{
-                        await viewModel.removeProductFromCart(productId:id)
+                        await viewModel.removeProductFromFavourite(productId:id)
                     }
                 }
             }
@@ -82,7 +81,7 @@ struct FavouriteView: View {
     }
     
     func justForYouSection() -> some View{
-        return VStack{
+        VStack{
             Text("Just For You")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.accentColor)
@@ -94,12 +93,12 @@ struct FavouriteView: View {
                       pinnedViews: [.sectionHeaders],
                       content: {
                 
-                ForEach(0..<3){index in
+                ForEach(viewModel.similarProducts){product in
                     ProductCardView(
-                        product: ProductDetailView.productMock
+                        product: product
                     )
-                    
                 }
+                
             })
         }
     }

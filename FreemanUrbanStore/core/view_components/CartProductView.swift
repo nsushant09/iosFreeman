@@ -16,7 +16,7 @@ struct CartProductView: View {
     var body: some View {
         NavigationStack{
             NavigationLink(
-                destination:ProductDetailView(mProduct: ProductDetailView.productMock)){
+                destination:ProductDetailView(mProduct: product)){
                 HStack{
                     AsyncImage(
                         url:URL(string : product.imagePath),
@@ -26,6 +26,7 @@ struct CartProductView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width:120, height: 120)
                                 .cornerRadius(16)
+                                .shadow(radius: 2, x:2, y:2)
                         },
                         placeholder: {
                             ProgressView()

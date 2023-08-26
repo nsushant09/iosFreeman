@@ -29,6 +29,7 @@ struct ProductCardView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width:170, height: 180)
                                 .cornerRadius(16)
+                                .shadow(radius: 4, x:2, y:4)
                         },
                         placeholder: {
                             ProgressView()

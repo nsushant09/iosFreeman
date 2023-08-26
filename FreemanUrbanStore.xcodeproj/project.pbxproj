@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5204AF7F2A98E2B10032CCD6 /* MultipartFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204AF7E2A98E2B10032CCD6 /* MultipartFile.swift */; };
 		523FC9ED2A95221A0020BB91 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9EC2A95221A0020BB91 /* AddProductView.swift */; };
 		523FC9EF2A9526AE0020BB91 /* ProductCRUDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9EE2A9526AE0020BB91 /* ProductCRUDViewModel.swift */; };
 		523FC9F12A9534D80020BB91 /* ApplicationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9F02A9534D80020BB91 /* ApplicationCache.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5204AF7E2A98E2B10032CCD6 /* MultipartFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFile.swift; sourceTree = "<group>"; };
 		523FC9EC2A95221A0020BB91 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		523FC9EE2A9526AE0020BB91 /* ProductCRUDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCRUDViewModel.swift; sourceTree = "<group>"; };
 		523FC9F02A9534D80020BB91 /* ApplicationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCache.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 				52CC17442A92116E004B18C4 /* HTTPRequestExecutor.swift */,
 				52AC6B912A93669C00FB2722 /* Result.swift */,
 				5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */,
+				5204AF7E2A98E2B10032CCD6 /* MultipartFile.swift */,
 			);
 			path = HTTPRequestExecutor;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				52E435EC2A8E021F00547A77 /* OTPView.swift in Sources */,
 				52AE51EA2A94C305008BD3B7 /* POSTTaskPerformer.swift in Sources */,
 				523FC9ED2A95221A0020BB91 /* AddProductView.swift in Sources */,
+				5204AF7F2A98E2B10032CCD6 /* MultipartFile.swift in Sources */,
 				527BC2562A932E3300ADF7AF /* CategoryRepo.swift in Sources */,
 				52C570522A8E4C5700048465 /* KeyValue.swift in Sources */,
 				52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */,

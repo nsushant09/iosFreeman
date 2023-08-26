@@ -8,11 +8,12 @@
 import Foundation
 
 protocol ProductRepo{
-    func insertProduct(userId : Int, categoryId : Int, product : Product) async -> (Product?, String)
     func updateProduct(product : Product) async -> (Product?, String)
-    func productById(id : Int) async -> (Product?, String)
-    func productByCategory(id : Int) async -> ([Product]?, String)
-    func productByUser(id : Int) async -> ([Product]?, String)
+    func insertProduct(userId : Int, categoryId : Int, product : Product) async -> (Product?, String)
+    
     func allProducts() async -> ([Product]? , String)
+    func productById(id : Int) async -> (Product?, String)
+    func productByUser(id : Int) async -> ([Product]?, String)
+    func productByCategory(id : Int) async -> ([Product]?, String)
     func productBySearchValue(value : String) async -> ([Product]?, String)
 }
