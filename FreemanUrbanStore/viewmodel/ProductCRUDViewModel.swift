@@ -46,6 +46,30 @@ class ProductCrudViewModel : ObservableObject{
         }
     }
     
+    func insertImage(image : UIImage?) async {
+        
+        guard let image = image else {return}
+        
+        let multipartFile = MultipartImageFile()
+        
+        let result = await HTTPRequestExecutor<Data, String>
+            .Builder()
+            .setRequestUrl(Constants.BASE_URL + "/image/upload")
+            .setHttpMethod(HTTPMethods.POST)
+            .setContentType(multipartFile.getContentType())
+            .setRequestBody(multipartFile.fromDataBody(image: image))
+            .build()
+            .executeAsync()
+        
+        let (data, error) = ResultManager.returnData(result: result)
+        
+        if let data = data {
+            print("The image url is : " + data)
+        }else{
+            print("The error is : " + error)
+        }
+    }
+    
     func getCategoryIdFromName(name : String) -> Int?{
         return categories.first(where: {category in
             category.name == name

@@ -14,6 +14,7 @@ struct AddProductView: View {
     
     @StateObject var viewModel = ProductCrudViewModel()
     @State var imageSelection : PhotosPickerItem? = nil
+    @State var selectedImage : UIImage? = nil
     
     @State var processing = false
     let decimalFormatter: NumberFormatter = {
@@ -36,58 +37,81 @@ struct AddProductView: View {
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 64, trailing: 0))
                     
                     inputFields()
+                    photoPicker()
+                    addButton()
                     
-                    PhotosPicker(
-                        {
-                            guard let title = imageSelection?.itemIdentifier else
-                            {return "Select a photo"}
-                            return "\(title)"
-                        }(),
-                        selection: $imageSelection,
-                        matching: .images,
-                        photoLibrary: .shared()
-                    )
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .tint(CustomColors.primary)
-                    .font(.system(size: 16, weight: .semibold, design: .rounded))
-                    .foregroundColor(Color.gray.opacity(0.6))
-                    .padding(16)
-                    .background(CustomColors.fieldColor)
-                    .cornerRadius(8)
-                    .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
-                    
-                    customView.darkOutlinedButton(
-                        action: {
-                            buttonTextMessage = "Loading"
-                            Task{
-                                await viewModel.insertProduct()
-                                if (viewModel.isProductInserted){
-                                    buttonTextMessage = "Product Added"
-                                }else{
-                                    buttonTextMessage = "Error!!!"
-                                }
-                            }
-                        },
-                        label: {
-                            Group{
-                                if buttonTextMessage == "Loading"{
-                                    ProgressView()
-                                        .progressViewStyle(.circular)
-                                }else{
-                                    Text(buttonTextMessage)
-                                }
-                            }
+                    customView.darkOutlinedButton(action: {
+                        Task{
+                            await viewModel.insertImage(image:selectedImage)
                         }
-                    )
-                }
-                .onAppear{
-                    Task{
-                    }
+                    }, label: {
+                        Text("Add Image")
+                    })
                 }
                 .padding()
+                .onAppear{
+                    onAppear()
+                }
+                .onChange(of: imageSelection) { _ in
+                    Task {
+                        if let data = try? await imageSelection?.loadTransferable(type: Data.self) {
+                            if let uiImage = UIImage(data: data) {
+                                selectedImage = uiImage
+                                return
+                            }
+                        }
+                    }
+                }
             }
         }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    func onAppear(){
+        Task{}
+    }
+    
+    func photoPicker() -> some View{
+        PhotosPicker(
+            "Select a photo",
+            selection: $imageSelection,
+            matching: .images,
+            photoLibrary: .shared()
+        )
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .tint(CustomColors.primary)
+        .font(.system(size: 16, weight: .semibold, design: .rounded))
+        .foregroundColor(Color.gray.opacity(0.6))
+        .padding(16)
+        .background(CustomColors.fieldColor)
+        .cornerRadius(8)
+        .padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+    }
+    
+    func addButton() -> some View{
+        customView.darkOutlinedButton(
+            action: {
+                buttonTextMessage = "Loading"
+                Task{
+                    await viewModel.insertProduct()
+                    if (viewModel.isProductInserted){
+                        buttonTextMessage = "Product Added"
+                    }else{
+                        buttonTextMessage = "Error!!!"
+                    }
+                }
+            },
+            label: {
+                Group{
+                    if buttonTextMessage == "Loading"{
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                    }else{
+                        Text(buttonTextMessage)
+                    }
+                }
+            }
+        )
     }
     
     func inputFields() -> some View{

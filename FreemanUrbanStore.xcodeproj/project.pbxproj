@@ -35,6 +35,7 @@
 		527BC2592A932EA800ADF7AF /* CategoryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */; };
 		527BC25B2A932FB000ADF7AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC25A2A932FB000ADF7AF /* Constants.swift */; };
 		527BC25D2A93309500ADF7AF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527BC25C2A93309500ADF7AF /* HomeViewModel.swift */; };
+		5283F81C2AA364B4008E562A /* HTTPRequestExecutorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283F81B2AA364B4008E562A /* HTTPRequestExecutorBuilder.swift */; };
 		5298E3902A9379700023FD80 /* EmailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298E38F2A9379700023FD80 /* EmailManager.swift */; };
 		5298E3922A938C8A0023FD80 /* HTTPStatusMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */; };
 		529FF7192A911D1300F92335 /* FavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529FF7182A911D1300F92335 /* FavouriteView.swift */; };
@@ -106,8 +107,10 @@
 		527BC2582A932EA800ADF7AF /* CategoryRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepoImpl.swift; sourceTree = "<group>"; };
 		527BC25A2A932FB000ADF7AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		527BC25C2A93309500ADF7AF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5283F81B2AA364B4008E562A /* HTTPRequestExecutorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestExecutorBuilder.swift; sourceTree = "<group>"; };
 		5298E38F2A9379700023FD80 /* EmailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailManager.swift; sourceTree = "<group>"; };
 		5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusMessage.swift; sourceTree = "<group>"; };
+		529AC6742A9DD0750096B4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		529FF7182A911D1300F92335 /* FavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteView.swift; sourceTree = "<group>"; };
 		529FF71A2A911EDA00F92335 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		52A2BA772A8E1D3800B41350 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
@@ -172,6 +175,16 @@
 			path = impl;
 			sourceTree = "<group>";
 		};
+		5283F81A2AA36488008E562A /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				52CC17412A9210E0004B18C4 /* HTTPMethods.swift */,
+				52AC6B912A93669C00FB2722 /* Result.swift */,
+				5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
 		52A2BA762A8E1D2A00B41350 /* view_components */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 		52A5440D2A8BF229004BCFA9 /* FreemanUrbanStore */ = {
 			isa = PBXGroup;
 			children = (
+				529AC6742A9DD0750096B4C8 /* Info.plist */,
 				52A544282A8BF2E7004BCFA9 /* core */,
 				52A544252A8BF25F004BCFA9 /* viewmodel */,
 				52A544242A8BF251004BCFA9 /* domain */,
@@ -345,12 +359,11 @@
 		52CC17432A921109004B18C4 /* HTTPRequestExecutor */ = {
 			isa = PBXGroup;
 			children = (
+				5283F81A2AA36488008E562A /* Extras */,
 				52AE51E22A94C2AB008BD3B7 /* TaskPerformer */,
-				52CC17412A9210E0004B18C4 /* HTTPMethods.swift */,
 				52CC17442A92116E004B18C4 /* HTTPRequestExecutor.swift */,
-				52AC6B912A93669C00FB2722 /* Result.swift */,
-				5298E3912A938C8A0023FD80 /* HTTPStatusMessage.swift */,
 				5204AF7E2A98E2B10032CCD6 /* MultipartFile.swift */,
+				5283F81B2AA364B4008E562A /* HTTPRequestExecutorBuilder.swift */,
 			);
 			path = HTTPRequestExecutor;
 			sourceTree = "<group>";
@@ -474,6 +487,7 @@
 				5241A70F2A96399D0014E794 /* CartRepo.swift in Sources */,
 				526EA6832A94E34500B4F9DF /* UserDefaultsManager.swift in Sources */,
 				52472B5A2A90F9CF0080F93A /* CartProductView.swift in Sources */,
+				5283F81C2AA364B4008E562A /* HTTPRequestExecutorBuilder.swift in Sources */,
 				527400D92A8CA22000053D64 /* CustomViews.swift in Sources */,
 				52E435EA2A8E021700547A77 /* ForgotPasswordNewPassView.swift in Sources */,
 				52A5442F2A8BFAAD004BCFA9 /* CustomImages.swift in Sources */,
@@ -622,6 +636,8 @@
 				DEVELOPMENT_TEAM = TL3LSG3X96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreemanUrbanStore/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app needs to access to the photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -651,6 +667,8 @@
 				DEVELOPMENT_TEAM = TL3LSG3X96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FreemanUrbanStore/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The app needs to access to the photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

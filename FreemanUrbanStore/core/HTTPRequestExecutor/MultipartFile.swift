@@ -8,31 +8,30 @@
 import Foundation
 import SwiftUI
 
-class Multipart{
+final class MultipartImageFile{
     
-    let boundry = "Boundry-\(UUID().uuidString)"
+    let boundary = "example.neupanesushant.boundary.\(ProcessInfo.processInfo.globallyUniqueString)"
+    
     func getContentType() -> String{
-        return "multipart/form-data; boundry=" + boundry
+        return "multipart/form-data; boundary=\(boundary)"
     }
     func fromDataBody(image : UIImage) -> Data{
+        
         let fromName = ApplicationCache.loggedInUser?.name ?? "nullUser"
         let lineBreak = "\r\n"
         var body = Data()
         
-        body.append("--\(boundry + lineBreak)")
-        body.append("Content-Disposition: form-data;name=\"fromName\"\(fromName + lineBreak)")
-        body.append("\(fromName + lineBreak)")
-        
-        // Process image data
+        guard let imageData = image.jpegData(compressionQuality: 0.99) else {return body}
+
         if let imageUUID = UUID().uuidString.components(separatedBy: "-").first{
-            body.append("--\(boundry + lineBreak)")
-            body.append("Content-Disposition: form-data; name=\"imageUploads\";filename=\"\(imageUUID).jpg\"\(lineBreak)")
-            body.append("Content-Type: image/jpeg\(lineBreak + lineBreak)")
-            body.append(image.jpegData(compressionQuality: 0.99)!)
-            body.append(lineBreak)
+            body.append("--\(boundary)\r\n".data(using: .utf8)!)
+            body.append("Content-Disposition: form-data; name=\"upload_image\"; filename=\"\(imageUUID).jpeg\"\r\n".data(using: .utf8)!)
+            body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+            body.append(imageData)
+            body.append("\r\n".data(using: .utf8)!)
+            body.append("--\(boundary)--\r\n".data(using: .utf8)!)
         }
         
-        body.append("--\(boundry)--\(lineBreak)")
         return body;
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ReviewCard: View {
     let username : String
     let rating : Int

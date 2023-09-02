@@ -17,7 +17,5 @@ struct GETTaskPerformer<ResponseType : Codable> : PerformableTask{
         return try handleResponse(data: data, response: response)
     }
     
-    
-    typealias ResponseType = ResponseType
     let request : URLRequest
 }

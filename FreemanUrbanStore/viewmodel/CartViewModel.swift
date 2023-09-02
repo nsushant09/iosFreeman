@@ -45,6 +45,7 @@ class CartViewModel : ObservableObject{
         setSubtotalAmount()
         setDelivery()
         setDiscount()
+        setCheckoutPrice()
     }
     
     func setSubtotalAmount(){
