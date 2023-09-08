@@ -13,7 +13,7 @@ class CartRepoImpl : CartRepo{
     
     
     func addItemToCart(productId: Int, userId: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/cart/add")
             .setHttpMethod(HTTPMethods.POST)
@@ -28,7 +28,7 @@ class CartRepoImpl : CartRepo{
     }
     
     func removeItemFromCart(productId: Int, userId: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/cart/remove")
             .setHttpMethod(HTTPMethods.POST)
@@ -43,7 +43,7 @@ class CartRepoImpl : CartRepo{
     }
     
     func getAllProductFromCart(userId: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/cart/cart_products")
             .setHttpMethod(HTTPMethods.GET)

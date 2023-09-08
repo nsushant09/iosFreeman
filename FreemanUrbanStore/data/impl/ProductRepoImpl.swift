@@ -9,7 +9,7 @@ import Foundation
 
 class ProductRepoImpl : ProductRepo{
     func insertProduct(userId : Int, categoryId : Int, product: Product) async -> (Product?, String) {
-        let result = await HTTPRequestExecutor<Product, Product>
+        let result = await HTTPRequestExecutor<Product>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/")
             .setHttpMethod(HTTPMethods.POST)
@@ -25,7 +25,7 @@ class ProductRepoImpl : ProductRepo{
     }
     
     func updateProduct(product: Product) async -> (Product?, String) {
-        let result = await HTTPRequestExecutor<Product, Product>
+        let result = await HTTPRequestExecutor<Product>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/")
             .setHttpMethod(HTTPMethods.PUT)
@@ -37,7 +37,7 @@ class ProductRepoImpl : ProductRepo{
     }
     
     func productById(id: Int) async -> (Product?, String) {
-        let result = await HTTPRequestExecutor<Product, Product>
+        let result = await HTTPRequestExecutor<Product>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/by_product_id")
             .setHttpMethod(HTTPMethods.GET)
@@ -51,7 +51,7 @@ class ProductRepoImpl : ProductRepo{
     }
     
     func productByCategory(id: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/by_category_id")
             .setHttpMethod(HTTPMethods.GET)
@@ -65,7 +65,7 @@ class ProductRepoImpl : ProductRepo{
     }
     
     func productByUser(id: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/by_user_id")
             .setHttpMethod(HTTPMethods.GET)
@@ -79,7 +79,7 @@ class ProductRepoImpl : ProductRepo{
     }
     
     func allProducts() async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/all")
             .setHttpMethod(HTTPMethods.GET)
@@ -90,7 +90,7 @@ class ProductRepoImpl : ProductRepo{
     }
     
     func productBySearchValue(value: String) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/product/search")
             .setHttpMethod(HTTPMethods.GET)

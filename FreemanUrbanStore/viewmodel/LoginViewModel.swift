@@ -16,7 +16,7 @@ class LoginViewModel : ObservableObject{
     @Published var navigateToOTP = false
     
     func loginUser(email : String, password : String) async{
-        let userResult = await HTTPRequestExecutor<User, User>
+        let userResult = await HTTPRequestExecutor<User>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/user/by_user_detail")
             .setRequestParams([

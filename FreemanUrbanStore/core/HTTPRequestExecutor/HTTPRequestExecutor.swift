@@ -8,12 +8,12 @@
 import Foundation
 import SwiftUI
 
-class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
+class HTTPRequestExecutor<ResponseType : Codable>{
     
     let requestUrl : String
     
     var httpMethod : HTTPMethods = .GET
-    var requestBody : DataType? = nil
+    var requestBody : Codable? = nil
     var headers : [String : String]? = nil
     var requestParameters : [String : String]? = nil
     var contentType : String? = nil
@@ -85,8 +85,7 @@ class HTTPRequestExecutor<DataType : Codable, ResponseType : Codable>{
     
     func applyRequestBody(){
         do{
-            if(requestBody == nil){return}
-            
+            guard let requestBody = requestBody else {return} 
             let jsonData = try JSONEncoder().encode(requestBody)
             
             if let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {

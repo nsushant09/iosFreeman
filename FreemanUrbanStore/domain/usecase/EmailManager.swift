@@ -10,7 +10,7 @@ import Foundation
 struct EmailManager{
     
     func mailOTPPassword(email : String) async -> String?{
-        let result = await HTTPRequestExecutor<String, [String : String]>
+        let result = await HTTPRequestExecutor<[String : String]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/mailOtp")
             .setRequestParams([

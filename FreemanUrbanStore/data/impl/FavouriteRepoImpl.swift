@@ -9,7 +9,7 @@ import Foundation
 
 class FavouriteRepoImpl : FavouriteRepo{
     func addItemToFavourite(productId: Int, userId: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/favourite/add")
             .setHttpMethod(HTTPMethods.POST)
@@ -24,7 +24,7 @@ class FavouriteRepoImpl : FavouriteRepo{
     }
     
     func removeItemFromFavourite(productId: Int, userId: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/favourite/remove")
             .setHttpMethod(HTTPMethods.POST)
@@ -39,7 +39,7 @@ class FavouriteRepoImpl : FavouriteRepo{
     }
     
     func getAllProductFromFavourite(userId: Int) async -> ([Product]?, String) {
-        let result = await HTTPRequestExecutor<Product, [Product]>
+        let result = await HTTPRequestExecutor<[Product]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/favourite/favourite_products")
             .setHttpMethod(HTTPMethods.GET)

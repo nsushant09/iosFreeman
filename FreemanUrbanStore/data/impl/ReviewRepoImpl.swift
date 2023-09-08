@@ -9,7 +9,7 @@ import Foundation
 
 class ReviewRepoImpl : ReviewRepo{
     func insertReview(productId: Int, userId : Int, review : Review) async -> (Review?, String) {
-        let result = await HTTPRequestExecutor<Review, Review>
+        let result = await HTTPRequestExecutor<Review>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/review/")
             .setHttpMethod(HTTPMethods.POST)
@@ -25,7 +25,7 @@ class ReviewRepoImpl : ReviewRepo{
     }
     
     func getReviewsForProduct(productId: Int) async -> ([Review]?, String) {
-        let result = await HTTPRequestExecutor<Review, [Review]>
+        let result = await HTTPRequestExecutor<[Review]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/review/all_by_product_id")
             .setHttpMethod(HTTPMethods.GET)

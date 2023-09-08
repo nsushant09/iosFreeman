@@ -10,7 +10,7 @@ import Foundation
 extension HTTPRequestExecutor{
     class Builder {
         private var requestUrl: String? = nil
-        private var requestBody: DataType? = nil
+        private var requestBody: Codable? = nil
         private var headers: [String: String]? = nil
         private var requestParameters: [String: String]? = nil
         private var httpMethod: HTTPMethods = .GET
@@ -21,7 +21,7 @@ extension HTTPRequestExecutor{
             return self
         }
         
-        func setRequestBody(_ requestBody: DataType) -> Builder {
+        func setRequestBody(_ requestBody: Codable) -> Builder {
             self.requestBody = requestBody
             return self
         }
@@ -46,13 +46,13 @@ extension HTTPRequestExecutor{
             return self
         }
         
-        func build() -> HTTPRequestExecutor<DataType, ResponseType> {
+        func build() -> HTTPRequestExecutor<ResponseType> {
             
             guard let requestUrl = requestUrl else{
                 fatalError("URL is required.Use .setRequestUrl() to insert the URL.")
             }
             
-            let executor = HTTPRequestExecutor<DataType, ResponseType>(
+            let executor = HTTPRequestExecutor<ResponseType>(
                 mRequestUrl: requestUrl
             )
             

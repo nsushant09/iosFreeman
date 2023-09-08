@@ -52,7 +52,7 @@ class ProductCrudViewModel : ObservableObject{
         
         let multipartFile = MultipartImageFile()
         
-        let result = await HTTPRequestExecutor<Data, String>
+        let result = await HTTPRequestExecutor<String>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/image/upload")
             .setHttpMethod(HTTPMethods.POST)

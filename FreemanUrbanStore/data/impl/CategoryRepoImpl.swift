@@ -17,7 +17,7 @@ class CategoryRepoImpl : CategoryRepo{
             return CategoryRepoImpl.categories
         }
         
-        let result = await HTTPRequestExecutor<Category, [Category]>
+        let result = await HTTPRequestExecutor<[Category]>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/category/all")
             .setHttpMethod(HTTPMethods.GET)

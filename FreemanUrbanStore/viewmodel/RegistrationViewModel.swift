@@ -24,7 +24,7 @@ class RegistrationViewModel : ObservableObject{
             return
         }
         
-        let userResult = await HTTPRequestExecutor<User, User>
+        let userResult = await HTTPRequestExecutor<User>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/user/")
             .setRequestBody(user)
