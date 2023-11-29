@@ -10,29 +10,43 @@ import SwiftUI
 
 final class MultipartImageFile{
     
-    let boundary = "example.neupanesushant.boundary.\(ProcessInfo.processInfo.globallyUniqueString)"
+    let boundary = "Boundary-\(UUID().uuidString)"
     
     func getContentType() -> String{
         return "multipart/form-data; boundary=\(boundary)"
     }
-    func fromDataBody(image : UIImage) -> Data{
+    
+    func generateRequest(httpBody : Data) -> URLRequest{
+        var request = URLRequest(url: URL(string : Constants.BASE_URL + "/image/")!)
+        request.httpMethod = "POST"
+        request.httpBody = httpBody
+        request.setValue(getContentType(), forHTTPHeaderField: "Content-Type")
         
-        let fromName = ApplicationCache.loggedInUser?.name ?? "nullUser"
+        return request
+    }
+    
+    func multipartFormDataBody(_ fromName:String, _ images:[UIImage]) -> Data{
         let lineBreak = "\r\n"
         var body = Data()
         
-        guard let imageData = image.jpegData(compressionQuality: 0.99) else {return body}
-
-        if let imageUUID = UUID().uuidString.components(separatedBy: "-").first{
-            body.append("--\(boundary)\r\n".data(using: .utf8)!)
-            body.append("Content-Disposition: form-data; name=\"upload_image\"; filename=\"\(imageUUID).jpeg\"\r\n".data(using: .utf8)!)
-            body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
-            body.append(imageData)
-            body.append("\r\n".data(using: .utf8)!)
-            body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+        body.append("--\(boundary + lineBreak)")
+        body.append("Content-Disposition: form-data; name=\"fromName\"\(lineBreak + lineBreak)")
+        body.append("\(fromName + lineBreak)")
+        
+        for image in images{
+            if let uuid = UUID().uuidString.components(separatedBy: "-").first{
+                body.append("--\(boundary + lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"image\"; filename=\"\(uuid).jpg\"\(lineBreak)")
+                body.append("Content-Type: image/jpeg\(lineBreak + lineBreak)")
+                body.append(image.jpegData(compressionQuality: 0.99)!)
+                body.append(lineBreak)
+            }
         }
         
-        return body;
+        body.append("--\(boundary)--\(lineBreak)")
+        
+        
+        return body
     }
 }
 

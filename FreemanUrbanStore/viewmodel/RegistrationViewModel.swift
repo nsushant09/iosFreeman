@@ -17,13 +17,6 @@ class RegistrationViewModel : ObservableObject{
     
     func registerUser(user : User) async{
         
-        if(!UserValidator(user: user).validate()){
-            DispatchQueue.main.async {[weak self] in
-                self?.errorMessage = "Not a valid user details"
-            }
-            return
-        }
-        
         let userResult = await HTTPRequestExecutor<User>
             .Builder()
             .setRequestUrl(Constants.BASE_URL + "/user/")

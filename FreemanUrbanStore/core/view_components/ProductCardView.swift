@@ -22,7 +22,7 @@ struct ProductCardView: View {
                 VStack{
                     
                     AsyncImage(
-                        url:URL(string : product.imagePath),
+                        url:URL(string : Constants.BASE_URL + product.imagePath),
                         content : {image in
                             image
                                 .resizable()

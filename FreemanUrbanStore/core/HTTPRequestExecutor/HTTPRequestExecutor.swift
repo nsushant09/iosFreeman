@@ -25,41 +25,13 @@ class HTTPRequestExecutor<ResponseType : Codable>{
     var urlComponent : URLComponents? = nil
     var request : URLRequest? = nil
     
-    
-    func execute(completion: @escaping (ResponseType?, Error?) -> Void){
-        urlComponent = URLComponents(string: requestUrl)
-        if(urlComponent == nil) {return}
-        applyRequestParameters()
-        guard let url = urlComponent?.url else {return}
-
-        request = URLRequest(url: url)
-        request?.httpMethod = httpMethod.rawValue
-
-        applyHeaders()
-        applyRequestBody()
-        performTask(completion : completion)
-    }
-
-    func performTask(completion: @escaping (ResponseType?, Error?) -> Void){
-        if(request == nil){return}
-        let task = URLSession.shared.dataTask(with: request!){data, urlResponse, error in
-            guard let data = data, error == nil else {return}
-            do {
-                let response = try JSONDecoder()
-                    .decode(ResponseType.self, from: data)
-                completion(response, nil)
-            } catch {
-                completion(nil, error)
-            }
-        }
-        task.resume()
-    }
-    
     func executeAsync() async -> Result<ResponseType>{
+        
         urlComponent = URLComponents(string: requestUrl)
         if(urlComponent == nil) {
             return .failure("Invalid URLComponent")
         }
+        
         applyRequestParameters()
         guard let url = urlComponent?.url else {
             return .failure("Invalid URL")
@@ -71,6 +43,12 @@ class HTTPRequestExecutor<ResponseType : Codable>{
         applyHeaders()
         applyRequestBody()
         
+        return await callTaskPerformer()
+    }
+    
+    
+    
+    func callTaskPerformer() async -> Result<ResponseType>{
         do{
             let taskPerformer = TaskPerformerFactory<ResponseType>
                 .getTaskPerformer(

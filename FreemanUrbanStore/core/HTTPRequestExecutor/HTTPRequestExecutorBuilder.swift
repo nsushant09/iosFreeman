@@ -15,6 +15,12 @@ extension HTTPRequestExecutor{
         private var requestParameters: [String: String]? = nil
         private var httpMethod: HTTPMethods = .GET
         private var contentType : String? = nil
+        private var request : URLRequest? = nil
+        
+        func setRequest(_ request : URLRequest) -> Builder{
+            self.request = request
+            return self
+        }
         
         func setRequestUrl(_ url: String) -> Builder {
             self.requestUrl = url
@@ -56,6 +62,7 @@ extension HTTPRequestExecutor{
                 mRequestUrl: requestUrl
             )
             
+            executor.request = self.request
             executor.headers = self.headers
             executor.httpMethod = self.httpMethod
             executor.contentType = self.contentType

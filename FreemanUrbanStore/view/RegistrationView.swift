@@ -148,7 +148,7 @@ struct RegistrationView: View {
                     password: password,
                     phoneNumber: phoneNumber,
                     dateOfBirth: dateFormatter.string(from : dateOfBirth),
-                    role: "user"
+                    role: "USER"
                 )
                 
                 Task{

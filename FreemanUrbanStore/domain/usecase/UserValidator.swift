@@ -18,9 +18,7 @@ struct UserValidator {
         isValidPassword() &&
         isValidPhoneNumber() &&
         isValidDateOfBirth() &&
-        isValidRole() &&
-        isValidGender() &&
-        isValidEmail()
+        isValidGender()
     }
     
     
@@ -48,7 +46,7 @@ struct UserValidator {
     }
     
     func isValidRole() -> Bool {
-        let validRoles = ["user", "admin", "trader"]
+        let validRoles = ["USER", "ADMIN", "TRADER"]
         guard let userRole = user.role?.lowercased() else {
             return false
         }
@@ -56,8 +54,8 @@ struct UserValidator {
     }
     
     func isValidGender() -> Bool {
-        let validGenders = ["male", "female"]
-        guard let userGender = user.gender?.lowercased() else{
+        let validGenders = ["Male", "Female"]
+        guard let userGender = user.gender else{
             return false
         }
         return validGenders.contains(userGender)

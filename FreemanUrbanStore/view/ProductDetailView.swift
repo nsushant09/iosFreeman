@@ -70,7 +70,7 @@ struct ProductDetailView: View {
     
     func getProductImage() -> some View{
         return AsyncImage(
-            url: URL(string: product.imagePath),
+            url: URL(string: Constants.BASE_URL + product.imagePath),
             content: { image in
                 image
                     .resizable()

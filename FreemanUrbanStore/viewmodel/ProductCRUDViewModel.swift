@@ -19,6 +19,7 @@ class ProductCrudViewModel : ObservableObject{
     @Published var price = ""
     @Published var stock = ""
     @Published var discountedPrice = ""
+    @Published var image : UIImage? = nil
     
     @Published var userId = ""
     @Published var category = ""
@@ -31,7 +32,10 @@ class ProductCrudViewModel : ObservableObject{
     func insertProduct() async {
         guard let categoryId = getCategoryIdFromName(name: category) else {return}
         guard let userId = ApplicationCache.loggedInUser?.id else {return}
-        let product = Product(id: -1, name: name, description: description, imagePath: "", price: Double(price) ?? 0, stock: Int(stock) ?? 0)
+        
+        guard let imagePath = await insertImage(image: image) else {return}
+        
+        let product = Product(id: -1, name: self.name, description: self.description, imagePath: imagePath, price: Double(price) ?? 0, stock: Int(stock) ?? 0)
         
         let (data, error) = await productRepo.insertProduct(userId: userId, categoryId: categoryId, product: product)
         
@@ -46,27 +50,26 @@ class ProductCrudViewModel : ObservableObject{
         }
     }
     
-    func insertImage(image : UIImage?) async {
-        
-        guard let image = image else {return}
-        
-        let multipartFile = MultipartImageFile()
-        
-        let result = await HTTPRequestExecutor<String>
-            .Builder()
-            .setRequestUrl(Constants.BASE_URL + "/image/upload")
-            .setHttpMethod(HTTPMethods.POST)
-            .setContentType(multipartFile.getContentType())
-            .setRequestBody(multipartFile.fromDataBody(image: image))
-            .build()
-            .executeAsync()
-        
-        let (data, error) = ResultManager.returnData(result: result)
-        
-        if let data = data {
-            print("The image url is : " + data)
-        }else{
-            print("The error is : " + error)
+    func insertImage(image: UIImage?) async -> String? {
+        guard let image = image else { return nil }
+
+        let multipart = MultipartImageFile()
+        let requestBody = multipart.multipartFormDataBody("Neupane", [image])
+        let request = multipart.generateRequest(httpBody: requestBody)
+
+        do {
+            let (data, _) = try await URLSession.shared.data(for: request)
+
+            if let responseString = String(data: data, encoding: .utf8) {
+                print(responseString)
+                return responseString
+            } else {
+                print("Unable to convert data to string.")
+                return nil
+            }
+        } catch {
+            print("Error: \(error)")
+            return nil
         }
     }
     
@@ -87,3 +90,4 @@ class ProductCrudViewModel : ObservableObject{
         }
     }
 }
+

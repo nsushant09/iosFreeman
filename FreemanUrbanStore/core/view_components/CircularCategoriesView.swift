@@ -27,7 +27,7 @@ struct CircularCategoriesView: View {
     func content() -> some View{
         VStack{
             AsyncImage(
-                url:URL(string : category.imagePath),
+                url:URL(string : Constants.BASE_URL + category.imagePath),
                 content : {image in
                     image
                         .resizable()
