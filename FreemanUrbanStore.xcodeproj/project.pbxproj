@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5204AF7F2A98E2B10032CCD6 /* MultipartFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204AF7E2A98E2B10032CCD6 /* MultipartFile.swift */; };
+		5216695A2B187CA400FF6495 /* UpdateProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521669592B187CA400FF6495 /* UpdateProductView.swift */; };
 		523FC9ED2A95221A0020BB91 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9EC2A95221A0020BB91 /* AddProductView.swift */; };
 		523FC9EF2A9526AE0020BB91 /* ProductCRUDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9EE2A9526AE0020BB91 /* ProductCRUDViewModel.swift */; };
 		523FC9F12A9534D80020BB91 /* ApplicationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523FC9F02A9534D80020BB91 /* ApplicationCache.swift */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		5204AF7E2A98E2B10032CCD6 /* MultipartFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFile.swift; sourceTree = "<group>"; };
+		521669592B187CA400FF6495 /* UpdateProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductView.swift; sourceTree = "<group>"; };
 		523FC9EC2A95221A0020BB91 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
 		523FC9EE2A9526AE0020BB91 /* ProductCRUDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCRUDViewModel.swift; sourceTree = "<group>"; };
 		523FC9F02A9534D80020BB91 /* ApplicationCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCache.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				529FF7182A911D1300F92335 /* FavouriteView.swift */,
 				529FF71A2A911EDA00F92335 /* ProductDetailView.swift */,
 				523FC9EC2A95221A0020BB91 /* AddProductView.swift */,
+				521669592B187CA400FF6495 /* UpdateProductView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				52C570522A8E4C5700048465 /* KeyValue.swift in Sources */,
 				52E435E62A8DFF0400547A77 /* SearchView.swift in Sources */,
 				5241A71D2A96816A0014E794 /* ProductDetailViewModel.swift in Sources */,
+				5216695A2B187CA400FF6495 /* UpdateProductView.swift in Sources */,
 				5241A7192A96447F0014E794 /* ReviewRepo.swift in Sources */,
 				529FF71B2A911EDA00F92335 /* ProductDetailView.swift in Sources */,
 				52E435E22A8DFEF500547A77 /* CartView.swift in Sources */,

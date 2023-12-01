@@ -30,13 +30,13 @@ final class MultipartImageFile{
         var body = Data()
         
         body.append("--\(boundary + lineBreak)")
-        body.append("Content-Disposition: form-data; name=\"fromName\"\(lineBreak + lineBreak)")
+        body.append("Content-Disposition: form-data; name=\"\(fromName)\"\(lineBreak + lineBreak)")
         body.append("\(fromName + lineBreak)")
         
         for image in images{
             if let uuid = UUID().uuidString.components(separatedBy: "-").first{
                 body.append("--\(boundary + lineBreak)")
-                body.append("Content-Disposition: form-data; name=\"image\"; filename=\"\(uuid).jpg\"\(lineBreak)")
+                body.append("Content-Disposition: form-data; name=\"image\"; filename=\"\(fromName)_\(uuid).jpg\"\(lineBreak)")
                 body.append("Content-Type: image/jpeg\(lineBreak + lineBreak)")
                 body.append(image.jpegData(compressionQuality: 0.99)!)
                 body.append(lineBreak)

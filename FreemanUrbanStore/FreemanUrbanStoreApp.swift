@@ -13,7 +13,7 @@ struct FreemanUrbanStoreApp: App {
 
     var body: some Scene {
         WindowGroup {
-            else if(UserDefaults.standard.bool(forKey: Constants.AS_IS_LOGGED_IN)){
+            if(UserDefaults.standard.bool(forKey: Constants.AS_IS_LOGGED_IN)){
                 MainView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }else{

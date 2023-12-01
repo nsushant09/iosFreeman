@@ -141,7 +141,7 @@ struct RegistrationView: View {
                 dateFormatter.dateFormat = "yyyy-MM-dd"
                 
                 let user = User(
-                    id: 0,
+                    id: -1,
                     name: fullName,
                     email: email,
                     gender: gender,
@@ -156,7 +156,7 @@ struct RegistrationView: View {
                 }
                 
             }, label: {
-                Text("Create account")
+                Text(registrationViewModel.createAccountText)
             })
             
             customView.darkOutlinedButton(action: {

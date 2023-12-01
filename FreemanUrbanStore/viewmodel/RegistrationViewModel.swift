@@ -10,12 +10,15 @@ import SwiftUI
 
 class RegistrationViewModel : ObservableObject{
     
+    @Published var createAccountText = "Create Account"
     @Published var authenticationKey = "-1"
     @Published var errorMessage = ""
     @Published var navigateToOtpPage = false
     @Published var userDetail : User?
     
     func registerUser(user : User) async{
+        
+        createAccountText = "Creating..."
         
         let userResult = await HTTPRequestExecutor<User>
             .Builder()
@@ -30,6 +33,7 @@ class RegistrationViewModel : ObservableObject{
             DispatchQueue.main.async {[weak self] in
                 self?.errorMessage = errorResponse
             }
+            createAccountText = "Could not create account"
             return
         }
         
@@ -37,6 +41,7 @@ class RegistrationViewModel : ObservableObject{
             if let authenticationResponse  = await EmailManager().mailOTPPassword(email: userResponse.email!){
                 DispatchQueue.main.async {
                     DispatchQueue.main.async {[weak self] in
+                        self?.createAccountText = "Created"
                         self?.authenticationKey = authenticationResponse
                         self?.userDetail = userResponse
                         self?.navigateToOtpPage = self?.authenticationKey != "-1"

@@ -8,16 +8,15 @@
 import SwiftUI
 import PhotosUI
 
-struct AddProductView: View {
+struct UpdateProductView: View {
     
     let customView = CustomViews.instance
     @StateObject var viewModel = ProductCrudViewModel()
     
     
-    @State var buttonTextMessage = "Add Product"
+    @State var buttonTextMessage = "Update Product"
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
-    @State var photosPickerText = "Select Photo"
     
     var body: some View{
         NavigationStack{
@@ -25,7 +24,7 @@ struct AddProductView: View {
                 header
                 inputField
                 photoPicker()
-                AddButton()
+                addButton()
                 Spacer()
             }
             .padding()
@@ -83,14 +82,14 @@ struct AddProductView: View {
         }
     }
     
-    func AddButton() -> some View{
+    func addButton() -> some View{
         customView.darkFilledButton(
                 action: {
                     buttonTextMessage = "Loading..."
                     Task{
-                        await viewModel.insertProduct()
-                        if (viewModel.isProductInserted){
-                            buttonTextMessage = "Product Added"
+                        await viewModel.updateProduct()
+                        if (viewModel.isProductUpdated){
+                            buttonTextMessage = "Product Updated"
                         }else{
                             buttonTextMessage = "Error!!!"
                         }
@@ -114,7 +113,7 @@ struct AddProductView: View {
             selection: $selectedItem,
             matching: .images,
             photoLibrary: .shared()) {
-                Text(photosPickerText)
+                Text("Select a photo")
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .tint(CustomColors.primary)
@@ -131,7 +130,6 @@ struct AddProductView: View {
                         selectedImageData = data
                         if let selectedImageData,
                            let uiImage = UIImage(data: selectedImageData){
-                            photosPickerText = data.description
                             viewModel.image = uiImage
                         }
                     }
@@ -141,8 +139,8 @@ struct AddProductView: View {
     // Functions
 }
 
-struct AddProductView_Previews: PreviewProvider {
+struct UpdateProductView_Previews: PreviewProvider {
     static var previews: some View {
-        AddProductView()
+        UpdateProductView()
     }
 }

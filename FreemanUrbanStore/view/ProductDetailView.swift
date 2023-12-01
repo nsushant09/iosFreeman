@@ -16,6 +16,7 @@ struct ProductDetailView: View {
     
     @StateObject var viewModel : ProductDetailViewModel
     @State var favouriteIcon = "heart"
+    @State var scrollOffset : CGFloat = 0;
     
     init(mProduct : Product){
         product = mProduct
@@ -25,39 +26,32 @@ struct ProductDetailView: View {
     var body: some View {
         
         NavigationStack {
-            GeometryReader { geometry in
-                
-                ScrollView{
-                    getProductImage()
-                        .overlay{
-                            getToolbar()
-                                .padding(.top)
-                                .padding(.top)
-                        }
-                    
-                    VStack{
-                        showProductDetails()
-                        showDescription()
-                        showReview()
-                    }
-                    .frame(maxWidth: .infinity, maxHeight:.infinity)
-                    .padding(.all)
-                    .padding(.bottom)
-                    .background(.white)
-                    .cornerRadius(16)
-                    .offset(y:-32)
-                }
-                .overlay(alignment:.bottom){
-                    cartButton()
-                }
-                .ignoresSafeArea()
-                
+            ZStack{
+                contents
+                toolbar
             }
         }
-        .onAppear{
-            onAppear()
-        }
         .navigationBarBackButtonHidden(true)
+    }
+    
+    var contents : some View{
+        ScrollView{
+            VStack{
+                getProductImage()
+                Group{
+                    showProductDetails()
+                    showDescription()
+                    showReview()
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 48)
+            }
+            .onAppear{onAppear()}
+        }
+        .overlay(alignment: .bottom, content: {
+            cartButton()
+        })
+        .ignoresSafeArea()
     }
     
     func onAppear(){
@@ -126,7 +120,7 @@ struct ProductDetailView: View {
     
     
     
-    func getToolbar() -> some View{
+    var toolbar : some View{
         return HStack{
             RoundedRectangle(cornerRadius: 16)
                 .frame(width: 48, height: 48)
@@ -178,7 +172,7 @@ struct ProductDetailView: View {
             }
         )
         .frame(maxHeight: .infinity, alignment: .top)
-        .padding(.all)
+        .padding(.horizontal)
     }
     
     func toggleFavourites(){

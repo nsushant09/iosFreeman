@@ -14,6 +14,7 @@ class ProductCrudViewModel : ObservableObject{
     private let categoryRepo  = CategoryRepoImpl()
     private let productRepo = ProductRepoImpl()
     
+    @Published var id = -1
     @Published var name = ""
     @Published var description = ""
     @Published var price = ""
@@ -23,21 +24,21 @@ class ProductCrudViewModel : ObservableObject{
     
     @Published var userId = ""
     @Published var category = ""
-    
     @Published var categories = [Category]()
-    
     @Published var errorMessage = ""
+    
+    @Published var isProductUpdated = false
     @Published var isProductInserted = false;
     
     func insertProduct() async {
         guard let categoryId = getCategoryIdFromName(name: category) else {return}
-        guard let userId = ApplicationCache.loggedInUser?.id else {return}
+        guard let user = ApplicationCache.loggedInUser else {return}
         
-        guard let imagePath = await insertImage(image: image) else {return}
+        guard let imagePath = await insertImage(username : user.name, image: image) else {return}
         
         let product = Product(id: -1, name: self.name, description: self.description, imagePath: imagePath, price: Double(price) ?? 0, stock: Int(stock) ?? 0)
         
-        let (data, error) = await productRepo.insertProduct(userId: userId, categoryId: categoryId, product: product)
+        let (data, error) = await productRepo.insertProduct(userId: user.id, categoryId: categoryId, product: product)
         
         if let _ = data {
             DispatchQueue.main.async {[weak self] in
@@ -50,11 +51,11 @@ class ProductCrudViewModel : ObservableObject{
         }
     }
     
-    func insertImage(image: UIImage?) async -> String? {
+    func insertImage(username : String, image: UIImage?) async -> String? {
         guard let image = image else { return nil }
 
         let multipart = MultipartImageFile()
-        let requestBody = multipart.multipartFormDataBody("Neupane", [image])
+        let requestBody = multipart.multipartFormDataBody(username, [image])
         let request = multipart.generateRequest(httpBody: requestBody)
 
         do {
@@ -70,6 +71,27 @@ class ProductCrudViewModel : ObservableObject{
         } catch {
             print("Error: \(error)")
             return nil
+        }
+    }
+    
+    func updateProduct() async{
+        
+        guard let imagePath = await insertImage(image: image) else {return}
+        if (id == -1) {return}
+        
+        
+        let product = Product(id: id, name: self.name, description: self.description, imagePath: imagePath, price: Double(price) ?? 0, stock: Int(stock) ?? 0)
+        
+        let (data, error) = await productRepo.updateProduct(product: product)
+        
+        if let _ = data {
+            DispatchQueue.main.async {[weak self] in
+                self?.isProductUpdated = true
+            }
+        }else {
+            DispatchQueue.main.async {[weak self] in
+                self?.errorMessage = error
+            }
         }
     }
     
